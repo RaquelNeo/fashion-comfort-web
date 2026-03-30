@@ -1,6 +1,5 @@
 /* Mobile Hamburger Menu — Fashion Comfort */
 (function() {
-  // Only run on mobile-capable viewports
   var nav = document.querySelector('.ds-nav');
   if (!nav) return;
 
@@ -44,43 +43,59 @@
   var menu = document.createElement('div');
   menu.className = 'ds-mobile-menu';
   menu.innerHTML =
-    '<ul class="ds-mobile-menu-links">' + linksHTML + '</ul>' +
+    '<div class="ds-mobile-menu-links">' + linksHTML + '</div>' +
     '<div class="ds-mobile-menu-langs">' +
       '<button class="ds-mobile-lang-btn">EN</button>' +
       '<button class="ds-mobile-lang-btn">ES</button>' +
     '</div>';
   document.body.appendChild(menu);
 
-  // Toggle function
-  function toggleMenu() {
-    var isOpen = hamburger.classList.contains('open');
-    hamburger.classList.toggle('open');
-    menu.classList.toggle('open');
-    overlay.classList.toggle('open');
-    document.body.style.overflow = isOpen ? '' : 'hidden';
+  var isOpen = false;
+
+  function openMenu() {
+    isOpen = true;
+    hamburger.classList.add('open');
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
+    isOpen = false;
     hamburger.classList.remove('open');
     menu.classList.remove('open');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  // Event listeners
-  hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', closeMenu);
+  // Hamburger toggle
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (isOpen) { closeMenu(); } else { openMenu(); }
+  });
 
-  // Close on any click inside menu (links + lang buttons)
+  // Close on overlay click
+  overlay.addEventListener('click', function() {
+    closeMenu();
+  });
+
+  // Close on any link or button inside menu
   menu.addEventListener('click', function(e) {
-    if (e.target.classList.contains('ds-mobile-menu-link') ||
-        e.target.classList.contains('ds-mobile-lang-btn')) {
+    var target = e.target;
+    if (target.tagName === 'A' || target.tagName === 'BUTTON') {
       closeMenu();
     }
   });
 
-  // Close on escape key
+  // Close on escape
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Escape' && isOpen) closeMenu();
+  });
+
+  // Close on touch outside (mobile)
+  document.addEventListener('touchstart', function(e) {
+    if (isOpen && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMenu();
+    }
   });
 })();

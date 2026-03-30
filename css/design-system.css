@@ -223,16 +223,19 @@ body {
 .ds-mobile-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.18);
   z-index: 199;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease-out;
+  transition: opacity 0.25s ease-out, visibility 0s linear 0.25s;
 }
 
 .ds-mobile-overlay.open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transition: opacity 0.25s ease-out, visibility 0s linear 0s;
 }
 
 /* Mobile menu — floating glass panel */
@@ -243,15 +246,16 @@ body {
   bottom: 14px;
   width: 78vw;
   max-width: 300px;
-  background: rgba(255, 255, 255, 0.84);
+  background: rgba(250, 250, 248, 0.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
   z-index: 200;
+  visibility: hidden;
   transform: translateX(calc(100% + 24px));
   opacity: 0;
-  transition: transform 0.28s ease-out, opacity 0.22s ease-out;
+  transition: transform 0.28s ease-out, opacity 0.22s ease-out, visibility 0s linear 0.3s;
   display: flex;
   flex-direction: column;
   padding: 48px 24px 28px;
@@ -259,8 +263,10 @@ body {
 }
 
 .ds-mobile-menu.open {
+  visibility: visible;
   transform: translateX(0);
   opacity: 1;
+  transition: transform 0.28s ease-out, opacity 0.22s ease-out, visibility 0s linear 0s;
 }
 
 .ds-mobile-menu-links {
