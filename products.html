@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Productions | Fashion Comfort Group</title>
+  <meta name="description" content="Ongoing productions delivered by Fashion Comfort Group for international fashion brands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    /* Hero */
+    .hero {
+      padding: 160px 32px var(--space-3xl);
+      background: var(--white, #fff);
+    }
+
+    .hero-inner {
+      max-width: var(--max-width, 1100px);
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent); margin-bottom: var(--space-lg);
+    }
+
+    .hero h1 {
+      font-family: var(--font-body);
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 200; line-height: 1.15;
+      margin-bottom: var(--space-xl);
+      max-width: 680px;
+      color: var(--text-primary);
+    }
+
+    .hero-text {
+      font-size: 16px; line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 600px;
+    }
+
+    .hero-text + .hero-text { margin-top: var(--space-sm, 8px); }
+
+    .hero-supporting {
+      font-size: 14px; color: var(--text-muted);
+      margin-top: var(--space-md);
+      font-style: italic;
+    }
+
+    /* Feed section */
+    .feed-section {
+      padding: var(--space-3xl, 80px) 32px;
+      background: var(--stone, #F5F5F1);
+    }
+
+    .feed-inner {
+      max-width: var(--max-width, 1100px);
+      margin: 0 auto;
+    }
+
+    /* Minimal filter tabs */
+    .feed-filters {
+      display: flex; gap: 8px; margin-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0;
+    }
+
+    .feed-tab {
+      padding: 10px 20px;
+      background: none; border: none;
+      font-family: var(--font-body);
+      font-size: 13px; font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .feed-tab::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 2px;
+      background: var(--text-primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .feed-tab.active {
+      color: var(--text-primary);
+    }
+
+    .feed-tab.active::after {
+      transform: scaleX(1);
+    }
+
+    .feed-tab:hover {
+      color: var(--text-primary);
+    }
+
+    /* Image grid — editorial, not e-commerce */
+    .feed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .feed-item {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 6px;
+      background: var(--border);
+      text-decoration: none;
+      display: block;
+    }
+
+    .feed-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    .feed-item:hover img {
+      transform: scale(1.04);
+      opacity: 0.92;
+    }
+
+    /* Minimal overlay — brand only, very discreet */
+    .feed-meta {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 12px 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.4));
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .feed-item:hover .feed-meta {
+      opacity: 1;
+    }
+
+    .feed-brand {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+    }
+
+    .feed-name {
+      font-size: 12px;
+      font-weight: 300;
+      margin-top: 2px;
+      opacity: 0.75;
+    }
+
+    .feed-comp {
+      font-size: 11px;
+      font-weight: 300;
+      margin-top: 2px;
+      opacity: 0.6;
+    }
+
+    /* Empty state */
+    .feed-empty {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--text-muted);
+      display: none;
+    }
+
+    /* Counter */
+    .feed-counter {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: var(--space-xl);
+    }
+
+    /* CTA */
+    .cta {
+      padding: var(--space-3xl, 80px) 32px;
+      background: var(--primary); color: white;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-family: var(--font-body);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 200; margin-bottom: 12px;
+    }
+
+    .cta p { font-size: 15px; opacity: 0.65; margin-bottom: var(--space-xl); }
+
+    .cta-btn {
+      display: inline-block; padding: 14px 36px;
+      background: white; color: var(--primary);
+      text-decoration: none; border-radius: 8px;
+      font-weight: 600; font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover { background: var(--stone); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 130px 24px var(--space-2xl); }
+      .feed-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .feed-meta { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .feed-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .feed-item { border-radius: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="ds-nav static">
+    <div class="ds-nav-inner">
+      <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
+      <ul class="ds-nav-links">
+        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link active">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+      </ul>
+      <div class="ds-nav-langs">
+        <button class="ds-lang-btn">EN</button>
+        <button class="ds-lang-btn">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Ongoing Productions</p>
+      <h1>Selected productions for international brands</h1>
+      <p class="hero-text">This selection is continuously updated through our internal tracking system, reflecting recent developments delivered to our clients.</p>
+      <p class="hero-supporting">Each piece reflects real production — not concept development.</p>
+    </div>
+  </section>
+
+  <!-- FEED -->
+  <section class="feed-section">
+    <div class="feed-inner">
+
+      <div class="feed-filters" id="feed-filters">
+        <button class="feed-tab active" onclick="filterFeed('all')">All</button>
+      </div>
+
+      <div class="feed-grid" id="feed-grid"></div>
+
+      <div class="feed-empty" id="feed-empty">
+        <p>Productions loading...</p>
+      </div>
+
+      <p class="feed-counter" id="feed-counter"></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-inner">
+      <h2>Work With Us</h2>
+      <p>Partner with a team that values quality, transparency and long-term relationships</p>
+      <a href="index.html#contact" class="cta-btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ds-footer">
+    <div class="ds-footer-inner">
+      <div>
+        <p class="ds-footer-logo">Fashion Comfort</p>
+        <p class="ds-footer-tagline">Knitwear manufacturer partner since 2002</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style: none;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none;">
+          <li><a href="mailto:contact@fashioncomfort.com">contact@fashioncomfort.com</a></li>
+          <li><a href="https://linkedin.com/company/fashion-comfort-group" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/fashioncomfortgroup" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ds-footer-bottom">
+      <p>&copy; 2026 Fashion Comfort Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let allProducts = [];
+    const grid = document.getElementById('feed-grid');
+    const emptyMsg = document.getElementById('feed-empty');
+    const counter = document.getElementById('feed-counter');
+    const filtersContainer = document.getElementById('feed-filters');
+
+    function mainComposition(comp) {
+      if (!comp) return '';
+      var parts = comp.split(',').map(function(s) { return s.trim(); });
+      var sum = 0, main = [];
+      for (var i = 0; i < parts.length; i++) {
+        var m = parts[i].match(/^(\d+)%/);
+        if (m) { sum += parseInt(m[1]); main.push(parts[i]); if (sum >= 100) break; }
+        else { main.push(parts[i]); }
+      }
+      return main.join(', ');
+    }
+
+    function renderFeed(products) {
+      grid.innerHTML = '';
+      if (!products.length) { emptyMsg.style.display = 'block'; counter.textContent = ''; return; }
+      emptyMsg.style.display = 'none';
+      counter.textContent = products.length + ' production' + (products.length !== 1 ? 's' : '');
+
+      products.forEach(function(p) {
+        var a = document.createElement('a');
+        a.href = p.productUrl || '#';
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'feed-item';
+        a.innerHTML =
+          '<img src="' + (p.imageLocal || p.image || '') + '" alt="' + (p.name || '') + '">' +
+          '<div class="feed-meta">' +
+            '<p class="feed-brand">' + (p.brandDisplay || '') + '</p>' +
+            '<p class="feed-name">' + (p.name || '') + '</p>' +
+            '<p class="feed-comp">' + mainComposition(p.composition) + '</p>' +
+          '</div>';
+        grid.appendChild(a);
+      });
+    }
+
+    function filterFeed(brand) {
+      document.querySelectorAll('.feed-tab').forEach(function(t) { t.classList.remove('active'); });
+      var active = brand === 'all'
+        ? document.querySelector('.feed-tab:first-child')
+        : document.querySelector('.feed-tab[data-filter="' + brand + '"]');
+      if (active) active.classList.add('active');
+      var filtered = brand === 'all' ? allProducts : allProducts.filter(function(p) { return p.brand === brand; });
+      renderFeed(filtered);
+    }
+
+    fetch('products_data.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        allProducts = data.filter(function(p) { return p.status === 'found'; });
+
+        // Build filter tabs from available brands
+        var brands = [];
+        allProducts.forEach(function(p) {
+          if (brands.indexOf(p.brand) === -1) brands.push(p.brand);
+        });
+        brands.forEach(function(b) {
+          var btn = document.createElement('button');
+          btn.className = 'feed-tab';
+          btn.setAttribute('data-filter', b);
+          btn.textContent = (b === 'zara' ? 'ZARA' : b === 'mango' ? 'MANGO' : b === 'pullbear' ? 'PULL&BEAR' : b.toUpperCase());
+          btn.onclick = function() { filterFeed(b); };
+          filtersContainer.appendChild(btn);
+        });
+
+        renderFeed(allProducts);
+      })
+      .catch(function() { emptyMsg.style.display = 'block'; });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYK Project | Fashion Comfort Group</title>
+  <meta name="description" content="LYK (Lubaba Yarn Kitchen) — a circular yarn platform transforming post-industrial textile waste into premium, traceable regenerated yarns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    :root {
+      --primary: #1D2B1F;
+      --accent: #8C8C8C;
+      --accent-light: rgba(122,140,110,0.08);
+      --bg: #FAFAF8;
+      --bg-warm: #F5F3EF;
+      --text: #2A2A2A;
+      --text-secondary: #4A4A4A;
+      --text-muted: #7A7A7A;
+      --border: #E8E5DF;
+      --font: 'Outfit', sans-serif;
+      --space-sm: 12px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 80px;
+      --space-4xl: 120px;
+      --max-w: 1100px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 22px; font-weight: 600; color: var(--text);
+      text-transform: lowercase; text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: var(--space-lg); list-style: none; }
+
+    .nav-link {
+      color: var(--text-secondary); text-decoration: none; font-size: 13px;
+      font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover, .nav-link.active { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      /* Placeholder gradient — replace with background-image when photo is ready */
+      background: url('assets/images/lyk-hero.jpg') center/cover no-repeat,
+                  linear-gradient(135deg, #2C3E2F 0%, #1D2B1F 40%, #3A4A3C 100%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 var(--space-xl);
+      color: white;
+    }
+
+    .hero-tag {
+      font-size: clamp(24px, 3.2vw, 38px); font-weight: 300; text-transform: uppercase;
+      letter-spacing: 0.14em; line-height: 1.6; color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px; font-weight: 300;
+      opacity: 0.85;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .hero h1 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 300;
+      line-height: 1.3;
+      margin-bottom: var(--space-xl);
+      color: white;
+    }
+
+    .hero-intro {
+      font-size: 16px; line-height: 1.8;
+      color: rgba(255,255,255,0.85);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .hero-intro + .hero-intro { margin-top: var(--space-md); }
+
+    /* DIVIDER */
+    .section-divider {
+      max-width: var(--max-w); margin: 0 auto;
+      height: 1px; background: var(--border);
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: var(--space-3xl) 32px;
+      max-width: var(--max-w); margin: 0 auto;
+    }
+
+    .section-full {
+      padding: var(--space-3xl) 32px;
+      background: var(--bg-warm);
+    }
+
+    .section-full .section-inner {
+      max-width: var(--max-w); margin: 0 auto;
+    }
+
+    .section-tag {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 300;
+      margin-bottom: var(--space-xl);
+      max-width: 600px;
+    }
+
+    .section-text {
+      font-size: 16px; line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: var(--space-xl);
+    }
+
+    /* FEATURE LIST */
+    .features {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 0;
+    }
+
+    .feature {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feature:first-child { border-top: 1px solid var(--border); }
+
+    .feature-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      margin-top: 8px; flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 15px; line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    .feature-text strong {
+      color: var(--text); font-weight: 500;
+    }
+
+    /* TWO COL */
+    .two-col {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: start;
+    }
+
+    /* HIGHLIGHT BLOCK */
+    .highlight-block {
+      background: var(--primary);
+      color: white;
+      padding: var(--space-3xl) 32px;
+      text-align: center;
+    }
+
+    .highlight-block .section-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+
+    .highlight-quote {
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: var(--space-lg);
+    }
+
+    .highlight-sub {
+      font-size: 14px; text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* STATS */
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+    }
+
+    .stat-number {
+      font-size: 40px; font-weight: 200;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px; color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* CTA */
+    .cta {
+      padding: var(--space-3xl) 32px;
+      text-align: center;
+      background: var(--bg);
+    }
+
+    .cta-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: 28px; font-weight: 300; margin-bottom: 12px;
+    }
+
+    .cta p {
+      font-size: 15px; color: var(--text-secondary); margin-bottom: var(--space-xl);
+    }
+
+    .cta-btn {
+      display: inline-block; padding: 14px 36px;
+      background: var(--primary); color: white;
+      text-decoration: none; border-radius: 8px;
+      font-weight: 600; font-size: 14px; transition: all 0.3s;
+    }
+
+    .cta-btn:hover { background: #2C3E2F; }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary); color: white;
+      padding: var(--space-2xl) 32px;
+    }
+
+    footer .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    footer h4 { font-size: 16px; font-weight: 500; margin-bottom: 15px; }
+    footer p { font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; transition: color 0.3s; }
+    footer a:hover { color: white; }
+
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .hero { padding: 140px 24px var(--space-3xl); }
+      .section, .section-full .section-inner { padding-left: 24px; padding-right: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="ds-nav static">
+    <div class="ds-nav-inner">
+      <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
+      <ul class="ds-nav-links">
+        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link active">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+      </ul>
+      <div class="ds-nav-langs">
+        <button class="ds-lang-btn">EN</button>
+        <button class="ds-lang-btn">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">LYK — Lubaba<br>Yarn Kitchen</p>
+      <p class="hero-subtitle">Bangladesh's First Transparent Waste-to-Yarn Ecosystem</p>
+      <h1>From waste to high-value yarn</h1>
+      <p class="hero-intro">LYK is our circular yarn initiative, transforming post-industrial textile waste into premium, traceable regenerated yarns for global brands.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 1: CIRCULAR SYSTEM -->
+  <div class="section">
+    <div class="reveal">
+      <p class="section-tag">The System</p>
+      <h2 class="section-title">A circular system, not just a product</h2>
+    </div>
+
+    <ul class="features">
+      <li class="feature">
+        <div class="feature-dot"></div>
+        <p class="feature-text"><strong>Waste-to-yarn transformation</strong> — post-industrial textile waste collected, sorted and processed into high-quality regenerated yarn</p>
+      </li>
+      <li class="feature">
+        <div class="feature-dot"></div>
+        <p class="feature-text"><strong>Traceability by design</strong> — batch-level tracking from raw waste to finished yarn, DPP (Digital Product Passport) readiness built in</p>
+      </li>
+      <li class="feature">
+        <div class="feature-dot"></div>
+        <p class="feature-text"><strong>Multi-application development</strong> — yarns engineered for knitwear, weaving and home textiles across different gauges and constructions</p>
+      </li>
+      <li class="feature">
+        <div class="feature-dot"></div>
+        <p class="feature-text"><strong>Scalable production model</strong> — from sample quantities to commercial volumes, designed for real supply chain integration</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SECTION 2: WHY THIS MATTERS -->
+  <div class="section-full">
+    <div class="section-inner">
+      <div class="two-col">
+        <div>
+          <div class="reveal">
+            <p class="section-tag">Context</p>
+            <h2 class="section-title">Why this matters</h2>
+          </div>
+          <p class="section-text">The global textile industry is shifting toward circular materials, driven by regulation, brand commitments and consumer expectations. LYK positions Fashion Comfort at the centre of this transition — not as a follower, but as an enabler.</p>
+        </div>
+        <div>
+          <ul class="features">
+            <li class="feature">
+              <div class="feature-dot"></div>
+              <p class="feature-text"><strong>Value retention</strong> — keeping materials in use longer, reducing waste and preserving the value embedded in fibres</p>
+            </li>
+            <li class="feature">
+              <div class="feature-dot"></div>
+              <p class="feature-text"><strong>Reduced dependency</strong> — less reliance on external virgin fibre sourcing, more control over the material pipeline</p>
+            </li>
+            <li class="feature">
+              <div class="feature-dot"></div>
+              <p class="feature-text"><strong>EU regulation readiness</strong> — aligned with upcoming European textile waste and traceability legislation</p>
+            </li>
+            <li class="feature">
+              <div class="feature-dot"></div>
+              <p class="feature-text"><strong>Upstream control</strong> — direct ownership of material inputs, from collection through yarn spinning</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section">
+    <div class="reveal">
+      <p class="section-tag">Impact</p>
+      <h2 class="section-title">Environmental performance</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <p class="stat-number">75%</p>
+        <p class="stat-label">Reduction in water consumption compared to conventional yarn production</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number">60%</p>
+        <p class="stat-label">Lower carbon footprint vs. virgin synthetic alternatives</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number">100%</p>
+        <p class="stat-label">Traceable material origin — from waste source to finished yarn</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 3: INTEGRATION -->
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <div class="reveal">
+          <p class="section-tag">Integration</p>
+          <h2 class="section-title">Connected to development and production</h2>
+        </div>
+        <p class="section-text">LYK is not a standalone initiative — it is directly integrated with our sampling facility and production operations, enabling a seamless path from material innovation to finished garments.</p>
+      </div>
+      <div>
+        <ul class="features">
+          <li class="feature">
+            <div class="feature-dot"></div>
+            <p class="feature-text"><strong>Faster experimentation</strong> — test new yarn blends and compositions directly in our sample home</p>
+          </li>
+          <li class="feature">
+            <div class="feature-dot"></div>
+            <p class="feature-text"><strong>Yarn-to-garment development</strong> — from regenerated yarn to knitted sample in one integrated workflow</p>
+          </li>
+          <li class="feature">
+            <div class="feature-dot"></div>
+            <p class="feature-text"><strong>Quality control</strong> — continuous feedback loop between yarn production and garment manufacturing</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHT -->
+  <div class="highlight-block">
+    <div class="section-inner">
+      <p class="highlight-quote">"Designed as a circular yarn platform — not just a recycling initiative."</p>
+      <p class="highlight-sub">LYK Project — Fashion Comfort Group</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-inner">
+      <h2 class="reveal">Interested in LYK?</h2>
+      <p class="reveal">Partner with us to integrate circular, traceable yarns into your supply chain</p>
+      <a href="index.html#contact" class="cta-btn">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="ds-footer-logo">Fashion Comfort</p>
+        <p class="ds-footer-tagline">Knitwear manufacturer partner since 2002</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style: none;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none;">
+          <li><a href="mailto:contact@fashioncomfort.com">contact@fashioncomfort.com</a></li>
+          <li><a href="https://linkedin.com/company/fashion-comfort-group" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/fashioncomfortgroup" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center;">
+      <p style="opacity: 0.4; font-size: 12px;">&copy; 2026 Fashion Comfort Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // No animations - all content visible immediately
+  </script>
+
+</body>
+</html>

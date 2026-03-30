@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Founders | Fashion Comfort Group</title>
+  <meta name="description" content="Meet the founders of Fashion Comfort Group — Md. Afzalur Rahman, Salma Rahman and Sadman Ishraq Hamid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    /* ============================================================ */
+    /* LUXURY MINIMALISM DESIGN SYSTEM */
+    /* ============================================================ */
+    :root {
+      --primary: #1D2B1F;
+      --accent: #8C8C8C;
+      --background: #F9F9F7;
+      --text-primary: #1D2B1F;
+      --text-secondary: #4A4A4A;
+      --text-muted: #7A7A7A;
+      --border: #E8E5DF;
+      --charcoal: #2C3E2F;
+      --stone: #F5F5F1;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Outfit', sans-serif;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background-color: var(--background);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(249, 249, 247, 0);
+      backdrop-filter: blur(0px);
+      transition: all 0.4s ease-out;
+    }
+
+    nav.scrolled {
+      background: rgba(249, 249, 247, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      text-transform: lowercase;
+      transition: color 0.3s;
+    }
+
+    nav.scrolled .nav-logo {
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-lg);
+      list-style: none;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    nav.scrolled .nav-link {
+      color: var(--text-secondary);
+    }
+
+    .nav-link:hover,
+    .nav-link.nav-active {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: var(--space-3xl) var(--space-lg);
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 600;
+      margin-bottom: var(--space-2xl);
+      letter-spacing: -0.02em;
+    }
+
+    section h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Hero */
+    #hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1D2B1F 0%, #2C3E2F 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      color: white;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 6vw, 80px);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.02em;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      font-weight: 300;
+      opacity: 0.8;
+      margin-bottom: var(--space-2xl);
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    /* Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--stone);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 32px rgba(29, 43, 31, 0.1);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .content-text p {
+      margin-bottom: var(--space-lg);
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .content-image {
+      background: var(--stone);
+      border-radius: 8px;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+
+    /* Lists */
+    .feature-list {
+      list-style: none;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .feature-list li::before {
+      content: "\2192";
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    /* Founder Profile */
+    .founder-profile {
+      margin-bottom: var(--space-3xl);
+    }
+
+    .founder-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: var(--space-xl);
+    }
+
+    .founder-avatar {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .founder-name {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .founder-role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .founder-bio {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: var(--space-2xl) var(--space-lg);
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer .section-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+
+    footer h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        padding: var(--space-2xl) var(--space-lg);
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      .founder-header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: var(--space-xl) var(--space-lg);
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="ds-nav static">
+    <div class="ds-nav-inner">
+      <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
+      <ul class="ds-nav-links">
+        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link active">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+      </ul>
+      <div class="ds-nav-langs">
+        <button class="ds-lang-btn">EN</button>
+        <button class="ds-lang-btn">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Our Founders</h1>
+      <p class="hero-subtitle">The people behind Fashion Comfort Group</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER 1: MD. AFZALUR RAHMAN -->
+  <section id="afzalur" style="background-color: white;">
+    <div class="section-inner">
+      <div class="founder-profile reveal">
+        <div class="founder-header">
+          <div class="founder-avatar"></div>
+          <div>
+            <h2 class="founder-name" style="margin-bottom: 5px;">Md. Afzalur Rahman</h2>
+            <p class="founder-role">Managing Director</p>
+          </div>
+        </div>
+        <p class="founder-bio">
+          Md. Afzalur Rahman leads the overall strategic direction of Fashion Comfort Group with vision and innovation. As Managing Director, he has been instrumental in building the company from its founding in 2002 into an internationally recognised knitwear manufacturing partner.
+        </p>
+        <p class="founder-bio" style="margin-top: var(--space-lg);">
+          Under his leadership, the group has expanded operations across multiple countries, established direct production facilities in Bangladesh, and built long-term relationships with leading fashion brands across Europe and Asia. His commitment to quality, reliability and responsible production continues to define the company's approach.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER 2: SALMA RAHMAN -->
+  <section id="salma" style="background-color: var(--stone);">
+    <div class="section-inner">
+      <div class="founder-profile reveal">
+        <div class="founder-header">
+          <div class="founder-avatar"></div>
+          <div>
+            <h2 class="founder-name" style="margin-bottom: 5px;">Salma Rahman</h2>
+            <p class="founder-role">Chairman</p>
+          </div>
+        </div>
+        <p class="founder-bio">
+          Salma Rahman oversees financial planning and strategic risk management for Fashion Comfort Group. As Chairman, she provides governance and strategic oversight ensuring the company maintains its financial health and sustainable growth trajectory.
+        </p>
+        <p class="founder-bio" style="margin-top: var(--space-lg);">
+          Her expertise in financial management and corporate governance has been essential in navigating the complexities of international textile manufacturing, from managing supply chain economics to ensuring compliance with global trade regulations and sustainability standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER 3: SADMAN ISHRAQ HAMID -->
+  <section id="sadman" style="background-color: white;">
+    <div class="section-inner">
+      <div class="founder-profile reveal">
+        <div class="founder-header">
+          <div class="founder-avatar"></div>
+          <div>
+            <h2 class="founder-name" style="margin-bottom: 5px;">Sadman Ishraq Hamid</h2>
+            <p class="founder-role">Director</p>
+          </div>
+        </div>
+        <p class="founder-bio">
+          Sadman Ishraq Hamid coordinates the regenerated yarn facility and sustainability initiatives at Fashion Comfort Group. As Director, he drives the company's commitment to circular economy principles and environmental responsibility.
+        </p>
+        <p class="founder-bio" style="margin-top: var(--space-lg);">
+          His work on the LYK Project and Lubaba Yarn Kitchen represents the next generation of the company's vision — developing innovative regenerated yarn technology and building transparent waste-to-yarn ecosystems that position Fashion Comfort at the forefront of sustainable textile manufacturing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section id="cta" style="background: linear-gradient(135deg, #1D2B1F 0%, #2C3E2F 100%); color: white; text-align: center;">
+    <div class="section-inner">
+      <h2 class="reveal" style="color: white;">Work With Us</h2>
+      <p class="reveal" style="font-size: 18px; margin-bottom: 30px; opacity: 0.8; animation-delay: 0.1s;">Partner with a team that values quality, transparency and long-term relationships</p>
+      <a href="index.html#contact" class="reveal" style="display: inline-block; padding: 14px 32px; background: var(--accent); color: var(--primary); text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s; animation-delay: 0.2s;">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="section-inner">
+      <div>
+        <h4 style="font-family: var(--font-display);">fashion comfort</h4>
+        <p style="opacity: 0.7;">Knitwear manufacturing partner since 2002</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style: none;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none;">
+          <li><a href="mailto:contact@fashioncomfort.com">contact@fashioncomfort.com</a></li>
+          <li><a href="https://linkedin.com/company/fashion-comfort-group" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/fashioncomfortgroup" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center;">
+      <p style="opacity: 0.5; font-size: 12px;">&copy; 2026 Fashion Comfort Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    const i18n = {
+      currentLang: 'en',
+      switchLanguage(lang) {
+        this.currentLang = lang;
+        console.log('Switched to language:', lang);
+      }
+    };
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll('.reveal').forEach((el, index) => {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+        },
+        duration: 0.6,
+        delay: index * 0.05
+      });
+    });
+  </script>
+
+</body>
+</html>

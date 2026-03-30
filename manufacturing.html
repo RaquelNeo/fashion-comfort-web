@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturing | Fashion Comfort Group</title>
+  <meta name="description" content="ASDWA Fashion Ltd. — our integrated knitwear manufacturing facility with over 300 knitting machines and 2,500 workers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <style>
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 160px 32px 80px;
+      background: var(--primary);
+      color: white;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero h1 {
+      font-family: var(--font-body);
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 200; line-height: 1.2;
+      margin-bottom: var(--space-md);
+      max-width: 640px;
+    }
+
+    .hero-sub {
+      font-size: 18px; font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: var(--space-xl);
+      max-width: 560px;
+    }
+
+    .hero-text {
+      font-size: 16px; line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      max-width: 560px;
+    }
+
+    /* Sections */
+    .sec { padding: 80px 32px; }
+    .sec-inner { max-width: var(--max-width); margin: 0 auto; }
+    .sec--white { background: var(--white); }
+    .sec--stone { background: var(--stone); }
+
+    .sec-tag {
+      font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: var(--space-sm);
+    }
+
+    .sec-title {
+      font-family: var(--font-body);
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 200; color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+      max-width: 600px; line-height: 1.25;
+    }
+
+    .sec-text {
+      font-size: 16px; line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 560px;
+    }
+
+    /* Two col */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+
+    .col-img {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--stone);
+      aspect-ratio: 4/3;
+    }
+
+    .col-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    /* Cards grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sec--white .card { background: var(--stone); }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+    }
+
+    .card h4 {
+      font-family: var(--font-body);
+      font-size: 15px; font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .card p {
+      font-size: 13px; line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* Mini list */
+    .mini-list {
+      list-style: none; padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px; margin-top: var(--space-xl);
+    }
+
+    .mini-list li {
+      font-size: 14px; color: var(--text-secondary);
+      padding-left: 16px; position: relative;
+      line-height: 1.6;
+    }
+
+    .mini-list li::before {
+      content: '\2022'; position: absolute;
+      left: 0; color: var(--accent);
+    }
+
+    /* Highlight */
+    .highlight {
+      background: var(--primary);
+      border-radius: var(--radius-md);
+      padding: 32px 40px; text-align: center;
+      margin-top: var(--space-2xl);
+    }
+
+    .highlight p {
+      font-size: 17px; font-weight: 300;
+      color: white; line-height: 1.6;
+    }
+
+    /* Feature list (responsible) */
+    .resp-list {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column;
+      gap: 12px; max-width: 560px;
+    }
+
+    .resp-list li {
+      font-size: 15px; color: var(--text-secondary);
+      padding: 16px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      transition: transform 0.3s ease;
+    }
+
+    .resp-list li:hover { transform: translateX(4px); }
+
+    /* Visual break */
+    .visual-break {
+      height: 240px; overflow: hidden;
+      background: var(--primary);
+    }
+
+    .visual-break video,
+    .visual-break img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      opacity: 0.5;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 80px 32px;
+      background: var(--primary);
+      color: white; text-align: center;
+    }
+
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+
+    .cta h2 {
+      font-family: var(--font-body);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 200; margin-bottom: 12px;
+    }
+
+    .cta p { font-size: 15px; opacity: 0.6; margin-bottom: var(--space-xl); }
+
+    .cta-btn {
+      display: inline-block; padding: 14px 36px;
+      background: white; color: var(--primary);
+      text-decoration: none; border-radius: 8px;
+      font-weight: 600; font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover { background: var(--stone); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 130px 24px 60px; }
+      .sec { padding: 56px 24px; }
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+      .mini-list { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="ds-nav static">
+    <div class="ds-nav-inner">
+      <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
+      <ul class="ds-nav-links">
+        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link active">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+      </ul>
+      <div class="ds-nav-langs">
+        <button class="ds-lang-btn">EN</button>
+        <button class="ds-lang-btn">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Manufacturing</p>
+      <h1>Production with control, not just capacity</h1>
+      <p class="hero-sub">Our production facility, ASDWA Fashion Ltd., is at the core of our operations.</p>
+      <p class="hero-text">This allows us to maintain direct control over quality, processes and delivery at every stage — from development to bulk production.</p>
+    </div>
+  </section>
+
+  <!-- 2. PRODUCTION OVERVIEW -->
+  <section class="sec sec--white">
+    <div class="sec-inner">
+      <div class="two-col">
+        <div>
+          <p class="sec-tag">Overview</p>
+          <p class="sec-title">Integrated knitwear manufacturing</p>
+          <p class="sec-text">We operate a fully integrated knitwear manufacturing facility in Bangladesh, combining modern machinery, experienced teams and structured workflows. Our setup is designed to ensure consistency, scalability and reliable lead times across all programs.</p>
+        </div>
+        <div class="col-img" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #E8E5DF 0%, #D8D5CF 100%);">
+          <p style="font-size: 12px; color: var(--text-muted); text-align: center; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.8; padding: 20px;">Factory interior<br>Production floor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CAPACITY & STRUCTURE -->
+  <section class="sec sec--stone">
+    <div class="sec-inner">
+      <p class="sec-tag">Capacity</p>
+      <p class="sec-title">Structure & scale</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>Production capacity</h4>
+          <p>Over 1.2 million pieces annually across knitwear categories</p>
+        </div>
+        <div class="card">
+          <h4>Machinery</h4>
+          <p>300+ computerized flat knitting machines (3GG–14GG)</p>
+        </div>
+        <div class="card">
+          <h4>Workforce</h4>
+          <p>2,500+ skilled workers across production and technical teams</p>
+        </div>
+        <div class="card">
+          <h4>Product categories</h4>
+          <p>Sweaters, cardigans, flat knit and seamless knitwear</p>
+        </div>
+        <div class="card">
+          <h4>Lead times</h4>
+          <p>Flexible planning adapted to program complexity and volume</p>
+        </div>
+        <div class="card">
+          <h4>Integrated development</h4>
+          <p>Direct connection between sample development and bulk production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MACHINERY & TECHNOLOGY -->
+  <section class="sec sec--white">
+    <div class="sec-inner">
+      <div class="two-col">
+        <div>
+          <p class="sec-tag">Technology</p>
+          <p class="sec-title">Machinery & technology</p>
+          <p class="sec-text">Our facilities are equipped with advanced knitting technology, enabling a wide range of gauges, constructions and finishes. This allows us to translate design concepts into production-ready garments with precision and consistency.</p>
+
+          <ul class="mini-list">
+            <li>Multi-gauge capability (3GG–14GG)</li>
+            <li>Jacquard and structure development</li>
+            <li>Advanced finishing techniques</li>
+            <li>Continuous machinery upgrades</li>
+          </ul>
+        </div>
+        <div class="col-img" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #E8E5DF 0%, #D8D5CF 100%);">
+          <p style="font-size: 12px; color: var(--text-muted); text-align: center; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.8; padding: 20px;">Knitting machines<br>Close-up detail</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. QUALITY CONTROL -->
+  <section class="sec sec--stone">
+    <div class="sec-inner">
+      <p class="sec-tag">Quality</p>
+      <p class="sec-title">Quality control & consistency</p>
+      <p class="sec-text" style="margin-bottom: var(--space-2xl);">Quality is integrated into every stage of our production process, from yarn selection to final inspection.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>In-line quality control</h4>
+          <p>Dedicated teams on every production line</p>
+        </div>
+        <div class="card">
+          <h4>Final inspection</h4>
+          <p>Garments checked before packing and shipment</p>
+        </div>
+        <div class="card">
+          <h4>Standardized processes</h4>
+          <p>Controlled and repeatable production workflows</p>
+        </div>
+        <div class="card">
+          <h4>Sample-to-bulk alignment</h4>
+          <p>Consistency between approved samples and production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PRODUCTION MODEL -->
+  <section class="sec sec--white">
+    <div class="sec-inner">
+      <div class="two-col">
+        <div>
+          <p class="sec-tag">Model</p>
+          <p class="sec-title">Production model</p>
+          <p class="sec-text">Our production is primarily driven by our own manufacturing facility, ensuring full control and consistency. When required by program scale or timing, selected external capacity supports production under our supervision and quality standards.</p>
+        </div>
+        <div class="col-img" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #E8E5DF 0%, #D8D5CF 100%);">
+          <p style="font-size: 12px; color: var(--text-muted); text-align: center; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.8; padding: 20px;">Production line<br>Workers & machinery</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <p>Scalable production without compromising control or consistency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-inner">
+      <h2>Work With Us</h2>
+      <p>Partner with a team that values quality, control and long-term reliability</p>
+      <a href="index.html#contact" class="cta-btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ds-footer">
+    <div class="ds-footer-inner">
+      <div>
+        <p class="ds-footer-logo">Fashion Comfort</p>
+        <p class="ds-footer-tagline">Knitwear manufacturer partner since 2002</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style: none;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none;">
+          <li><a href="mailto:contact@fashioncomfort.com">contact@fashioncomfort.com</a></li>
+          <li><a href="https://linkedin.com/company/fashion-comfort-group" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/fashioncomfortgroup" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ds-footer-bottom">
+      <p>&copy; 2026 Fashion Comfort Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
