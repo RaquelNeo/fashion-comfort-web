@@ -33,7 +33,7 @@
 
   // Menu panel — inline styles to avoid any CSS conflicts
   var menu = document.createElement('div');
-  menu.style.cssText = 'position:fixed;top:14px;right:12px;bottom:14px;width:75vw;max-width:280px;background:rgba(245,245,241,0.92);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.06);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:44px 24px 28px;overflow-y:auto;';
+  menu.style.cssText = 'position:fixed;top:14px;right:12px;bottom:14px;width:75vw;max-width:280px;background:rgba(245,245,241,0.5);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.06);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:44px 24px 28px;overflow-y:auto;';
 
   var linksHTML = links.map(function(l) {
     var active = currentPage === l.href || (currentPage === 'founders.html' && l.href === 'our-history.html');
@@ -48,6 +48,7 @@
   document.body.appendChild(menu);
 
   var isOpen = false;
+  var autoCloseTimer = null;
 
   function openMenu() {
     isOpen = true;
@@ -60,10 +61,15 @@
     overlay.style.visibility = 'visible';
     overlay.style.pointerEvents = 'auto';
     document.body.style.overflow = 'hidden';
+
+    // Auto-close after 2 seconds
+    if (autoCloseTimer) clearTimeout(autoCloseTimer);
+    autoCloseTimer = setTimeout(function() { closeMenu(); }, 2000);
   }
 
   function closeMenu() {
     isOpen = false;
+    if (autoCloseTimer) { clearTimeout(autoCloseTimer); autoCloseTimer = null; }
     hamburger.classList.remove('open');
     menu.style.transform = 'translateX(calc(100% + 24px))';
     menu.style.opacity = '0';
