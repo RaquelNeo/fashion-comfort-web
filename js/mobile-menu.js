@@ -33,17 +33,17 @@
 
   // Menu panel — inline styles to avoid any CSS conflicts
   var menu = document.createElement('div');
-  menu.style.cssText = 'position:fixed;top:14px;right:12px;bottom:14px;width:75vw;max-width:280px;background:rgba(245,245,241,0.5);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.06);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:44px 24px 28px;overflow-y:auto;';
+  menu.style.cssText = 'position:fixed;top:14px;right:12px;width:75vw;max-width:280px;background:rgba(29,43,31,0.70);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:24px 24px 20px;';
 
   var linksHTML = links.map(function(l) {
     var active = currentPage === l.href || (currentPage === 'founders.html' && l.href === 'our-history.html');
-    return '<a href="' + l.href + '" style="display:block;font-family:Outfit,sans-serif;font-size:13px;font-weight:400;color:' + (active ? '#1D2B1F' : '#7A7A7A') + ';text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;padding:14px 0;border-bottom:1px solid rgba(0,0,0,0.04);">' + l.label + '</a>';
+    return '<a href="' + l.href + '" style="display:block;font-family:Outfit,sans-serif;font-size:13px;font-weight:400;color:' + (active ? '#ffffff' : 'rgba(255,255,255,0.65)') + ';text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.1);">' + l.label + '</a>';
   }).join('');
 
   menu.innerHTML = '<div>' + linksHTML + '</div>' +
     '<div style="display:flex;gap:6px;margin-top:auto;padding-top:20px;">' +
-      '<button style="background:none;border:1px solid rgba(0,0,0,0.06);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#7A7A7A;cursor:pointer;padding:7px 16px;" class="ml-btn">EN</button>' +
-      '<button style="background:none;border:1px solid rgba(0,0,0,0.06);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#7A7A7A;cursor:pointer;padding:7px 16px;" class="ml-btn">ES</button>' +
+      '<button style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65);cursor:pointer;padding:7px 16px;" class="ml-btn">EN</button>' +
+      '<button style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65);cursor:pointer;padding:7px 16px;" class="ml-btn">ES</button>' +
     '</div>';
   document.body.appendChild(menu);
 
