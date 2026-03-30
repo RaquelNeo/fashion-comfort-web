@@ -71,9 +71,12 @@
   hamburger.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', closeMenu);
 
-  // Close on link click
-  menu.querySelectorAll('.ds-mobile-menu-link').forEach(function(link) {
-    link.addEventListener('click', closeMenu);
+  // Close on any click inside menu (links + lang buttons)
+  menu.addEventListener('click', function(e) {
+    if (e.target.classList.contains('ds-mobile-menu-link') ||
+        e.target.classList.contains('ds-mobile-lang-btn')) {
+      closeMenu();
+    }
   });
 
   // Close on escape key
