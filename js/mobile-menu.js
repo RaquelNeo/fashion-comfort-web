@@ -33,7 +33,7 @@
 
   // Menu panel — inline styles to avoid any CSS conflicts
   var menu = document.createElement('div');
-  menu.style.cssText = 'position:fixed;top:14px;right:12px;width:75vw;max-width:280px;background:rgba(29,43,31,0.70);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:24px 24px 20px;';
+  menu.style.cssText = 'position:fixed;top:14px;right:12px;width:75vw;max-width:280px;background:rgba(29,43,31,0.90);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:200;transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform 0.28s ease-out,opacity 0.22s ease-out,visibility 0s linear 0.3s;display:flex;flex-direction:column;padding:24px 24px 20px;';
 
   var linksHTML = links.map(function(l) {
     var active = currentPage === l.href || (currentPage === 'founders.html' && l.href === 'our-history.html');
