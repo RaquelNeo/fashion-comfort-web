@@ -318,8 +318,6 @@
     let allProducts = [];
     const grid = document.getElementById('feed-grid');
     const emptyMsg = document.getElementById('feed-empty');
-    const counter = document.getElementById('feed-counter');
-    const filtersContainer = document.getElementById('feed-filters');
 
     function mainComposition(comp) {
       if (!comp) return '';
@@ -335,9 +333,8 @@
 
     function renderFeed(products) {
       grid.innerHTML = '';
-      if (!products.length) { emptyMsg.style.display = 'block'; counter.textContent = ''; return; }
+      if (!products.length) { emptyMsg.style.display = 'block'; return; }
       emptyMsg.style.display = 'none';
-      counter.textContent = products.length + ' production' + (products.length !== 1 ? 's' : '');
 
       products.forEach(function(p) {
         var a = document.createElement('a');
