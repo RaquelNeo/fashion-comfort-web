@@ -1,6 +1,5 @@
 selenium==4.27.1
 beautifulsoup4==4.12.3
-pandas==2.2.3
-openpyxl==3.1.5
 requests==2.32.3
-Pillow==11.1.0
+gspread==6.1.4
+google-auth==2.38.0

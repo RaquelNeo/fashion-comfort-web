@@ -19,6 +19,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+import gspread
+from google.oauth2.service_account import Credentials
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -28,11 +30,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+BACKEND_DIR = Path(__file__).resolve().parent
 DATA_DIR = PROJECT_ROOT / 'data'
 IMAGES_DIR = PROJECT_ROOT / 'assets' / 'images' / 'products'
 CSV_PATH = PROJECT_ROOT / 'products_references.csv'
 OUTPUT_JSON = DATA_DIR / 'products.json'
 PRODUCTS_DATA_JSON = PROJECT_ROOT / 'products_data.json'
+
+# Google Sheets config
+CREDENTIALS_FILE = BACKEND_DIR / 'credentials.json'
+SHEET_ID = '19aow05P-eZLxisih2vbC8rjTqDSXObxYWF511KiBJO8'
 
 BRAND_URLS = {
     'pullbear': 'https://www.pullandbear.com',
@@ -78,20 +85,45 @@ def create_driver():
 
 
 def read_references():
+    """Read product references from Google Sheets, fallback to local CSV."""
     references = []
-    if not CSV_PATH.exists():
-        print(f"ERROR: {CSV_PATH} not found")
+
+    # Try Google Sheets first
+    if CREDENTIALS_FILE.exists():
+        try:
+            print("Reading from Google Sheets...")
+            scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+            creds = Credentials.from_service_account_file(str(CREDENTIALS_FILE), scopes=scopes)
+            gc = gspread.authorize(creds)
+            sheet = gc.open_by_key(SHEET_ID).sheet1
+            rows = sheet.get_all_records()
+            for row in rows:
+                # Case-insensitive header lookup
+                row_lower = {k.lower(): v for k, v in row.items()}
+                brand = str(row_lower.get('marca', '')).strip().lower()
+                ref = str(row_lower.get('referencia', '')).strip()
+                if brand and ref:
+                    references.append({'brand': brand, 'reference': ref})
+            print(f"Found {len(references)} references from Google Sheets")
+            return references
+        except Exception as e:
+            print(f"Google Sheets error: {e}")
+            print("Falling back to local CSV...")
+
+    # Fallback to local CSV
+    if CSV_PATH.exists():
+        with open(CSV_PATH, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                brand = row.get('Marca', '').strip().lower()
+                ref = row.get('Referencia', '').strip()
+                if brand and ref:
+                    references.append({'brand': brand, 'reference': ref})
+        print(f"Found {len(references)} references from local CSV")
+    else:
+        print("ERROR: No Google Sheets credentials and no local CSV found")
         sys.exit(1)
 
-    with open(CSV_PATH, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            brand = row.get('Marca', '').strip().lower()
-            ref = row.get('Referencia', '').strip()
-            if brand and ref:
-                references.append({'brand': brand, 'reference': ref})
-
-    print(f"Found {len(references)} product references")
     return references
 
 
