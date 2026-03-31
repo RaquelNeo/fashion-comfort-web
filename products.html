@@ -366,8 +366,12 @@
       renderFeed(filtered);
     }
 
-    fetch('products_data.json')
-      .then(function(r) { return r.json(); })
+    var jsonUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'products_data.json';
+    fetch(jsonUrl)
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
       .then(function(data) {
         allProducts = data.filter(function(p) { return p.status === 'found'; });
 
@@ -387,7 +391,11 @@
 
         renderFeed(allProducts);
       })
-      .catch(function() { emptyMsg.style.display = 'block'; });
+      .catch(function(err) {
+        console.error('Products load error:', err);
+        emptyMsg.innerHTML = '<p>Error loading products: ' + err.message + '</p>';
+        emptyMsg.style.display = 'block';
+      });
   </script>
 
 <script src="js/mobile-menu.js"></script>
