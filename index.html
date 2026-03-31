@@ -998,5 +998,13 @@
   <script src="js/timeline.js"></script>
   <script src="js/portfolio.js"></script>
 <script src="js/mobile-menu.js"></script>
+<script>
+if (window.location.hash) {
+  setTimeout(function() {
+    var el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 300);
+}
+</script>
 </body>
 </html>
