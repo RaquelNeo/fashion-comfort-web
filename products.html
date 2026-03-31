@@ -366,35 +366,21 @@
       renderFeed(filtered);
     }
 
-    var jsonUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'products_data.json';
-    fetch(jsonUrl)
+    fetch('products_data.json')
       .then(function(r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
       })
       .then(function(data) {
         allProducts = data.filter(function(p) { return p.status === 'found'; });
-
-        // Build filter tabs from available brands
-        var brands = [];
-        allProducts.forEach(function(p) {
-          if (brands.indexOf(p.brand) === -1) brands.push(p.brand);
-        });
-        brands.forEach(function(b) {
-          var btn = document.createElement('button');
-          btn.className = 'feed-tab';
-          btn.setAttribute('data-filter', b);
-          btn.textContent = (b === 'zara' ? 'ZARA' : b === 'mango' ? 'MANGO' : b === 'pullbear' ? 'PULL&BEAR' : b.toUpperCase());
-          btn.onclick = function() { filterFeed(b); };
-          filtersContainer.appendChild(btn);
-        });
-
         renderFeed(allProducts);
       })
       .catch(function(err) {
         console.error('Products load error:', err);
-        emptyMsg.innerHTML = '<p>Error loading products: ' + err.message + '</p>';
-        emptyMsg.style.display = 'block';
+        if (emptyMsg) {
+          emptyMsg.innerHTML = '<p>Error: ' + err.message + '</p>';
+          emptyMsg.style.display = 'block';
+        }
       });
   </script>
 
