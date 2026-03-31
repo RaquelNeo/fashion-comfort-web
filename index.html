@@ -999,12 +999,16 @@
   <script src="js/portfolio.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script>
-if (window.location.hash) {
-  setTimeout(function() {
+window.addEventListener('load', function() {
+  if (window.location.hash) {
     var el = document.querySelector(window.location.hash);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }, 300);
-}
+    if (el) {
+      setTimeout(function() {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
+  }
+});
 </script>
 </body>
 </html>
