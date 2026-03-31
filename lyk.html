@@ -79,9 +79,16 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      /* Placeholder gradient — replace with background-image when photo is ready */
-      background: url('assets/images/lyk-hero.jpg') center/cover no-repeat,
-                  linear-gradient(135deg, #2C3E2F 0%, #1D2B1F 40%, #3A4A3C 100%);
+      background: linear-gradient(135deg, #2C3E2F 0%, #1D2B1F 40%, #3A4A3C 100%);
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
 
     .hero::after {
@@ -340,6 +347,9 @@
 
   <!-- HERO -->
   <div class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/hero-video-source/LYK-hero-video.mp4" type="video/mp4">
+    </video>
     <div class="hero-content">
       <p class="hero-tag">LYK<br>Lubaba Yarn Kitchen</p>
       <p class="hero-subtitle">Bangladesh's First Transparent<br>Waste-to-Yarn Ecosystem</p>
