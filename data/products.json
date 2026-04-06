@@ -169,7 +169,7 @@
   },
   {
     "brand": "zara",
-    "brandDisplay": "ZARA",
+    "brandDisplay": "ZARA MAN",
     "reference": "03284752",
     "name": "POLO CON LINO Y ALGODÓN",
     "image": "https://static.zara.net/assets/public/993e/2944/b0874c20a8ed/39c70d18e158/03284752705-e1/03284752705-e1.jpg?ts=1768290239682&w=1920",
@@ -199,7 +199,7 @@
     "image": "https://static.zara.net/assets/public/77a1/7eb4/e61d43e7adfd/92ca83a5fc79/03332404800-p/03332404800-p.jpg?ts=1766999454680&w=1920",
     "imageLocal": "assets/images/products/zara_03284400.jpg",
     "productUrl": "https://www.zara.com/es/es/jersey-punto-perlado-cuello-cremallera-p03332404.html",
-    "composition": "3%B",
+    "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-04-06T19:24:35.946440+00:00"
   },
@@ -211,7 +211,7 @@
     "image": "https://static.zara.net/assets/public/d1a0/6ce4/622c412199da/3c77e12a1986/03284403300-p/03284403300-p.jpg?ts=1770826316085&w=1920",
     "imageLocal": "assets/images/products/zara_03284403.jpg",
     "productUrl": "https://www.zara.com/es/es/chaleco-punto-jacquard-cuadros-p03284403.html",
-    "composition": "3%B",
+    "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-04-06T19:24:44.179545+00:00"
   },
@@ -223,7 +223,7 @@
     "image": "https://static.zara.net/assets/public/dd77/a987/4c474bf78a56/bd138637d69d/03284405401-p/03284405401-p.jpg?ts=1770649724807&w=1920",
     "imageLocal": "assets/images/products/zara_03284405.jpg",
     "productUrl": "https://www.zara.com/es/es/polo-punto-relaxed-fit-rayas-p03284405.html",
-    "composition": "3%B",
+    "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-04-06T19:24:52.654747+00:00"
   },
@@ -235,7 +235,7 @@
     "image": "https://static.zara.net/assets/public/06ed/2b84/504e448d8001/4f6edd794244/03284412800-p/03284412800-p.jpg?ts=1771258927858&w=1920",
     "imageLocal": "assets/images/products/zara_03284412.jpg",
     "productUrl": "https://www.zara.com/es/es/jersey-estructura-lavado-p03284412.html",
-    "composition": "3%B",
+    "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-04-06T19:25:01.150990+00:00"
   },
@@ -247,7 +247,7 @@
     "image": "https://static.zara.net/assets/public/e084/3061/f51e4fe1a6e3/30e31c630e66/03284417401-p/03284417401-p.jpg?ts=1774370359360&w=1920",
     "imageLocal": "assets/images/products/zara_03284417.jpg",
     "productUrl": "https://www.zara.com/es/es/polo-punto-rayas-willy-chavarria-x-zara-p03284417.html",
-    "composition": "3%B",
+    "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-04-06T19:25:09.872968+00:00"
   }
