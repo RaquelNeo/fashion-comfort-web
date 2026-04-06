@@ -175,11 +175,15 @@ body {
 .lang-flag {
   position: absolute;
   inset: 0;
-  font-size: 38px;
-  line-height: 0.68;
-  text-align: center;
-  filter: saturate(0.85);
-  transition: filter 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .lang-code {
@@ -198,16 +202,8 @@ body {
   transform: translateY(-1px);
 }
 
-.ds-lang-btn:hover .lang-flag {
-  filter: saturate(1.1);
-}
-
 .ds-lang-btn.active {
   border-color: var(--primary);
-}
-
-.ds-lang-btn.active .lang-flag {
-  filter: saturate(1);
 }
 
 /* Lang btn in non-static nav (transparent hero nav) */
