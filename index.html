@@ -905,31 +905,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
   
   <script>
-    // Simple i18n object for translations
-    const i18n = {
-      currentLang: 'en',
-      translations: {},
-      
-      switchLanguage(lang) {
-        this.currentLang = lang;
-        this.loadTranslations(lang);
-        this.updatePage();
-      },
-      
-      loadTranslations(lang) {
-        // This will be replaced by actual translation loading
-        console.log('Loading translations for:', lang);
-      },
-      
-      updatePage() {
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          // For now, just update language indicators
-        });
-      }
-    };
-
     // Navigation scroll effect
     const navbar = document.getElementById('navbar');
     let lastScroll = 0;
