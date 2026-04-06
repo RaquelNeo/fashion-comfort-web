@@ -121,11 +121,18 @@ def read_references():
             rows = sheet.get_all_records()
             for row in rows:
                 # Case-insensitive header lookup
-                row_lower = {k.lower(): v for k, v in row.items()}
+                row_lower = {k.lower().strip(): v for k, v in row.items()}
                 brand = str(row_lower.get('marca', '')).strip().lower()
                 ref = str(row_lower.get('referencia', '')).strip()
                 if brand and ref:
-                    references.append({'brand': brand, 'reference': ref})
+                    entry = {'brand': brand, 'reference': ref}
+                    # Optional manual fields (for brands that block scraping)
+                    for field, key in [('image', 'image'), ('name', 'name'),
+                                       ('composition', 'composition'), ('url', 'url')]:
+                        val = str(row_lower.get(field, '')).strip()
+                        if val:
+                            entry[key] = val
+                    references.append(entry)
             print(f"Found {len(references)} references from Google Sheets")
             return references
         except Exception as e:
@@ -456,8 +463,8 @@ def scrape_zara_product(driver, reference):
     return product_url, product_name, image_url, composition
 
 
-def scrape_product(driver, brand, reference):
-    """Scrape a single product."""
+def scrape_product(driver, brand, reference, manual=None):
+    """Scrape a single product, or use manual data from spreadsheet."""
     ref_clean = reference.replace('/', '-')
     brand_file = brand.replace(' ', '_')  # "zara man" -> "zara_man" for filenames
 
@@ -473,6 +480,22 @@ def scrape_product(driver, brand, reference):
         'status': 'not_found',
         'scrapedAt': datetime.now(timezone.utc).isoformat()
     }
+
+    # If manual data provided from spreadsheet, use it directly
+    if manual and manual.get('image') and manual.get('name'):
+        print("(manual) ", end='')
+        result['name'] = manual['name']
+        result['image'] = manual['image']
+        result['productUrl'] = manual.get('url')
+        result['composition'] = manual.get('composition')
+
+        image_path = IMAGES_DIR / f'{brand_file}_{ref_clean}.jpg'
+        if download_image(manual['image'], image_path):
+            result['imageLocal'] = f'assets/images/products/{brand_file}_{ref_clean}.jpg'
+            result['status'] = 'found'
+        else:
+            result['status'] = 'image_failed'
+        return result
 
     try:
         scraper_key = BRAND_SCRAPER.get(brand)
@@ -521,20 +544,29 @@ def main():
     if not references:
         return
 
-    print("Launching browser...")
-    driver = create_driver()
-    products = []
+    # Check if any refs need scraping (no manual data)
+    needs_scraping = any(not (r.get('image') and r.get('name')) for r in references)
 
-    # Initialize sessions: visit homepages and accept cookies
-    brands_in_refs = set(BRAND_SCRAPER.get(r['brand'], r['brand']) for r in references)
-    for scraper_brand in brands_in_refs:
-        if scraper_brand in BRAND_URLS:
-            url = BRAND_URLS[scraper_brand]
-            print(f"Initializing {scraper_brand} session...")
-            driver.get(f'{url}/es/')
-            time.sleep(4)
-            dismiss_cookies(driver)
-            time.sleep(1)
+    driver = None
+    if needs_scraping:
+        print("Launching browser...")
+        driver = create_driver()
+
+        # Initialize sessions: visit homepages and accept cookies
+        brands_in_refs = set(BRAND_SCRAPER.get(r['brand'], r['brand']) for r in references
+                             if not (r.get('image') and r.get('name')))
+        for scraper_brand in brands_in_refs:
+            if scraper_brand in BRAND_URLS:
+                url = BRAND_URLS[scraper_brand]
+                print(f"Initializing {scraper_brand} session...")
+                driver.get(f'{url}/es/')
+                time.sleep(4)
+                dismiss_cookies(driver)
+                time.sleep(1)
+    else:
+        print("All entries have manual data, no scraping needed.")
+
+    products = []
 
     try:
         for idx, ref in enumerate(references, 1):
@@ -544,7 +576,13 @@ def main():
             print(f"[{idx}/{len(references)}] {BRAND_DISPLAY.get(brand, brand)} ref {reference}... ",
                   end='', flush=True)
 
-            result = scrape_product(driver, brand, reference)
+            # Pass manual data if available from spreadsheet
+            manual = {}
+            for field in ('image', 'name', 'composition', 'url'):
+                if ref.get(field):
+                    manual[field] = ref[field]
+
+            result = scrape_product(driver, brand, reference, manual=manual or None)
             products.append(result)
 
             status = result['status'].upper()
@@ -552,13 +590,14 @@ def main():
             comp = f" | {result['composition'][:60]}" if result.get('composition') else ""
             print(f"{status}{name}{comp}")
 
-            if idx < len(references):
+            if idx < len(references) and not manual:
                 time.sleep(3)
 
     except KeyboardInterrupt:
         print("\nInterrupted. Saving partial results...")
     finally:
-        driver.quit()
+        if driver:
+            driver.quit()
 
     # Save results
     with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
