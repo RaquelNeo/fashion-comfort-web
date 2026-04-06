@@ -115,8 +115,20 @@
     if (e.target.tagName === 'A') {
       closeMenu();
     }
-    if (e.target.tagName === 'BUTTON' && e.target.classList.contains('ml-btn')) {
-      setTimeout(function() { updateMobileLangButtons(); }, 100);
+    var btn = e.target.closest('.ml-btn');
+    if (btn) {
+      // Mark active immediately based on clicked button's data-lang
+      menu.querySelectorAll('.ml-btn').forEach(function(b) {
+        if (b === btn) {
+          b.style.color = '#ffffff';
+          b.style.borderColor = 'rgba(255,255,255,0.8)';
+          b.style.background = 'rgba(255,255,255,0.15)';
+        } else {
+          b.style.color = 'rgba(255,255,255,0.65)';
+          b.style.borderColor = 'rgba(255,255,255,0.2)';
+          b.style.background = 'none';
+        }
+      });
     }
   });
 
