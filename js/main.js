@@ -57,7 +57,7 @@ const i18n = {
   },
 
   updateToggle() {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    document.querySelectorAll('.lang-btn, .ds-lang-btn, .ds-mobile-lang-btn').forEach(btn => {
       const isActive = btn.dataset.lang === this.currentLang;
       btn.classList.toggle('active', isActive);
     });
