@@ -398,6 +398,10 @@
       })
       .then(function(data) {
         allProducts = data.filter(function(p) { return p.status === 'found'; });
+        // Newest first
+        allProducts.sort(function(a, b) {
+          return (b.scrapedAt || '').localeCompare(a.scrapedAt || '');
+        });
         buildFilterTabs(allProducts);
         renderFeed(allProducts);
       })
