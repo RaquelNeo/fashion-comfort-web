@@ -406,13 +406,13 @@
     <div class="ds-nav-inner">
       <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
       <ul class="ds-nav-links">
-        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
-        <li><a href="products.html" class="ds-nav-link">Products</a></li>
-        <li><a href="manufacturing.html" class="ds-nav-link">Manufacturing</a></li>
-        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
-        <li><a href="our-history.html" class="ds-nav-link active">Our History</a></li>
-        <li><a href="lyk.html" class="ds-nav-link">LYK Project</a></li>
-        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+        <li><a href="index.html#about" class="ds-nav-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link" data-i18n="nav.products">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link" data-i18n="nav.manufacturing">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link" data-i18n="nav.responsibility">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link active" data-i18n="nav.history">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link" data-i18n="nav.lyk">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="ds-nav-langs">
         <button class="ds-lang-btn" onclick="i18n.switchLanguage('en')" data-lang="en">EN</button>
@@ -425,8 +425,8 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Our Founders</h1>
-      <p class="hero-subtitle">The people behind Fashion Comfort Group</p>
+      <h1 class="hero-title" data-i18n="founders.title">Our Founders</h1>
+      <p class="hero-subtitle" data-i18n="founders.tag">The people behind Fashion Comfort Group</p>
     </div>
   </section>
 
@@ -437,11 +437,11 @@
         <div class="founder-header">
           <div class="founder-avatar"></div>
           <div>
-            <h2 class="founder-name" style="margin-bottom: 5px;">Md. Afzalur Rahman</h2>
-            <p class="founder-role">Managing Director</p>
+            <h2 class="founder-name" style="margin-bottom: 5px;" data-i18n="founders.founder1_name">Md. Afzalur Rahman</h2>
+            <p class="founder-role" data-i18n="founders.founder1_role">Managing Director</p>
           </div>
         </div>
-        <p class="founder-bio">
+        <p class="founder-bio" data-i18n="founders.founder1_desc">
           Md. Afzalur Rahman leads the overall strategic direction of Fashion Comfort Group with vision and innovation. As Managing Director, he has been instrumental in building the company from its founding in 2002 into an internationally recognised knitwear manufacturing partner.
         </p>
         <p class="founder-bio" style="margin-top: var(--space-lg);">
@@ -458,11 +458,11 @@
         <div class="founder-header">
           <div class="founder-avatar"></div>
           <div>
-            <h2 class="founder-name" style="margin-bottom: 5px;">Salma Rahman</h2>
-            <p class="founder-role">Chairman</p>
+            <h2 class="founder-name" style="margin-bottom: 5px;" data-i18n="founders.founder2_name">Salma Rahman</h2>
+            <p class="founder-role" data-i18n="founders.founder2_role">Chairman</p>
           </div>
         </div>
-        <p class="founder-bio">
+        <p class="founder-bio" data-i18n="founders.founder2_desc">
           Salma Rahman oversees financial planning and strategic risk management for Fashion Comfort Group. As Chairman, she provides governance and strategic oversight ensuring the company maintains its financial health and sustainable growth trajectory.
         </p>
         <p class="founder-bio" style="margin-top: var(--space-lg);">
@@ -479,11 +479,11 @@
         <div class="founder-header">
           <div class="founder-avatar"></div>
           <div>
-            <h2 class="founder-name" style="margin-bottom: 5px;">Sadman Ishraq Hamid</h2>
-            <p class="founder-role">Director</p>
+            <h2 class="founder-name" style="margin-bottom: 5px;" data-i18n="founders.founder3_name">Sadman Ishraq Hamid</h2>
+            <p class="founder-role" data-i18n="founders.founder3_role">Director</p>
           </div>
         </div>
-        <p class="founder-bio">
+        <p class="founder-bio" data-i18n="founders.founder3_desc">
           Sadman Ishraq Hamid coordinates the regenerated yarn facility and sustainability initiatives at Fashion Comfort Group. As Director, he drives the company's commitment to circular economy principles and environmental responsibility.
         </p>
         <p class="founder-bio" style="margin-top: var(--space-lg);">
@@ -507,7 +507,7 @@
     <div class="section-inner">
       <div>
         <h4 style="font-family: var(--font-display);">fashion comfort</h4>
-        <p style="opacity: 0.7;">Knitwear manufacturing partner since 2002</p>
+        <p style="opacity: 0.7;" data-i18n="footer.tagline">Knitwear manufacturing partner since 2002</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -567,6 +567,7 @@
     });
   </script>
 
+<script src="js/main.js"></script>
 <script src="js/mobile-menu.js"></script>
 </body>
 </html>

@@ -234,13 +234,13 @@
     <div class="ds-nav-inner">
       <a href="index.html" class="ds-nav-logo">Fashion Comfort</a>
       <ul class="ds-nav-links">
-        <li><a href="index.html#about" class="ds-nav-link">About Us</a></li>
-        <li><a href="products.html" class="ds-nav-link active">Products</a></li>
-        <li><a href="manufacturing.html" class="ds-nav-link">Manufacturing</a></li>
-        <li><a href="responsibility.html" class="ds-nav-link">Responsibility</a></li>
-        <li><a href="our-history.html" class="ds-nav-link">Our History</a></li>
-        <li><a href="lyk.html" class="ds-nav-link">LYK Project</a></li>
-        <li><a href="index.html#contact" class="ds-nav-link">Contact</a></li>
+        <li><a href="index.html#about" class="ds-nav-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="products.html" class="ds-nav-link active" data-i18n="nav.products">Products</a></li>
+        <li><a href="manufacturing.html" class="ds-nav-link" data-i18n="nav.manufacturing">Manufacturing</a></li>
+        <li><a href="responsibility.html" class="ds-nav-link" data-i18n="nav.responsibility">Responsibility</a></li>
+        <li><a href="our-history.html" class="ds-nav-link" data-i18n="nav.history">Our History</a></li>
+        <li><a href="lyk.html" class="ds-nav-link" data-i18n="nav.lyk">LYK Project</a></li>
+        <li><a href="index.html#contact" class="ds-nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="ds-nav-langs">
         <button class="ds-lang-btn" onclick="i18n.switchLanguage('en')" data-lang="en">EN</button>
@@ -254,9 +254,9 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="hero-tag">Ongoing Productions</p>
-      <h1>Selected productions for international brands</h1>
-      <p class="hero-text">This selection is continuously updated through our internal tracking system,<br>reflecting recent developments delivered to our clients.</p>
-      <p class="hero-supporting">Each piece reflects real production — not concept development.</p>
+      <h1 data-i18n="work.title">Selected productions for international brands</h1>
+      <p class="hero-text" data-i18n="work.subtitle">This selection is continuously updated through our internal tracking system,<br>reflecting recent developments delivered to our clients.</p>
+      <p class="hero-supporting" data-i18n="work.description">Each piece reflects real production — not concept development.</p>
     </div>
   </section>
 
@@ -265,7 +265,7 @@
     <div class="feed-inner">
 
       <div class="feed-filters" id="feed-filters">
-        <button class="feed-tab active" onclick="filterFeed('all')">All</button>
+        <button class="feed-tab active" onclick="filterFeed('all')" data-i18n="work.filter_all">All</button>
       </div>
 
       <div class="feed-grid" id="feed-grid"></div>
@@ -291,7 +291,7 @@
     <div class="ds-footer-inner">
       <div>
         <p class="ds-footer-logo">Fashion Comfort</p>
-        <p class="ds-footer-tagline">Knitwear manufacturer partner since 2002</p>
+        <p class="ds-footer-tagline" data-i18n="footer.tagline">Knitwear manufacturer partner since 2002</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -382,6 +382,7 @@
       });
   </script>
 
+<script src="js/main.js"></script>
 <script src="js/mobile-menu.js"></script>
 </body>
 </html>
