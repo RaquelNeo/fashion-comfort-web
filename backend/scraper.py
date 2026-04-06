@@ -52,10 +52,28 @@ BRAND_URLS = {
 BRAND_DISPLAY = {
     'pullbear': 'PULL&BEAR',
     'zara': 'ZARA',
+    'zara man': 'ZARA MAN',
+    'zara kids': 'ZARA KIDS',
+    'zara baby boys': 'ZARA BABY BOYS',
     'mango': 'MANGO',
     'bershka': 'BERSHKA',
     'oysho': 'OYSHO',
 }
+
+# Map brand variants to their scraper key
+BRAND_SCRAPER = {
+    'pullbear': 'pullbear',
+    'zara': 'zara',
+    'zara man': 'zara',
+    'zara kids': 'zara',
+    'zara baby boys': 'zara',
+    'mango': 'mango',
+    'bershka': 'bershka',
+    'oysho': 'oysho',
+}
+
+# Generic Zara placeholder image hash — used to detect unpublished products
+ZARA_PLACEHOLDER_HASHES = ['b9f2/a11a']
 
 
 def create_driver():
@@ -344,9 +362,100 @@ def scrape_pullbear_product(driver, reference):
     return product_url, product_name, image_url, composition
 
 
+def scrape_zara_product(driver, reference):
+    """Scrape Zara product by reference (works for all Zara sub-brands)."""
+    ref_clean = reference.replace('/', '')
+    if not ref_clean.startswith('0'):
+        ref_clean = '0' + ref_clean
+
+    product_url = None
+    product_name = None
+    image_url = None
+    composition = None
+
+    driver.get(f'https://www.zara.com/es/es/product-p{ref_clean}.html')
+    time.sleep(5)
+
+    product_url = driver.current_url
+
+    # Extract from JSON-LD structured data
+    try:
+        scripts = driver.find_elements(By.CSS_SELECTOR, 'script[type="application/ld+json"]')
+        for script in scripts:
+            try:
+                data = json.loads(script.get_attribute('innerHTML'))
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    if isinstance(item, dict) and item.get('@type') == 'Product':
+                        product_name = item.get('name')
+                        img = item.get('image')
+                        if isinstance(img, list) and img:
+                            image_url = img[0]
+                        elif img:
+                            image_url = img
+                        desc = item.get('description', '')
+                        comp_match = re.search(
+                            r'(\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+                            r'(?:\s*[,]\s*\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+                            desc)
+                        if comp_match:
+                            composition = comp_match.group(1)
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    # Fallback: h1
+    if not product_name:
+        try:
+            h1 = driver.find_element(By.CSS_SELECTOR, 'h1')
+            if h1.text.strip():
+                product_name = h1.text.strip()
+        except Exception:
+            pass
+
+    # Fallback: image from static.zara.net
+    if not image_url:
+        try:
+            imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="static.zara.net"]')
+            for img in imgs:
+                src = img.get_attribute('src') or ''
+                if src.startswith('http') and 'logo' not in src and 'icon' not in src:
+                    image_url = src
+                    break
+        except Exception:
+            pass
+
+    # Fallback: composition from page source
+    if not composition:
+        try:
+            source = driver.page_source
+            comp_match = re.search(
+                r'(\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+                r'(?:\s*[,]\s*\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+                source)
+            if comp_match:
+                composition = comp_match.group(1)
+        except Exception:
+            pass
+
+    # Detect placeholder/unpublished products
+    if image_url:
+        for placeholder in ZARA_PLACEHOLDER_HASHES:
+            if placeholder in image_url:
+                print("(placeholder image — product not yet published) ", end='')
+                image_url = None
+                product_name = None
+                composition = None
+                break
+
+    return product_url, product_name, image_url, composition
+
+
 def scrape_product(driver, brand, reference):
     """Scrape a single product."""
     ref_clean = reference.replace('/', '-')
+    brand_file = brand.replace(' ', '_')  # "zara man" -> "zara_man" for filenames
 
     result = {
         'brand': brand,
@@ -362,8 +471,11 @@ def scrape_product(driver, brand, reference):
     }
 
     try:
-        if brand == 'pullbear':
+        scraper_key = BRAND_SCRAPER.get(brand)
+        if scraper_key == 'pullbear':
             product_url, name, image_url, composition = scrape_pullbear_product(driver, reference)
+        elif scraper_key == 'zara':
+            product_url, name, image_url, composition = scrape_zara_product(driver, reference)
         else:
             print(f"brand {brand} not yet implemented")
             result['status'] = 'not_implemented'
@@ -375,9 +487,9 @@ def scrape_product(driver, brand, reference):
 
         if image_url:
             result['image'] = image_url
-            image_path = IMAGES_DIR / f'{brand}_{ref_clean}.jpg'
+            image_path = IMAGES_DIR / f'{brand_file}_{ref_clean}.jpg'
             if download_image(image_url, image_path):
-                result['imageLocal'] = f'assets/images/products/{brand}_{ref_clean}.jpg'
+                result['imageLocal'] = f'assets/images/products/{brand_file}_{ref_clean}.jpg'
                 result['status'] = 'found'
             else:
                 result['status'] = 'image_failed'
@@ -409,12 +521,16 @@ def main():
     driver = create_driver()
     products = []
 
-    # Initialize session: visit homepage and accept cookies
-    print("Initializing session...")
-    driver.get(f'{BRAND_URLS["pullbear"]}/es/')
-    time.sleep(4)
-    dismiss_cookies(driver)
-    time.sleep(1)
+    # Initialize sessions: visit homepages and accept cookies
+    brands_in_refs = set(BRAND_SCRAPER.get(r['brand'], r['brand']) for r in references)
+    for scraper_brand in brands_in_refs:
+        if scraper_brand in BRAND_URLS:
+            url = BRAND_URLS[scraper_brand]
+            print(f"Initializing {scraper_brand} session...")
+            driver.get(f'{url}/es/')
+            time.sleep(4)
+            dismiss_cookies(driver)
+            time.sleep(1)
 
     try:
         for idx, ref in enumerate(references, 1):

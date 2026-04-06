@@ -354,14 +354,41 @@
       });
     }
 
-    function filterFeed(brand) {
+    function filterFeed(brandDisplay) {
       document.querySelectorAll('.feed-tab').forEach(function(t) { t.classList.remove('active'); });
-      var active = brand === 'all'
+      var active = brandDisplay === 'all'
         ? document.querySelector('.feed-tab:first-child')
-        : document.querySelector('.feed-tab[data-filter="' + brand + '"]');
+        : document.querySelector('.feed-tab[data-filter="' + brandDisplay + '"]');
       if (active) active.classList.add('active');
-      var filtered = brand === 'all' ? allProducts : allProducts.filter(function(p) { return p.brand === brand; });
+      var filtered = brandDisplay === 'all'
+        ? allProducts
+        : allProducts.filter(function(p) { return p.brandDisplay === brandDisplay; });
       renderFeed(filtered);
+    }
+
+    function buildFilterTabs(products) {
+      var filtersEl = document.getElementById('feed-filters');
+      // Keep the "All" tab
+      filtersEl.innerHTML = '<button class="feed-tab active" onclick="filterFeed(\'all\')" data-i18n="work.filter_all">All</button>';
+
+      // Get unique brandDisplay values in order of appearance
+      var seen = {};
+      var brands = [];
+      products.forEach(function(p) {
+        if (!seen[p.brandDisplay]) {
+          seen[p.brandDisplay] = true;
+          brands.push(p.brandDisplay);
+        }
+      });
+
+      brands.forEach(function(bd) {
+        var btn = document.createElement('button');
+        btn.className = 'feed-tab';
+        btn.setAttribute('data-filter', bd);
+        btn.textContent = bd;
+        btn.onclick = function() { filterFeed(bd); };
+        filtersEl.appendChild(btn);
+      });
     }
 
     fetch('products_data.json')
@@ -371,6 +398,7 @@
       })
       .then(function(data) {
         allProducts = data.filter(function(p) { return p.status === 'found'; });
+        buildFilterTabs(allProducts);
         renderFeed(allProducts);
       })
       .catch(function(err) {
