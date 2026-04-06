@@ -152,7 +152,7 @@ body {
 .ds-nav-langs {
   margin-left: 24px;
   display: flex;
-  gap: 6px;
+  gap: 0;
   flex-shrink: 0;
 }
 
@@ -163,8 +163,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
   padding: 0;
-  width: 36px;
-  height: 26px;
+  width: 29px;
+  height: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
