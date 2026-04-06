@@ -358,11 +358,24 @@
 
   <!-- HERO -->
   <div class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
       <source src="assets/hero-video-source/LYK-hero-video.mp4" type="video/mp4">
     </video>
+    <script>
+      // Force video play on mobile (iOS Safari requires user gesture workaround)
+      (function() {
+        var v = document.querySelector('.hero-video');
+        if (!v) return;
+        v.play().catch(function() {
+          document.addEventListener('touchstart', function once() {
+            v.play();
+            document.removeEventListener('touchstart', once);
+          });
+        });
+      })();
+    </script>
     <div class="hero-content">
-      <p class="hero-tag" data-i18n="lyk.hero_title">LYK<br>Lubaba Yarn Kitchen</p>
+      <p class="hero-tag" data-i18n-html="lyk.hero_title">LYK<br>Lubaba Yarn Kitchen</p>
       <p class="hero-subtitle" data-i18n="lyk.hero_subtitle">Bangladesh's First Transparent<br>Waste-to-Yarn Ecosystem</p>
       <h1 data-i18n="lyk.hero_h1">From waste to high-value yarn</h1>
       <p class="hero-intro" data-i18n="lyk.hero_intro">LYK is our circular yarn initiative, transforming post-industrial textile waste into premium, traceable regenerated yarns for global brands.</p>
