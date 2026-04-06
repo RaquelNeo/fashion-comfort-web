@@ -14,7 +14,13 @@
   "hero": {
     "title": "Knitwear manufacturing for brands that expect more",
     "subtitle": "Mentalidad de diseño europeo, desarrollo rápido y producción fiable — pensado para relaciones a largo plazo.",
-    "cta": "Descubre Nuestra Historia"
+    "cta": "Descubre Nuestra Historia",
+    "hero_card_1_title": "Fundada en 2002",
+    "hero_card_1_text": "Operaciones de producción en Bangladés con control de calidad directo",
+    "hero_card_2_title": "Presencia internacional",
+    "hero_card_2_text": "5 oficinas en todo el mundo al servicio de las principales marcas de moda a nivel internacional",
+    "hero_card_3_title": "Sostenibilidad",
+    "hero_card_3_text": "Producción sostenible certificada por GOTS, GRS, RCS y RWS"
   },
   "about": {
     "tag": "Quiénes Somos",
@@ -77,7 +83,18 @@
     "social_worker_1": "Proyecto de guardería en sitio para hijos de trabajadores",
     "social_worker_2": "Área de soporte médico dedicada para empleados",
     "social_worker_3": "Enfoque a largo plazo en condiciones de trabajo seguras y de apoyo",
-    "social_quote": "La responsabilidad está integrada en las operaciones diarias, no tratada como una iniciativa separada"
+    "social_quote": "La responsabilidad está integrada en las operaciones diarias, no tratada como una iniciativa separada",
+    "teams_heading": "Diseño, desarrollo y abastecimiento: conectados a nivel mundial",
+    "teams_why": "Por qué es importante",
+    "teams_closer_title": "Una comunicación más estrecha",
+    "teams_closer_text": "Acceso directo a los equipos de diseño de los clientes en sus mercados locales",
+    "teams_faster_title": "Ciclos de desarrollo más rápidos",
+    "teams_faster_text": "Reducción de los plazos de entrega gracias a la coordinación y la supervisión regionales",
+    "teams_yarn_title": "Experiencia en hilos y abastecimiento",
+    "teams_yarn_text": "Acceso directo a los mercados italianos de hilos y a las redes de proveedores asiáticos",
+    "teams_alignment_title": "Coordinación entre diseño y producción",
+    "teams_alignment_text": "Una mejor traducción de la idea creativa al producto final",
+    "production_heading": "Producción con control, no solo capacidad"
   },
   "founders": {
     "tag": "Liderazgo",
@@ -90,7 +107,8 @@
     "founder2_desc": "Supervisa la planificación financiera, estructuración de capital y gestión de riesgos. Gestiona las relaciones bancarias.",
     "founder3_name": "Sadman Ishraq Hamid",
     "founder3_role": "Director",
-    "founder3_desc": "Enfocado en coordinar la configuración de la instalación de hilado regenerado, gestionar la comunicación con stakeholders y apoyar la trazabilidad."
+    "founder3_desc": "Enfocado en coordinar la configuración de la instalación de hilado regenerado, gestionar la comunicación con stakeholders y apoyar la trazabilidad.",
+    "subtitle": "Las personas que forman parte de Fashion Comfort Group"
   },
   "timeline": {
     "tag": "Desde 2002",
@@ -103,7 +121,9 @@
     "2013": "SQ CELSIUS y FCBL comenzaron a trabajar juntos como socios para producir hilos de cachemira y lana en Bangladesh.",
     "2016": "FCBL y YARNS & COLORS iniciaron una cooperación en Bangladesh para ofrecer nuevas oportunidades de hilados fancy. Establecimos una nueva estrategia con ASDWA FASHION LTD, una institución textil y de diseño especializada en hilados tradicionales.",
     "2017": "FCBL y DEHONG International Cashmere Co., Ltd formaron una asociación en el campo de la cachemira y el tema Joint Life, especialmente en el sector Heavy Knitwear. FCBL abrió su propia oficina en Barcelona bajo el nombre FASHION COMFORT EUROPE S.L. con experiencia europea para mejor comunicación con clientes españoles y nuevos desarrollos en estilismo y soporte en el sector de la moda.",
-    "2018": "FCBL inició su propia unidad de producción conocida como ASDWA Fashion Ltd., una manufactura moderna y sostenible de alta calidad, 100% orientada a la exportación de suéteres en Bangladesh, con instalaciones de última generación. Recientemente añadió 100 máquinas jacquard para aumentar la capacidad productiva y responder a la creciente demanda. FCBL adquirió la asociación de Titas Sweater Industries Ltd., una fábrica 100% certificada establecida en 2003. Actualmente 2,500 trabajadores laboran en esta instalación."
+    "2018": "FCBL inició su propia unidad de producción conocida como ASDWA Fashion Ltd., una manufactura moderna y sostenible de alta calidad, 100% orientada a la exportación de suéteres en Bangladesh, con instalaciones de última generación. Recientemente añadió 100 máquinas jacquard para aumentar la capacidad productiva y responder a la creciente demanda. FCBL adquirió la asociación de Titas Sweater Industries Ltd., una fábrica 100% certificada establecida en 2003. Actualmente 2,500 trabajadores laboran en esta instalación.",
+    "founders_label": "Fundadores",
+    "founders_roles": "Director general y presidente"
   },
   "work": {
     "title": "Nuestro Trabajo",
@@ -114,7 +134,8 @@
     "no_products": "Productos próximamente. Ejecuta el scraper para poblar esta sección.",
     "load_more": "Cargar Más Productos",
     "unavailable": "Ya no disponible",
-    "composition": "Composición"
+    "composition": "Composición",
+    "hero_tag": "Producciones en curso"
   },
   "lyk": {
     "hero_title": "Lubaba Yarn Kitchen",
@@ -179,7 +200,18 @@
     "phase_3_label": "Largo plazo",
     "phase_3_value": "30,000 toneladas/año",
     "phase_3_desc": "Objetivo de capacidad a largo plazo",
-    "mission": "Hacer de Bangladesh el líder mundial en hilo regenerado trazable convirtiendo residuos textiles en una economía circular de mil millones de dólares."
+    "mission": "Hacer de Bangladesh el líder mundial en hilo regenerado trazable convirtiendo residuos textiles en una economía circular de mil millones de dólares.",
+    "hero_h1": "De los residuos a un hilo de gran valor",
+    "hero_intro": "LYK es nuestra iniciativa de hilos circulares, que transforma los residuos textiles postindustriales en hilos regenerados de alta calidad y trazabilidad para marcas internacionales.",
+    "section_system": "El sistema",
+    "section_context": "Contexto",
+    "section_impact": "Impacto",
+    "section_integration": "Integración",
+    "upstream_title": "Control previo",
+    "upstream_text": "la propiedad directa de las materias primas, desde la recolección hasta la hilatura",
+    "highlight_sub": "Proyecto LYK — Fashion Comfort Group",
+    "cta_text": "Colabora con nosotros para integrar hilos circulares y trazables en tu cadena de suministro",
+    "cta_btn": "Contáctanos"
   },
   "contact": {
     "title": "Contáctanos",
@@ -306,5 +338,15 @@
     "cta_title": "Colabora con un socio responsable",
     "cta_text": "Creemos que la fabricación responsable y el desempeño comercial van de la mano",
     "cta_btn": "Contáctanos"
+  },
+  "common": {
+    "cta_title": "Trabaja con nosotros",
+    "cta_text": "Colabora con un equipo que valora la calidad, la transparencia y las relaciones duraderas",
+    "cta_btn": "Contáctanos",
+    "footer_quick_links": "Enlaces rápidos",
+    "footer_home": "Inicio",
+    "footer_about": "Acerca de",
+    "footer_contact_title": "Contacto",
+    "footer_contact_link": "Contacto"
   }
 }

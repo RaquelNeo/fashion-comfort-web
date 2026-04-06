@@ -14,7 +14,13 @@
   "hero": {
     "title": "Knitwear manufacturing for brands that expect more",
     "subtitle": "European design mindset, fast development and reliable production — built for long-term partnerships.",
-    "cta": "Discover Our Story"
+    "cta": "Discover Our Story",
+    "hero_card_1_title": "Established Since 2002",
+    "hero_card_1_text": "Production operations in Bangladesh with direct quality control",
+    "hero_card_2_title": "International Presence",
+    "hero_card_2_text": "5 global offices serving leading fashion brands worldwide",
+    "hero_card_3_title": "Sustainability",
+    "hero_card_3_text": "GOTS, GRS, RCS, RWS certified sustainable production"
   },
   "about": {
     "tag": "Who We Are",
@@ -77,7 +83,18 @@
     "social_worker_1": "On-site childcare facility project for workers' children",
     "social_worker_2": "Dedicated medical support area for employees",
     "social_worker_3": "Long-term focus on safe, supportive working conditions",
-    "social_quote": "Responsibility is integrated into daily operations, not treated as a separate initiative"
+    "social_quote": "Responsibility is integrated into daily operations, not treated as a separate initiative",
+    "teams_heading": "Design, development and sourcing — connected globally",
+    "teams_why": "Why it matters",
+    "teams_closer_title": "Closer communication",
+    "teams_closer_text": "Direct access to clients’ design teams in their local markets",
+    "teams_faster_title": "Faster development cycles",
+    "teams_faster_text": "Reduced lead times through regional coordination and oversight",
+    "teams_yarn_title": "Yarn and sourcing expertise",
+    "teams_yarn_text": "Direct access to Italian yarn markets and Asian supplier networks",
+    "teams_alignment_title": "Design–production alignment",
+    "teams_alignment_text": "Better translation from creative intent to manufactured product",
+    "production_heading": "Production with control, not just capacity"
   },
   "founders": {
     "tag": "Leadership",
@@ -90,7 +107,8 @@
     "founder2_desc": "Oversees financial planning, capital structuring, and risk management. Manages banking relationships.",
     "founder3_name": "Sadman Ishraq Hamid",
     "founder3_role": "Director",
-    "founder3_desc": "Focused on coordinating the setup of the regenerated yarn facility, managing stakeholder communication, supporting traceability."
+    "founder3_desc": "Focused on coordinating the setup of the regenerated yarn facility, managing stakeholder communication, supporting traceability.",
+    "subtitle": "The people behind Fashion Comfort Group"
   },
   "timeline": {
     "tag": "Since 2002",
@@ -103,7 +121,9 @@
     "2013": "SQ CELSIUS and FCBL started working together as partners to produce cashmere and woolen yarn in Bangladesh.",
     "2016": "FCBL and YARNS & COLORS started cooperation in Bangladesh to provide new fancy yarn opportunities. We established a new strategy with ASDWA FASHION LTD, a textile and design institution specialized in traditional yarn.",
     "2017": "FCBL and DEHONG International Cashmere Co., Ltd formed a partnership in cashmere and Joint Life theme, especially in Heavy Knitwear Sector. FCBL opened its own branch office in Barcelona named FASHION COMFORT EUROPE S.L. with European expertise for better communication with Spanish customers and new developments in styling and fashion sector support.",
-    "2018": "FCBL started their own production unit known as ASDWA Fashion Ltd., a modern and sustainable high-quality manufacture, 100% export-oriented sweater manufacturing company in Bangladesh with state-of-the-art facilities. Recently added 100 jacquard machines to increase productive capacity and meet growing demand. FCBL acquired the partnership of Titas Sweater Industries Ltd., a 100% certified factory established in 2003. Currently 2,500 workers are employed at this facility."
+    "2018": "FCBL started their own production unit known as ASDWA Fashion Ltd., a modern and sustainable high-quality manufacture, 100% export-oriented sweater manufacturing company in Bangladesh with state-of-the-art facilities. Recently added 100 jacquard machines to increase productive capacity and meet growing demand. FCBL acquired the partnership of Titas Sweater Industries Ltd., a 100% certified factory established in 2003. Currently 2,500 workers are employed at this facility.",
+    "founders_label": "Founders",
+    "founders_roles": "Managing Director & Chairman"
   },
   "work": {
     "tag": "Portfolio",
@@ -115,7 +135,8 @@
     "no_products": "Products coming soon. Run the scraper to populate this section.",
     "load_more": "Load More Products",
     "unavailable": "No longer available",
-    "composition": "Composition"
+    "composition": "Composition",
+    "hero_tag": "Ongoing Productions"
   },
   "lyk": {
     "hero_title": "Lubaba Yarn Kitchen",
@@ -180,7 +201,18 @@
     "phase_3_label": "Long-term",
     "phase_3_value": "30,000 tons/year",
     "phase_3_desc": "Long-term capacity goal",
-    "mission": "Make Bangladesh the world leader in traceable, regenerated yarn by turning textile waste into a billion-dollar circular economy."
+    "mission": "Make Bangladesh the world leader in traceable, regenerated yarn by turning textile waste into a billion-dollar circular economy.",
+    "hero_h1": "From waste to high-value yarn",
+    "hero_intro": "LYK is our circular yarn initiative, transforming post-industrial textile waste into premium, traceable regenerated yarns for global brands.",
+    "section_system": "The System",
+    "section_context": "Context",
+    "section_impact": "Impact",
+    "section_integration": "Integration",
+    "upstream_title": "Upstream control",
+    "upstream_text": "direct ownership of material inputs, from collection through yarn spinning",
+    "highlight_sub": "LYK Project — Fashion Comfort Group",
+    "cta_text": "Partner with us to integrate circular, traceable yarns into your supply chain",
+    "cta_btn": "Contact Us"
   },
   "contact": {
     "tag": "Get in Touch",
@@ -314,5 +346,15 @@
     "cta_title": "Work with a responsible partner",
     "cta_text": "We believe that responsible manufacturing and commercial performance go hand in hand",
     "cta_btn": "Contact Us"
+  },
+  "common": {
+    "cta_title": "Work With Us",
+    "cta_text": "Partner with a team that values quality, transparency and long-term relationships",
+    "cta_btn": "Contact Us",
+    "footer_quick_links": "Quick Links",
+    "footer_home": "Home",
+    "footer_about": "About",
+    "footer_contact_title": "Contact",
+    "footer_contact_link": "Contact"
   }
 }
