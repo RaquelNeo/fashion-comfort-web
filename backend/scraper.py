@@ -56,6 +56,7 @@ BRAND_DISPLAY = {
     'zara kids': 'ZARA KIDS',
     'zara baby boys': 'ZARA BABY BOYS',
     'mango': 'MANGO',
+    'mango teen': 'MANGO TEEN',
     'bershka': 'BERSHKA',
     'oysho': 'OYSHO',
 }
@@ -68,6 +69,7 @@ BRAND_SCRAPER = {
     'zara kids': 'zara',
     'zara baby boys': 'zara',
     'mango': 'mango',
+    'mango teen': 'mango',
     'bershka': 'bershka',
     'oysho': 'oysho',
 }
