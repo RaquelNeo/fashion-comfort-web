@@ -176,7 +176,7 @@ function initSmoothScroll() {
 }
 
 // === Init ===
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
   const basePath = document.body.dataset.basePath || '';
   i18n.init(basePath);
   initNavbar();
@@ -185,4 +185,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavHighlight();
   initContactForm();
   initSmoothScroll();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
