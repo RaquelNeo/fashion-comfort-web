@@ -451,11 +451,13 @@
 
     // Nav scroll
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.style.background = window.scrollY > 50
-        ? 'rgba(249,249,247,0.95)'
-        : 'rgba(249,249,247,0.92)';
-    });
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        navbar.style.background = window.scrollY > 50
+          ? 'rgba(249,249,247,0.95)'
+          : 'rgba(249,249,247,0.92)';
+      });
+    }
 
     // Timeline intro fade-in
     gsap.to('.timeline-intro', {
