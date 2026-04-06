@@ -22,13 +22,13 @@
 
   // Links
   var links = [
-    { href: 'index.html#about', label: 'About Us' },
-    { href: 'products.html', label: 'Products' },
-    { href: 'manufacturing.html', label: 'Manufacturing' },
-    { href: 'responsibility.html', label: 'Responsibility' },
-    { href: 'our-history.html', label: 'Our History' },
-    { href: 'lyk.html', label: 'LYK Project' },
-    { href: 'index.html#contact', label: 'Contact' }
+    { href: 'index.html#about', label: 'About Us', i18nKey: 'nav.about' },
+    { href: 'products.html', label: 'Products', i18nKey: 'nav.products' },
+    { href: 'manufacturing.html', label: 'Manufacturing', i18nKey: 'nav.manufacturing' },
+    { href: 'responsibility.html', label: 'Responsibility', i18nKey: 'nav.responsibility' },
+    { href: 'our-history.html', label: 'Our History', i18nKey: 'nav.history' },
+    { href: 'lyk.html', label: 'LYK Project', i18nKey: 'nav.lyk' },
+    { href: 'index.html#contact', label: 'Contact', i18nKey: 'nav.contact' }
   ];
 
   // Menu panel — inline styles to avoid any CSS conflicts
@@ -37,15 +37,33 @@
 
   var linksHTML = links.map(function(l) {
     var active = currentPage === l.href || (currentPage === 'founders.html' && l.href === 'our-history.html');
-    return '<a href="' + l.href + '" style="display:block;font-family:Outfit,sans-serif;font-size:13px;font-weight:400;color:' + (active ? '#ffffff' : 'rgba(255,255,255,0.65)') + ';text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.1);">' + l.label + '</a>';
+    var i18nAttr = l.i18nKey ? ' data-i18n="' + l.i18nKey + '"' : '';
+    return '<a href="' + l.href + '"' + i18nAttr + ' style="display:block;font-family:Outfit,sans-serif;font-size:13px;font-weight:400;color:' + (active ? '#ffffff' : 'rgba(255,255,255,0.65)') + ';text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.1);">' + l.label + '</a>';
   }).join('');
 
+  var langBtnStyle = 'background:none;border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65);cursor:pointer;padding:7px 16px;';
   menu.innerHTML = '<div>' + linksHTML + '</div>' +
     '<div style="display:flex;gap:6px;margin-top:auto;padding-top:20px;">' +
-      '<button style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65);cursor:pointer;padding:7px 16px;" class="ml-btn">EN</button>' +
-      '<button style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:6px;font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65);cursor:pointer;padding:7px 16px;" class="ml-btn">ES</button>' +
+      '<button style="' + langBtnStyle + '" class="ml-btn ds-mobile-lang-btn" data-lang="en" onclick="i18n.switchLanguage(\'en\')">EN</button>' +
+      '<button style="' + langBtnStyle + '" class="ml-btn ds-mobile-lang-btn" data-lang="es" onclick="i18n.switchLanguage(\'es\')">ES</button>' +
+      '<button style="' + langBtnStyle + '" class="ml-btn ds-mobile-lang-btn" data-lang="ja" onclick="i18n.switchLanguage(\'ja\')">JA</button>' +
     '</div>';
   document.body.appendChild(menu);
+
+  // Highlight active language button
+  function updateMobileLangButtons() {
+    var currentLang = (typeof i18n !== 'undefined' && i18n.currentLang) ? i18n.currentLang : (localStorage.getItem('fc-lang') || 'en');
+    menu.querySelectorAll('.ml-btn').forEach(function(btn) {
+      if (btn.dataset.lang === currentLang) {
+        btn.style.color = '#ffffff';
+        btn.style.borderColor = 'rgba(255,255,255,0.7)';
+      } else {
+        btn.style.color = 'rgba(255,255,255,0.65)';
+        btn.style.borderColor = 'rgba(255,255,255,0.2)';
+      }
+    });
+  }
+  updateMobileLangButtons();
 
   var isOpen = false;
   var autoCloseTimer = null;
@@ -62,9 +80,7 @@
     overlay.style.pointerEvents = 'auto';
     document.body.style.overflow = 'hidden';
 
-    // Auto-close after 2 seconds
     if (autoCloseTimer) clearTimeout(autoCloseTimer);
-    autoCloseTimer = setTimeout(function() { closeMenu(); }, 2000);
   }
 
   function closeMenu() {
@@ -89,8 +105,11 @@
   overlay.addEventListener('click', closeMenu);
 
   menu.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+    if (e.target.tagName === 'A') {
       closeMenu();
+    }
+    if (e.target.tagName === 'BUTTON' && e.target.classList.contains('ml-btn')) {
+      setTimeout(function() { updateMobileLangButtons(); }, 100);
     }
   });
 

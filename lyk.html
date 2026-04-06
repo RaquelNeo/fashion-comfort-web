@@ -320,6 +320,16 @@
       .stats-grid { grid-template-columns: 1fr; }
       .hero { padding: 140px 24px var(--space-3xl); }
       .section, .section-full .section-inner { padding-left: 24px; padding-right: 24px; }
+
+      /* Ensure hero video is visible on mobile */
+      .hero-video {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   </style>
 </head>
