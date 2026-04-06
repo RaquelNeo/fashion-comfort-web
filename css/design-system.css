@@ -150,31 +150,60 @@ body {
 
 /* Language switcher */
 .ds-nav-langs {
-  margin-left: auto;
+  margin-left: 32px;
   display: flex;
-  gap: 2px;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .ds-lang-btn {
   background: none;
   border: none;
+  border-right: 1px solid var(--border);
   font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-muted);
   cursor: pointer;
-  padding: 4px 8px;
-  transition: color var(--transition-base);
+  padding: 6px 12px;
+  transition: all 0.2s ease;
 }
 
-.ds-lang-btn:hover { color: white; }
+.ds-lang-btn:last-child {
+  border-right: none;
+}
 
-.ds-nav.static .ds-lang-btn { color: var(--text-muted); }
-.ds-nav.static .ds-lang-btn:hover { color: var(--text-primary); }
-.ds-nav.scrolled .ds-lang-btn { color: var(--text-muted); }
-.ds-nav.scrolled .ds-lang-btn:hover { color: var(--text-primary); }
+.ds-lang-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.ds-lang-btn:hover:not(.active) {
+  background: var(--stone);
+  color: var(--text-primary);
+}
+
+/* Lang btn in non-static nav (transparent hero nav) */
+.ds-nav:not(.static):not(.scrolled) .ds-nav-langs {
+  border-color: rgba(255,255,255,0.2);
+}
+.ds-nav:not(.static):not(.scrolled) .ds-lang-btn {
+  color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.2);
+}
+.ds-nav:not(.static):not(.scrolled) .ds-lang-btn.active {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+.ds-nav:not(.static):not(.scrolled) .ds-lang-btn:hover:not(.active) {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
 .ds-nav.static .ds-nav-link:hover,
 .ds-nav.static .ds-nav-link.active { color: var(--text-primary); }
 
