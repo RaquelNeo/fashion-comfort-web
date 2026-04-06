@@ -150,59 +150,80 @@ body {
 
 /* Language switcher */
 .ds-nav-langs {
-  margin-left: 32px;
+  margin-left: 24px;
   display: flex;
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
+  gap: 6px;
   flex-shrink: 0;
 }
 
 .ds-lang-btn {
+  position: relative;
   background: none;
-  border: none;
-  border-right: 1px solid var(--border);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
   cursor: pointer;
-  padding: 6px 12px;
+  padding: 0;
+  width: 40px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   transition: all 0.2s ease;
 }
 
-.ds-lang-btn:last-child {
-  border-right: none;
+.lang-flag {
+  position: absolute;
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.lang-code {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-shadow: 0 0 4px rgba(255,255,255,0.9), 0 0 8px rgba(255,255,255,0.7);
+}
+
+.ds-lang-btn:hover {
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+.ds-lang-btn:hover .lang-flag {
+  opacity: 0.85;
 }
 
 .ds-lang-btn.active {
-  background: var(--primary);
-  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
-.ds-lang-btn:hover:not(.active) {
-  background: var(--stone);
-  color: var(--text-primary);
+.ds-lang-btn.active .lang-flag {
+  opacity: 0.9;
 }
 
 /* Lang btn in non-static nav (transparent hero nav) */
-.ds-nav:not(.static):not(.scrolled) .ds-nav-langs {
-  border-color: rgba(255,255,255,0.2);
-}
 .ds-nav:not(.static):not(.scrolled) .ds-lang-btn {
-  color: rgba(255,255,255,0.5);
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.25);
+}
+.ds-nav:not(.static):not(.scrolled) .lang-code {
+  color: white;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.3);
+}
+.ds-nav:not(.static):not(.scrolled) .ds-lang-btn:hover {
+  border-color: rgba(255,255,255,0.5);
 }
 .ds-nav:not(.static):not(.scrolled) .ds-lang-btn.active {
-  background: rgba(255,255,255,0.15);
-  color: white;
-}
-.ds-nav:not(.static):not(.scrolled) .ds-lang-btn:hover:not(.active) {
-  background: rgba(255,255,255,0.08);
-  color: white;
+  border-color: white;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
 }
 .ds-nav.static .ds-nav-link:hover,
 .ds-nav.static .ds-nav-link.active { color: var(--text-primary); }
