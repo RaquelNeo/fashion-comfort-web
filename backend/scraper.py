@@ -128,7 +128,8 @@ def read_references():
                     entry = {'brand': brand, 'reference': ref}
                     # Optional manual fields (for brands that block scraping)
                     for field, key in [('image', 'image'), ('name', 'name'),
-                                       ('composition', 'composition'), ('url', 'url')]:
+                                       ('composition', 'composition'),
+                                       ('url', 'url'), ('product url', 'url')]:
                         val = str(row_lower.get(field, '')).strip()
                         if val:
                             entry[key] = val
