@@ -366,12 +366,14 @@
       if (active) active.classList.add('active');
       var filtered = brandDisplay === 'all'
         ? allProducts
-        : allProducts.filter(function(p) { return p.brandDisplay === brandDisplay; });
+        : brandDisplay === 'ZARA BABY'
+          ? allProducts.filter(function(p) { return p.brandDisplay === 'ZARA BABY BOYS' || p.brandDisplay === 'ZARA BABY GIRLS'; })
+          : allProducts.filter(function(p) { return p.brandDisplay === brandDisplay; });
       renderFeed(filtered);
     }
 
     // Brands that always show a tab, even with no products yet
-    var fixedBrands = ['ZARA MAN', 'ZARA', 'ZARA KIDS', 'ZARA BABY BOYS', 'ZARA BABY GIRLS', 'MANGO', 'MANGO TEEN', 'PULL&BEAR', 'BERSHKA', 'OYSHO'];
+    var fixedBrands = ['ZARA MAN', 'ZARA', 'ZARA KIDS', 'ZARA BABY', 'MANGO', 'MANGO TEEN', 'PULL&BEAR', 'BERSHKA', 'OYSHO'];
 
     function buildFilterTabs(products) {
       var filtersEl = document.getElementById('feed-filters');
