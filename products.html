@@ -334,7 +334,11 @@
 
     function renderFeed(products) {
       grid.innerHTML = '';
-      if (!products.length) { emptyMsg.style.display = 'block'; return; }
+      if (!products.length) {
+        emptyMsg.innerHTML = '<p>Coming soon</p>';
+        emptyMsg.style.display = 'block';
+        return;
+      }
       emptyMsg.style.display = 'none';
 
       products.forEach(function(p) {
@@ -366,12 +370,14 @@
       renderFeed(filtered);
     }
 
+    // Brands that always show a tab, even with no products yet
+    var fixedBrands = ['ZARA MAN', 'ZARA', 'MANGO', 'PULL&BEAR'];
+
     function buildFilterTabs(products) {
       var filtersEl = document.getElementById('feed-filters');
-      // Keep the "All" tab
       filtersEl.innerHTML = '<button class="feed-tab active" onclick="filterFeed(\'all\')" data-i18n="work.filter_all">All</button>';
 
-      // Get unique brandDisplay values in order of appearance
+      // Collect brands from products
       var seen = {};
       var brands = [];
       products.forEach(function(p) {
@@ -379,6 +385,22 @@
           seen[p.brandDisplay] = true;
           brands.push(p.brandDisplay);
         }
+      });
+
+      // Add fixed brands that aren't already in the list
+      fixedBrands.forEach(function(fb) {
+        if (!seen[fb]) {
+          brands.push(fb);
+        }
+      });
+
+      // Sort: fixed brands first in their defined order, then the rest
+      brands.sort(function(a, b) {
+        var ia = fixedBrands.indexOf(a);
+        var ib = fixedBrands.indexOf(b);
+        if (ia === -1) ia = 999;
+        if (ib === -1) ib = 999;
+        return ia - ib;
       });
 
       brands.forEach(function(bd) {
