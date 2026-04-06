@@ -240,12 +240,18 @@
         white-space: nowrap;
         flex-shrink: 0;
       }
+
+      .feed-item { aspect-ratio: 4/5; }
+      .feed-meta { opacity: 1; padding: 10px 10px; }
+      .feed-brand { font-size: 12px; }
+      .feed-name { font-size: 11px; }
     }
 
     @media (max-width: 480px) {
       .feed-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
-      .feed-item { border-radius: 4px; }
+      .feed-item { border-radius: 4px; aspect-ratio: 3/4; }
       .feed-tab { padding: 7px 12px; font-size: 10px; }
+      .feed-brand { font-size: 11px; }
     }
   </style>
 </head>
