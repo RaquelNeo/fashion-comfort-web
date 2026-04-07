@@ -94,6 +94,12 @@
       object-fit: cover;
       will-change: transform;
       display: block;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hero-video.visible {
+      opacity: 1;
     }
 
     .hero-video-container::after {
@@ -536,7 +542,7 @@
   <!-- ============================================================ -->
   <section id="hero">
     <div class="hero-video-container">
-      <video class="hero-video" id="hero-video" autoplay muted playsinline crossorigin="anonymous">
+      <video class="hero-video" id="hero-video" autoplay muted loop playsinline crossorigin="anonymous">
         <source src="assets/hero-video-source/hero-knitting-web.mp4" type="video/mp4">
       </video>
       <div class="hero-video-fallback"></div>
@@ -929,6 +935,21 @@
     if (heroVideo) {
       heroVideo.loop = true;
       heroVideo.muted = true;
+
+      // Fade in when video is ready to play
+      heroVideo.addEventListener('canplay', function() {
+        heroVideo.classList.add('visible');
+      }, { once: true });
+
+      // Fade out near end, fade in on loop restart
+      heroVideo.addEventListener('timeupdate', function() {
+        var timeLeft = heroVideo.duration - heroVideo.currentTime;
+        if (timeLeft < 1.2) {
+          heroVideo.classList.remove('visible');
+        } else if (heroVideo.currentTime > 0.1 && heroVideo.currentTime < 1.5) {
+          heroVideo.classList.add('visible');
+        }
+      });
 
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
