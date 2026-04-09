@@ -99,7 +99,7 @@
     }
 
     .hero-video.visible {
-      opacity: 1;
+      opacity: 0.75;
     }
 
     .hero-video-container::after {
@@ -670,7 +670,7 @@
           </div>
         </div>
         <div class="sample-img-wrap">
-          <img src="assets/images/03284303712.jpg" alt="Knitwear texture detail">
+          <img src="assets/images/hombre-cardigan.png" alt="Man wearing knit cardigan">
         </div>
       </div>
     </div>
@@ -784,8 +784,8 @@
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: var(--space-2xl); align-items: stretch;">
         <!-- Contact Info -->
-        <div class="reveal">
-          <div style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
+        <div class="reveal" style="display: flex; flex-direction: column;">
+          <div data-contact="bcn" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.bcn_office">Barcelona Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bcn_title">Fashion Comfort Europe S.L.</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Fran Raya</p>
@@ -800,7 +800,7 @@
             </p>
           </div>
 
-          <div style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
+          <div data-contact="dhaka" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dhaka_office">Dhaka Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bd_title">Fashion Comfort (BD) Ltd.</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Afzalur Rahman</p>
@@ -818,10 +818,21 @@
             </p>
           </div>
 
-          <div style="display: flex; gap: 16px; margin-top: 8px;">
-            <a href="https://linkedin.com/company/fashion-comfort-group" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.3s;">LinkedIn &rarr;</a>
-            <a href="https://instagram.com/fashioncomfortgroup" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.3s;">Instagram &rarr;</a>
+          <div data-contact="tokyo" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.tokyo_office">Tokyo Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.jp_title">FASHION COMFORT STUDIO JAPAN CO., LTD.</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Mitsuhiro Kusumoto</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="tel:+81704415223" style="color: var(--text-secondary); text-decoration: none;">+81 70 4415 2239</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:kusumoto@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">kusumoto@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.jp_address">
+              Riviera Minami Aoyama BLD. A<br>3-3, 3 Chome, Minami Aoyama<br>Minato-ku, Tokyo 107-0062<br>Japan
+            </p>
           </div>
+
         </div>
 
         <!-- Contact Form -->
@@ -935,6 +946,7 @@
     if (heroVideo) {
       heroVideo.loop = true;
       heroVideo.muted = true;
+      heroVideo.playbackRate = 0.7;
 
       // Fade in when video is ready to play
       heroVideo.addEventListener('canplay', function() {

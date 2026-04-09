@@ -14,6 +14,7 @@ const i18n = {
     await this.loadLanguage(this.currentLang);
     this.applyTranslations();
     this.updateToggle();
+    this.reorderContacts();
   },
 
   async loadLanguage(lang) {
@@ -32,6 +33,7 @@ const i18n = {
     await this.loadLanguage(lang);
     this.applyTranslations();
     this.updateToggle();
+    this.reorderContacts();
     if (typeof portfolio !== 'undefined' && portfolio.products.length > 0) {
       portfolio.render();
     }
@@ -60,6 +62,19 @@ const i18n = {
     document.querySelectorAll('.lang-btn, .ds-lang-btn, .ds-mobile-lang-btn').forEach(btn => {
       const isActive = btn.dataset.lang === this.currentLang;
       btn.classList.toggle('active', isActive);
+    });
+  },
+
+  reorderContacts() {
+    const container = document.querySelector('[data-contact="bcn"]')?.parentElement;
+    if (!container) return;
+    const cards = Array.from(container.querySelectorAll('[data-contact]'));
+    const order = this.currentLang === 'ja'
+      ? ['tokyo', 'dhaka', 'bcn']
+      : ['bcn', 'dhaka', 'tokyo'];
+    order.forEach(id => {
+      const card = cards.find(c => c.dataset.contact === id);
+      if (card) container.appendChild(card);
     });
   }
 };
