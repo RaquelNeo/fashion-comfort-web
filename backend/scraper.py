@@ -89,7 +89,7 @@ BRAND_SCRAPER = {
 SKIP_BRANDS = {'pullbear', 'pull&bear', 'mango', 'mango teen', 'gdi'}
 
 # Generic Zara placeholder image hash — used to detect unpublished products
-ZARA_PLACEHOLDER_HASHES = ['b9f2/a11a']
+ZARA_PLACEHOLDER_HASHES = ['b9f2/a11a', '14a4/dea1']
 
 
 def create_driver():

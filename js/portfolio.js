@@ -20,9 +20,10 @@ const portfolio = {
     const countEl = document.getElementById('products-count');
     if (!grid) return;
 
+    const available = this.products.filter(p => p.status === 'found');
     const filtered = this.currentFilter === 'all'
-      ? this.products
-      : this.products.filter(p => p.brand === this.currentFilter);
+      ? available
+      : available.filter(p => p.brand === this.currentFilter);
 
     if (filtered.length === 0) { grid.innerHTML = ''; empty?.classList.remove('hidden'); if (countEl) countEl.textContent = ''; return; }
     empty?.classList.add('hidden');
@@ -83,7 +84,7 @@ const portfolio = {
   },
 
   updateFiltersVisibility() {
-    const brands = new Set(this.products.map(p => p.brand));
+    const brands = new Set(this.products.filter(p => p.status === 'found').map(p => p.brand));
     document.querySelectorAll('.btn-filter-pill').forEach(btn => {
       if (btn.dataset.filter !== 'all' && !brands.has(btn.dataset.filter)) btn.style.display = 'none';
     });
