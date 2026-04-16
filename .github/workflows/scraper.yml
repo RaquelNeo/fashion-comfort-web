@@ -2,8 +2,8 @@ name: Product Scraper
 
 on:
   schedule:
-    # Martes y viernes a las 8:00 AM (hora España)
-    - cron: '0 6 * * 2,5'
+    # Martes y viernes a las 18:00 (hora España)
+    - cron: '0 16 * * 2,5'
   workflow_dispatch: # permite ejecutar manualmente desde GitHub
 
 jobs:
