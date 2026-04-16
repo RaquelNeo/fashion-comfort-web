@@ -47,6 +47,9 @@ BRAND_URLS = {
     'mango': 'https://shop.mango.com',
     'bershka': 'https://www.bershka.com',
     'oysho': 'https://www.oysho.com',
+    'honeys': 'https://www.honeys-onlineshop.com',
+    'gdi': None,   # URL pendiente
+    'dub': 'https://www.dubapparels.com',
 }
 
 BRAND_DISPLAY = {
@@ -60,6 +63,9 @@ BRAND_DISPLAY = {
     'mango teen': 'MANGO TEEN',
     'bershka': 'BERSHKA',
     'oysho': 'OYSHO',
+    'honeys': 'HONEYS',
+    'gdi': 'GDI',
+    'dub': 'DUB',
 }
 
 # Map brand variants to their scraper key
@@ -74,7 +80,13 @@ BRAND_SCRAPER = {
     'mango teen': 'mango',
     'bershka': 'bershka',
     'oysho': 'oysho',
+    'honeys': 'honeys',
+    'gdi': 'gdi',
+    'dub': 'dub',
 }
+
+# Brands to skip during scraping (wrong references, etc.)
+SKIP_BRANDS = {'pullbear', 'pull&bear', 'mango', 'mango teen', 'gdi'}
 
 # Generic Zara placeholder image hash — used to detect unpublished products
 ZARA_PLACEHOLDER_HASHES = ['b9f2/a11a']
@@ -124,7 +136,7 @@ def read_references():
                 row_lower = {k.lower().strip(): v for k, v in row.items()}
                 brand = str(row_lower.get('marca', '')).strip().lower()
                 ref = str(row_lower.get('referencia', '')).strip()
-                if brand and ref:
+                if brand and ref and brand not in SKIP_BRANDS:
                     entry = {'brand': brand, 'reference': ref}
                     # Optional manual fields (for brands that block scraping)
                     for field, key in [('image', 'image'), ('name', 'name'),
@@ -147,7 +159,7 @@ def read_references():
             for row in reader:
                 brand = row.get('Marca', '').strip().lower()
                 ref = row.get('Referencia', '').strip()
-                if brand and ref:
+                if brand and ref and brand not in SKIP_BRANDS:
                     references.append({'brand': brand, 'reference': ref})
         print(f"Found {len(references)} references from local CSV")
     else:
@@ -464,6 +476,378 @@ def scrape_zara_product(driver, reference):
     return product_url, product_name, image_url, composition
 
 
+def scrape_oysho_product(driver, reference):
+    """Scrape Oysho product by reference (Inditex pattern)."""
+    # Oysho refs come as "4682/987/712" (article/model/color)
+    parts = reference.replace(' ', '').split('/')
+    ref_all = ''.join(parts)            # 4682987712
+    ref_article = ''.join(parts[:2])    # 4682987
+
+    product_url = None
+    product_name = None
+    image_url = None
+    composition = None
+
+    # Strategy 1: Try direct product URLs with different ref formats
+    url_variants = []
+    for ref_clean in [ref_all, ref_article]:
+        padded = ref_clean if ref_clean.startswith('0') else '0' + ref_clean
+        url_variants.append(f'https://www.oysho.com/es/product-p{padded}.html')
+        url_variants.append(f'https://www.oysho.com/es/es/product-p{padded}.html')
+
+    for url in url_variants:
+        try:
+            driver.get(url)
+            time.sleep(5)
+            current = driver.current_url
+            # Check we didn't land on homepage
+            if current.rstrip('/') == 'https://www.oysho.com/es' or current.rstrip('/') == 'https://www.oysho.com/es/es':
+                continue
+            if 'product' in current or ref_article in current:
+                product_url = current
+                break
+        except Exception:
+            continue
+
+    # Strategy 2: Try Oysho search (Inditex search pattern)
+    if not product_url:
+        for search_term in [ref_article, ref_all]:
+            try:
+                driver.get(f'https://www.oysho.com/es/buscar?q={search_term}')
+                time.sleep(5)
+                # Look for product links in search results
+                links = driver.find_elements(By.CSS_SELECTOR,
+                    'a[href*="product-p"], a[href*="-p0"], a[href*="/es/"]')
+                for link in links:
+                    href = link.get_attribute('href') or ''
+                    if '/es/' in href and 'buscar' not in href and href != 'https://www.oysho.com/es/':
+                        product_url = href
+                        break
+                if product_url:
+                    break
+            except Exception:
+                continue
+
+    # Strategy 3: Try Oysho static image URL directly (Inditex CDN pattern)
+    if not image_url:
+        for ref_clean in [ref_all, ref_article]:
+            padded = ref_clean if ref_clean.startswith('0') else '0' + ref_clean
+            # Inditex CDN pattern: static.oysho.net/assets/public/.../REFCOLOR-p/REFCOLOR-p.jpg
+            test_url = f'https://static.oysho.net/assets/public/{padded}-p/{padded}-p.jpg'
+            try:
+                resp = requests.head(test_url, timeout=5, allow_redirects=True,
+                                     headers={'User-Agent': 'Mozilla/5.0'})
+                if resp.status_code == 200:
+                    image_url = test_url
+                    break
+            except Exception:
+                continue
+
+    # Navigate to product page if found
+    if product_url and product_url != driver.current_url:
+        driver.get(product_url)
+        time.sleep(4)
+
+    # Extract from JSON-LD (Inditex standard)
+    if product_url:
+        try:
+            scripts = driver.find_elements(By.CSS_SELECTOR, 'script[type="application/ld+json"]')
+            for script in scripts:
+                try:
+                    data = json.loads(script.get_attribute('innerHTML'))
+                    items = data if isinstance(data, list) else [data]
+                    for item in items:
+                        if isinstance(item, dict) and item.get('@type') == 'Product':
+                            product_name = item.get('name')
+                            img = item.get('image')
+                            if isinstance(img, list) and img:
+                                image_url = img[0]
+                            elif img:
+                                image_url = img
+                            desc = item.get('description', '')
+                            comp_match = re.search(
+                                r'(\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+                                r'(?:\s*[,]\s*\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+                                desc)
+                            if comp_match:
+                                composition = comp_match.group(1)
+                except Exception:
+                    continue
+        except Exception:
+            pass
+
+    # Fallback: h1
+    if not product_name and product_url:
+        try:
+            h1 = driver.find_element(By.CSS_SELECTOR, 'h1')
+            if h1.text.strip():
+                product_name = h1.text.strip()
+        except Exception:
+            pass
+
+    # Fallback: image from static.oysho
+    if not image_url:
+        try:
+            imgs = driver.find_elements(By.CSS_SELECTOR,
+                'img[src*="static.oysho"], img[src*="oysho.net"]')
+            for img in imgs:
+                src = img.get_attribute('src') or ''
+                if src.startswith('http') and 'logo' not in src and 'icon' not in src:
+                    image_url = src
+                    break
+        except Exception:
+            pass
+
+    # Fallback: composition from page source
+    if not composition and product_url:
+        try:
+            source = driver.page_source
+            comp_match = re.search(
+                r'(\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+                r'(?:\s*[,]\s*\d{1,3}%\s*[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+                source)
+            if comp_match:
+                composition = comp_match.group(1)
+        except Exception:
+            pass
+
+    return product_url, product_name, image_url, composition
+
+
+def scrape_honeys_product(driver, reference):
+    """Scrape Honeys product by searching their website."""
+    # Extract numeric reference (strip descriptive suffixes like "SKIRT", "CAT", etc.)
+    ref_numeric = re.match(r'[\d\-]+', reference.strip())
+    ref_search = ref_numeric.group(0).rstrip('-') if ref_numeric else reference.strip()
+    ref_digits = ref_search.replace('-', '')  # e.g. "587311298"
+
+    product_url = None
+    product_name = None
+    image_url = None
+    composition = None
+
+    base = BRAND_URLS['honeys']
+
+    # Strategy 1: Try direct product URL with different code formats
+    # Honeys uses 12-digit codes like /shop/g/g587311298XX/
+    # Try padding with common suffixes to reach 12 digits
+    code_variants = [ref_digits]
+    if len(ref_digits) < 12:
+        for pad in ['01', '31', '37', '00', '10', '20', '30', '40', '50']:
+            padded = ref_digits + pad
+            if len(padded) <= 12:
+                code_variants.append(padded.ljust(12, '0'))
+                code_variants.append(padded)
+
+    for code in code_variants:
+        test_url = f'{base}/shop/g/g{code}/'
+        try:
+            driver.get(test_url)
+            time.sleep(3)
+            # Check for actual product content (not just nav/homepage)
+            page_text = driver.find_element(By.TAG_NAME, 'body').text
+            # Look for price indicators (¥) as sign of a product page
+            if '¥' in page_text and len(page_text) > 500:
+                # Verify this isn't just a category/nav page
+                try:
+                    # Look for product-specific elements
+                    for sel in ['.goods_name', '#item_detail', '.itemDetail',
+                                '[class*="goodsDetail"]', '[class*="product-detail"]',
+                                'h1.item-name', '.good_detail_box']:
+                        els = driver.find_elements(By.CSS_SELECTOR, sel)
+                        if els and els[0].text.strip():
+                            product_url = driver.current_url
+                            product_name = els[0].text.strip()
+                            break
+                except Exception:
+                    pass
+
+                if not product_name:
+                    # Try h1 as last resort, but verify it's not navigation
+                    try:
+                        h1 = driver.find_element(By.CSS_SELECTOR, 'h1')
+                        h1_text = h1.text.strip()
+                        if h1_text and len(h1_text) < 100 and 'honeys' not in h1_text.lower():
+                            product_url = driver.current_url
+                            product_name = h1_text
+                    except Exception:
+                        pass
+
+            if product_url:
+                break
+        except Exception:
+            continue
+
+    # Strategy 2: Use search
+    if not product_url:
+        search_url = f'{base}/shop/goods/search.aspx?search=x&keyword={ref_search}'
+        try:
+            driver.get(search_url)
+            time.sleep(5)
+            # Look for product links containing the reference digits
+            links = driver.find_elements(By.CSS_SELECTOR, 'a[href*="/shop/g/g"]')
+            for link in links:
+                href = link.get_attribute('href') or ''
+                # Only take links whose product code starts with our ref digits
+                code_match = re.search(r'/g/g(\d+)/', href)
+                if code_match and code_match.group(1).startswith(ref_digits):
+                    product_url = href if href.startswith('http') else base + href
+                    break
+        except Exception:
+            pass
+
+    # Navigate to product page if found via search
+    if product_url and product_url != driver.current_url:
+        driver.get(product_url)
+        time.sleep(4)
+
+    # Extract product name from page
+    if not product_name and product_url:
+        for sel in ['.goods_name', '#item_detail h1', '.itemDetail h1',
+                    'h1', '[class*="product-name"]', '[class*="goodsName"]']:
+            try:
+                el = driver.find_element(By.CSS_SELECTOR, sel)
+                text = el.text.strip()
+                if text and len(text) < 100 and 'honeys' not in text.lower():
+                    product_name = text
+                    break
+            except Exception:
+                continue
+
+    # Extract image
+    if not image_url and product_url:
+        for sel in ['img[src*="img/goods"]', '#mainImage', '.goods_image img',
+                    '.main-image img', 'img[src*="honeys"]']:
+            try:
+                imgs = driver.find_elements(By.CSS_SELECTOR, sel)
+                for img in imgs:
+                    src = img.get_attribute('src') or img.get_attribute('data-src') or ''
+                    if src.startswith('http') and 'logo' not in src and 'icon' not in src and 'banner' not in src:
+                        image_url = src
+                        break
+                if image_url:
+                    break
+            except Exception:
+                continue
+
+    # Extract composition/material
+    if product_url:
+        try:
+            source = driver.page_source
+            # Japanese composition patterns: NN%素材名
+            comp_match = re.search(
+                r'(\d{1,3}%\s*[\w\u3000-\u9FFF\uFF00-\uFFEF]+'
+                r'(?:\s*[,/、]\s*\d{1,3}%\s*[\w\u3000-\u9FFF\uFF00-\uFFEF]+)*)',
+                source)
+            if comp_match:
+                composition = comp_match.group(1)
+        except Exception:
+            pass
+
+    # Try JSON-LD
+    if not product_name or not image_url:
+        try:
+            scripts = driver.find_elements(By.CSS_SELECTOR, 'script[type="application/ld+json"]')
+            for script in scripts:
+                data = json.loads(script.get_attribute('innerHTML'))
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    if isinstance(item, dict) and item.get('@type') == 'Product':
+                        if not product_name:
+                            product_name = item.get('name')
+                        if not image_url:
+                            img = item.get('image')
+                            image_url = img[0] if isinstance(img, list) else img
+        except Exception:
+            pass
+
+    return product_url, product_name, image_url, composition
+
+
+def scrape_dub_product(driver, reference):
+    """Scrape DUB Apparels product. DUB uses internal refs (1005/XXX) and sells via Wildberries."""
+    ref_clean = reference.replace('/', '')
+    base = BRAND_URLS['dub']
+
+    product_url = None
+    product_name = None
+    image_url = None
+    composition = None
+
+    # DUB's website is a showcase with collections; try browsing pages for the reference
+    # First try searching for the article code in page content
+    collection_pages = [
+        f'{base}/bestsellers',
+        f'{base}/urban-i',
+        f'{base}/urban-ii',
+        f'{base}/sk8-park',
+        f'{base}/denim-cut',
+        f'{base}/natures-canvas',
+    ]
+
+    for page_url in collection_pages:
+        try:
+            driver.get(page_url)
+            time.sleep(4)
+
+            # Search for the reference in page source (article codes may appear as text)
+            source = driver.page_source
+            if ref_clean in source or reference in source:
+                # Found the reference on this page, try to extract product info nearby
+                # Look for product cards/items
+                items = driver.find_elements(By.CSS_SELECTOR,
+                    '[class*="product"], [class*="item"], [class*="card"], article')
+                for item in items:
+                    item_text = item.text or ''
+                    item_html = item.get_attribute('innerHTML') or ''
+                    if ref_clean in item_text or ref_clean in item_html or reference in item_html:
+                        # Found the matching product card
+                        try:
+                            link = item.find_element(By.CSS_SELECTOR, 'a[href]')
+                            product_url = link.get_attribute('href')
+                        except Exception:
+                            product_url = page_url
+
+                        try:
+                            img = item.find_element(By.CSS_SELECTOR, 'img')
+                            image_url = img.get_attribute('src') or img.get_attribute('data-src')
+                        except Exception:
+                            pass
+
+                        try:
+                            name_el = item.find_element(By.CSS_SELECTOR,
+                                'h2, h3, h4, [class*="name"], [class*="title"]')
+                            product_name = name_el.text.strip()
+                        except Exception:
+                            pass
+
+                        break
+
+                if image_url:
+                    break
+        except Exception:
+            continue
+
+    # If not found in collections, try product images from the page
+    if not image_url:
+        try:
+            driver.get(base)
+            time.sleep(4)
+            # Try to find any reference to the article
+            imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="dub"], img[src*="product"]')
+            for img in imgs:
+                alt = (img.get_attribute('alt') or '').lower()
+                src = img.get_attribute('src') or ''
+                if ref_clean in alt or ref_clean in src:
+                    image_url = src
+                    product_name = img.get_attribute('alt')
+                    break
+        except Exception:
+            pass
+
+    return product_url, product_name, image_url, composition
+
+
 def scrape_product(driver, brand, reference, manual=None):
     """Scrape a single product, or use manual data from spreadsheet."""
     ref_clean = reference.replace('/', '-')
@@ -504,6 +888,12 @@ def scrape_product(driver, brand, reference, manual=None):
             product_url, name, image_url, composition = scrape_pullbear_product(driver, reference)
         elif scraper_key == 'zara':
             product_url, name, image_url, composition = scrape_zara_product(driver, reference)
+        elif scraper_key == 'oysho':
+            product_url, name, image_url, composition = scrape_oysho_product(driver, reference)
+        elif scraper_key == 'honeys':
+            product_url, name, image_url, composition = scrape_honeys_product(driver, reference)
+        elif scraper_key == 'dub':
+            product_url, name, image_url, composition = scrape_dub_product(driver, reference)
         else:
             print(f"brand {brand} not yet implemented")
             result['status'] = 'not_implemented'
@@ -545,8 +935,55 @@ def main():
     if not references:
         return
 
+    # Load existing products to avoid re-scraping
+    existing = {}
+    if PRODUCTS_DATA_JSON.exists():
+        try:
+            with open(PRODUCTS_DATA_JSON, 'r', encoding='utf-8') as f:
+                for p in json.load(f):
+                    if p.get('status') == 'found':
+                        key = (p['brand'], p['reference'])
+                        existing[key] = p
+            print(f"Loaded {len(existing)} existing products (will skip)")
+        except Exception:
+            pass
+
+    # Filter out already-scraped references
+    def normalize_ref(brand, ref):
+        """Normalize reference for comparison."""
+        ref_clean = ref.replace('/', '').replace(' ', '')
+        # Zara refs: "3284/419" in sheet vs "03284419" in JSON
+        if 'zara' in brand:
+            if not ref_clean.startswith('0'):
+                ref_clean = '0' + ref_clean
+        return ref_clean
+
+    new_references = []
+    for ref in references:
+        brand = ref['brand']
+        reference = ref['reference']
+        # Check both raw and normalized forms
+        if (brand, reference) in existing:
+            continue
+        norm_ref = normalize_ref(brand, reference)
+        # Check with normalized ref across all brand variants
+        found = False
+        for (eb, er) in existing:
+            if normalize_ref(eb, er) == norm_ref and BRAND_SCRAPER.get(eb) == BRAND_SCRAPER.get(brand):
+                found = True
+                break
+        if not found:
+            new_references.append(ref)
+
+    if not new_references:
+        print("No new references to scrape. All up to date!")
+        return
+
+    print(f"New references to process: {len(new_references)} "
+          f"(skipped {len(references) - len(new_references)} existing)")
+
     # Check if any refs need scraping (no manual data)
-    needs_scraping = any(not (r.get('image') and r.get('name')) for r in references)
+    needs_scraping = any(not (r.get('image') and r.get('name')) for r in new_references)
 
     driver = None
     if needs_scraping:
@@ -554,27 +991,30 @@ def main():
         driver = create_driver()
 
         # Initialize sessions: visit homepages and accept cookies
-        brands_in_refs = set(BRAND_SCRAPER.get(r['brand'], r['brand']) for r in references
+        brands_in_refs = set(BRAND_SCRAPER.get(r['brand'], r['brand']) for r in new_references
                              if not (r.get('image') and r.get('name')))
         for scraper_brand in brands_in_refs:
-            if scraper_brand in BRAND_URLS:
-                url = BRAND_URLS[scraper_brand]
+            url = BRAND_URLS.get(scraper_brand)
+            if url:
                 print(f"Initializing {scraper_brand} session...")
-                driver.get(f'{url}/es/')
+                # Honeys is Japanese, no /es/ path
+                home = url if scraper_brand == 'honeys' else f'{url}/es/'
+                driver.get(home)
                 time.sleep(4)
                 dismiss_cookies(driver)
                 time.sleep(1)
     else:
         print("All entries have manual data, no scraping needed.")
 
-    products = []
+    # Start with existing products
+    products = list(existing.values())
 
     try:
-        for idx, ref in enumerate(references, 1):
+        for idx, ref in enumerate(new_references, 1):
             brand = ref['brand']
             reference = ref['reference']
 
-            print(f"[{idx}/{len(references)}] {BRAND_DISPLAY.get(brand, brand)} ref {reference}... ",
+            print(f"[{idx}/{len(new_references)}] {BRAND_DISPLAY.get(brand, brand)} ref {reference}... ",
                   end='', flush=True)
 
             # Pass manual data if available from spreadsheet
@@ -591,7 +1031,7 @@ def main():
             comp = f" | {result['composition'][:60]}" if result.get('composition') else ""
             print(f"{status}{name}{comp}")
 
-            if idx < len(references) and not manual:
+            if idx < len(new_references) and not manual:
                 time.sleep(3)
 
     except KeyboardInterrupt:
