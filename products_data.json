@@ -1159,7 +1159,7 @@
     "image": "https://media.mango.com/is/image/punto/27054048-35-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_27054048.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-fino_27054048",
-    "composition": null,
+    "composition": "90% viscosa, 10% poliéster",
     "status": "found",
     "scrapedAt": "2026-04-20T13:51:43.326907+00:00"
   },
@@ -1171,7 +1171,7 @@
     "image": "https://media.mango.com/is/image/punto/17026332-30-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_17026332.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-cremallera_17026332",
-    "composition": null,
+    "composition": "55% acrílico, 22% poliéster, 15% poliamida, 8% lana",
     "status": "found",
     "scrapedAt": "2026-04-20T13:51:50.817818+00:00"
   },
@@ -1183,7 +1183,7 @@
     "image": "https://media.mango.com/is/image/punto/17018271-95-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_17018271.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-flecos_17018271",
-    "composition": null,
+    "composition": "70% acrílico, 30% algodón",
     "status": "found",
     "scrapedAt": "2026-04-20T13:51:58.853017+00:00"
   },
@@ -1195,7 +1195,7 @@
     "image": "https://media.mango.com/is/image/punto/17007130-14-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_17007130.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-cuello-perkins_17007130",
-    "composition": null,
+    "composition": "56% acrílico, 25% poliéster, 19% poliamida",
     "status": "found",
     "scrapedAt": "2026-04-20T13:52:06.704476+00:00"
   },
@@ -1207,7 +1207,7 @@
     "image": "https://media.mango.com/is/image/punto/27025817-02-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_27025817.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-calado-rayas_27025817",
-    "composition": null,
+    "composition": "65% acrílico, 35% poliamida",
     "status": "found",
     "scrapedAt": "2026-04-20T13:52:15.796485+00:00"
   },
@@ -1219,7 +1219,7 @@
     "image": "https://media.mango.com/is/image/punto/27025816-56-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_27025816.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-calado_27025816",
-    "composition": null,
+    "composition": "65% acrílico, 35% poliamida",
     "status": "found",
     "scrapedAt": "2026-04-20T13:52:23.992748+00:00"
   },
@@ -1231,7 +1231,7 @@
     "image": "https://media.mango.com/is/image/punto/27012547-30-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_27012547.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-calado_27012547",
-    "composition": null,
+    "composition": "100% acrílico",
     "status": "found",
     "scrapedAt": "2026-04-20T13:52:32.669154+00:00"
   },
@@ -1243,7 +1243,7 @@
     "image": "https://media.mango.com/is/image/punto/27024052-25-002?imwidth=1920&imdensity=1",
     "imageLocal": "assets/images/products/mango_27024052.jpg",
     "productUrl": "https://shop.mango.com/es/es/p/teen/jerseis-y-cardigans/jerseis/jersey-punto-medio_27024052",
-    "composition": null,
+    "composition": "60% algodón, 40% acrílico",
     "status": "found",
     "scrapedAt": "2026-04-20T13:52:40.447199+00:00"
   }

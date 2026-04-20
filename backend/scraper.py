@@ -663,17 +663,38 @@ def scrape_mango_product(driver, reference):
         # Upgrade to higher resolution if size param is present
         image_url = re.sub(r'imwidth=\d+', 'imwidth=1920', og_image)
 
-    # Extract composition from og:description only — page source is noisy
-    # (contains strings like "10% de descuento"). Reject matches where the
-    # fabric word is a Spanish preposition/article like "de", "del", "la".
-    if og_desc:
-        comp_re = re.compile(
-            r'(\d{1,3}%\s+(?!de\b|del\b|la\b|en\b)[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
-            r'(?:\s*,\s*\d{1,3}%\s+(?!de\b|del\b|la\b|en\b)[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
-            re.I)
-        m = comp_re.search(og_desc)
-        if m:
-            composition = m.group(1)
+    # Extract composition: match "<N>% <material>[, <N>% <material>]*".
+    # Reject matches where the fabric word is a Spanish preposition/article
+    # (e.g. "10% de descuento", "10% en tu próxima compra" in promo banners).
+    # Among all candidates, prefer the one whose percentages sum closest to 100.
+    comp_re = re.compile(
+        r'(\d{1,3}\s*%\s+(?!de\b|del\b|la\b|el\b|en\b|para\b|con\b|sin\b)'
+        r'[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+        r'(?:\s*,\s*\d{1,3}\s*%\s+(?!de\b|del\b|la\b|el\b|en\b|para\b|con\b|sin\b)'
+        r'[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+        re.I)
+
+    def pick_composition(text):
+        if not text:
+            return None
+        candidates = comp_re.findall(text)
+        best = None
+        best_diff = 999
+        for c in candidates:
+            pcts = [int(n) for n in re.findall(r'(\d{1,3})\s*%', c)]
+            total = sum(pcts)
+            diff = abs(100 - total)
+            if diff < best_diff:
+                best_diff = diff
+                best = c
+        return best if best and best_diff <= 5 else None
+
+    composition = pick_composition(og_desc)
+    if not composition:
+        try:
+            composition = pick_composition(driver.page_source)
+        except Exception:
+            pass
 
     return product_url, product_name, image_url, composition
 
