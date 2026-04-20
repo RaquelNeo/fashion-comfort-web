@@ -969,6 +969,10 @@ def scrape_product(driver, brand, reference, manual=None):
         result['name'] = name
         result['composition'] = composition
 
+        # Auto-detect Mango Teen sub-brand from product URL
+        if scraper_key == 'mango' and product_url and '/teen/' in product_url.lower():
+            result['brandDisplay'] = 'MANGO TEEN'
+
         if image_url:
             result['image'] = image_url
             image_path = IMAGES_DIR / f'{brand_file}_{ref_clean}.jpg'
