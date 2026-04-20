@@ -86,7 +86,7 @@ BRAND_SCRAPER = {
 }
 
 # Brands to skip during scraping (wrong references, etc.)
-SKIP_BRANDS = {'pullbear', 'pull&bear', 'mango', 'mango teen', 'gdi'}
+SKIP_BRANDS = {'pullbear', 'pull&bear', 'gdi'}
 
 # Generic Zara placeholder image hash — used to detect unpublished products
 ZARA_PLACEHOLDER_HASHES = ['b9f2/a11a', '14a4/dea1']
@@ -614,6 +614,70 @@ def scrape_oysho_product(driver, reference):
     return product_url, product_name, image_url, composition
 
 
+def scrape_mango_product(driver, reference):
+    """Scrape Mango product by reference.
+
+    Mango accepts /es/es/p/{ref} as a short URL that redirects to the full
+    canonical product page. Metadata comes from og:* tags.
+    """
+    ref_clean = str(reference).strip().replace('/', '').replace(' ', '')
+
+    product_url = None
+    product_name = None
+    image_url = None
+    composition = None
+
+    try:
+        driver.get(f'https://shop.mango.com/es/es/p/{ref_clean}')
+        time.sleep(5)
+    except Exception:
+        return product_url, product_name, image_url, composition
+
+    current = driver.current_url
+    # If we didn't redirect to a real product page, bail out
+    if '/p/' not in current or current.rstrip('/').endswith(f'/p/{ref_clean}'):
+        # Still on the short URL or redirected away — product likely unavailable
+        if current.rstrip('/').endswith(f'/p/{ref_clean}'):
+            # short URL didn't resolve; page may contain 404 state
+            return product_url, product_name, image_url, composition
+    product_url = current
+
+    def meta(prop):
+        try:
+            el = driver.find_element(By.CSS_SELECTOR, f'meta[property="{prop}"]')
+            return (el.get_attribute('content') or '').strip() or None
+        except Exception:
+            return None
+
+    og_title = meta('og:title')
+    og_image = meta('og:image')
+    og_desc = meta('og:description')
+
+    if og_title:
+        # Strip " - Teen | MANGO España (...)" suffix
+        product_name = re.split(r'\s*\|\s*MANGO', og_title)[0].strip()
+        product_name = re.sub(r'\s*-\s*(Teen|Kids|Baby|Man|Woman|Mujer|Hombre|Niña|Niño)\s*$',
+                              '', product_name, flags=re.I).strip()
+
+    if og_image:
+        # Upgrade to higher resolution if size param is present
+        image_url = re.sub(r'imwidth=\d+', 'imwidth=1920', og_image)
+
+    # Extract composition from og:description only — page source is noisy
+    # (contains strings like "10% de descuento"). Reject matches where the
+    # fabric word is a Spanish preposition/article like "de", "del", "la".
+    if og_desc:
+        comp_re = re.compile(
+            r'(\d{1,3}%\s+(?!de\b|del\b|la\b|en\b)[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+'
+            r'(?:\s*,\s*\d{1,3}%\s+(?!de\b|del\b|la\b|en\b)[A-Za-zÁáÉéÍíÓóÚúÑñüÜ]+)*)',
+            re.I)
+        m = comp_re.search(og_desc)
+        if m:
+            composition = m.group(1)
+
+    return product_url, product_name, image_url, composition
+
+
 def scrape_honeys_product(driver, reference):
     """Scrape Honeys product by searching their website."""
     # Extract numeric reference (strip descriptive suffixes like "SKIRT", "CAT", etc.)
@@ -890,6 +954,8 @@ def scrape_product(driver, brand, reference, manual=None):
             product_url, name, image_url, composition = scrape_zara_product(driver, reference)
         elif scraper_key == 'oysho':
             product_url, name, image_url, composition = scrape_oysho_product(driver, reference)
+        elif scraper_key == 'mango':
+            product_url, name, image_url, composition = scrape_mango_product(driver, reference)
         elif scraper_key == 'honeys':
             product_url, name, image_url, composition = scrape_honeys_product(driver, reference)
         elif scraper_key == 'dub':
