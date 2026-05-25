@@ -782,62 +782,9 @@
     <div class="section-inner">
       <div class="section-tag reveal" data-i18n="contact.tag">Get in Touch</div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: var(--space-2xl); align-items: stretch;">
-        <!-- Contact Info -->
-        <div class="reveal" style="display: flex; flex-direction: column;">
-          <div data-contact="bcn" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
-            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.bcn_office">Barcelona Office</h3>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bcn_title">Fashion Comfort Europe S.L.</p>
-            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Fran Raya</p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
-              <a href="tel:+34653645209" style="color: var(--text-secondary); text-decoration: none;">+34 653 645 209</a>
-            </p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="mailto:fran@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">fran@fashioncomfort.com</a>
-            </p>
-            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.bcn_address">
-              C/ Narcís Monturiol 48<br>1st Floor, Door 3<br>08340 Vilassar de Mar<br>Barcelona, Spain
-            </p>
-          </div>
-
-          <div data-contact="dhaka" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 16px;">
-            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dhaka_office">Dhaka Office</h3>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bd_title">Fashion Comfort (BD) Ltd.</p>
-            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Afzalur Rahman</p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="tel:+8801713018428" style="color: var(--text-secondary); text-decoration: none;">+880 17 1301 8428</a>
-            </p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
-              <a href="mailto:afzal@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">afzal@fashioncomfort.com</a>
-            </p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="mailto:diporno@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">diporno@fashioncomfort.com</a>
-            </p>
-            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.bd_address">
-              House 198/A, Road 1<br>New DOHS, Mohakhali<br>Dhaka 1206<br>Bangladesh
-            </p>
-          </div>
-
-          <div data-contact="tokyo" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
-            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.tokyo_office">Tokyo Office</h3>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.jp_title">FASHION COMFORT STUDIO JAPAN CO., LTD.</p>
-            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Mitsuhiro Kusumoto</p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="tel:+817044152239" style="color: var(--text-secondary); text-decoration: none;">+81 70 4415 2239</a>
-            </p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="mailto:kusumoto@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">kusumoto@fashioncomfort.com</a>
-            </p>
-            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.jp_address">
-              Riviera Minami Aoyama BLD. A<br>3-3, 3 Chome, Minami Aoyama<br>Minato-ku, Tokyo 107-0062<br>Japan
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Contact Form -->
-        <div class="reveal" style="animation-delay: 0.1s;">
-          <form id="contact-form" action="https://formspree.io/f/mwvwqlno" method="POST" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%;">
+      <!-- Contact Form: full width on top -->
+      <div class="reveal" style="margin-top: var(--space-2xl);">
+        <form id="contact-form" action="https://formspree.io/f/mwvwqlno" method="POST" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); display: flex; flex-direction: column;">
             <input type="hidden" name="_subject" value="New inquiry from fashioncomfort.com">
             <input type="hidden" name="_autoresponse" value="Thank you for contacting Fashion Comfort Group. We have received your message and will get back to you shortly.">
             <input type="hidden" name="_template" value="table">
@@ -900,7 +847,124 @@
                 });
             });
           </script>
+      </div>
+
+      <!-- Offices: 2-column grid, equal column heights -->
+      <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: stretch;">
+
+        <!-- LEFT COLUMN: Barcelona, Dhaka, Tokyo -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div data-contact="bcn" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.bcn_office">Barcelona Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bcn_title">Fashion Comfort Europe S.L.</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Fran Raya</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+34653645209" style="color: var(--text-secondary); text-decoration: none;">+34 653 645 209</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:fran@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">fran@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.bcn_address">
+              C/ Narcís Monturiol 48<br>1st Floor, Door 3<br>08340 Vilassar de Mar<br>Barcelona, Spain
+            </p>
+          </div>
+
+          <div data-contact="dhaka" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dhaka_office">Dhaka Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bd_title">Fashion Comfort (BD) Ltd.</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Afzalur Rahman</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="tel:+8801713018428" style="color: var(--text-secondary); text-decoration: none;">+880 17 1301 8428</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="mailto:afzal@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">afzal@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:diporno@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">diporno@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.bd_address">
+              House 198/A, Road 1<br>New DOHS, Mohakhali<br>Dhaka 1206<br>Bangladesh
+            </p>
+          </div>
+
+          <div data-contact="tokyo" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.tokyo_office">Tokyo Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.jp_title">FASHION COMFORT STUDIO JAPAN CO., LTD.</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Mitsuhiro Kusumoto</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="tel:+817044152239" style="color: var(--text-secondary); text-decoration: none;">+81 70 4415 2239</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:kusumoto@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">kusumoto@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.jp_address">
+              Riviera Minami Aoyama BLD. A<br>3-3, 3 Chome, Minami Aoyama<br>Minato-ku, Tokyo 107-0062<br>Japan
+            </p>
+          </div>
         </div>
+
+        <!-- RIGHT COLUMN: USA, Canada, Dubai, Shanghai -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div data-contact="usa" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.usa_office">USA Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.usa_title">FASHION COMFORT USA LLC</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+19173921969" style="color: var(--text-secondary); text-decoration: none;">+1 (917) 392-1969</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:mdhossain@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">mdhossain@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.usa_address">
+              700 Union Pkwy Ste 6<br>Ronkonkoma, NY 11779-7427<br>USA
+            </p>
+          </div>
+
+          <div data-contact="ca" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.ca_office">Canada Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.ca_title">FASHION COMFORT CANADA</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+19059031457" style="color: var(--text-secondary); text-decoration: none;">+1 (905) 903-1457</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:mehbub@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">mehbub@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.ca_address">
+              33 Martinworth Lane<br>Ajax, Ontario L1Z 0L1<br>Canada
+            </p>
+          </div>
+
+          <div data-contact="dubai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dubai_office">Dubai Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.dubai_title">FASHION COMFORT FZCO DUBAI</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+971543266570" style="color: var(--text-secondary); text-decoration: none;">+971 54 326 6570</a>
+              <span data-i18n="contact.dubai_phone_mobile" style="color: var(--text-muted);">(mobile)</span>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+97145583140" style="color: var(--text-secondary); text-decoration: none;">+971 4 558 3140</a>
+              <span data-i18n="contact.dubai_phone_landline" style="color: var(--text-muted);">(landline)</span>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:akash@fashioncomfort.com" style="color: var(--text-primary); text-decoration: none;">akash@fashioncomfort.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.dubai_address">
+              Building BCA1, Office 516<br>Dubai CommerCity, Umm Ramool<br>Dubai, UAE
+            </p>
+          </div>
+
+          <div data-contact="shanghai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.shanghai_office">Shanghai Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.shanghai_title">FC SHANGHAI</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Andrew Chou</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+8613512143212" style="color: var(--text-secondary); text-decoration: none;">+86 135 1214 3212</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:AndrewChou@shfullwise.com" style="color: var(--text-primary); text-decoration: none;">AndrewChou@shfullwise.com</a>
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
