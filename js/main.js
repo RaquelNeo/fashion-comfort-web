@@ -70,8 +70,8 @@ const i18n = {
     if (!container) return;
     const cards = Array.from(container.querySelectorAll('[data-contact]'));
     const order = this.currentLang === 'ja'
-      ? ['tokyo', 'dhaka', 'bcn']
-      : ['bcn', 'dhaka', 'tokyo'];
+      ? ['tokyo', 'dhaka', 'bcn', 'shanghai']
+      : ['bcn', 'dhaka', 'tokyo', 'shanghai'];
     order.forEach(id => {
       const card = cards.find(c => c.dataset.contact === id);
       if (card) container.appendChild(card);

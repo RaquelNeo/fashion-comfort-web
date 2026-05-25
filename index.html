@@ -490,6 +490,12 @@
         margin: 0 auto;
       }
 
+      /* Offices grid collapses to single column with auto row heights on mobile */
+      #contact .offices-grid {
+        grid-template-rows: auto !important;
+        grid-auto-flow: row !important;
+      }
+
       /* Stack Why FC cards */
       #why .reveal[style*="grid-template-columns: 1fr 1fr"] {
         grid-template-columns: 1fr !important;
@@ -849,12 +855,12 @@
           </script>
       </div>
 
-      <!-- Offices: 2-column grid, equal column heights -->
-      <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: stretch;">
+      <!-- Offices: unified grid, all cards same height. Left 4 / Right 3 -->
+      <div class="reveal offices-grid" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 380px); grid-auto-flow: column; gap: 16px 40px; margin-top: 40px;">
 
-        <!-- LEFT COLUMN: Barcelona, Dhaka, Tokyo -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div data-contact="bcn" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+        <!-- LEFT COLUMN: Barcelona, Dhaka, Tokyo, Shanghai -->
+        <div style="display: contents;">
+          <div data-contact="bcn" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.bcn_office">Barcelona Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bcn_title">Fashion Comfort Europe S.L.</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Fran Raya</p>
@@ -869,7 +875,7 @@
             </p>
           </div>
 
-          <div data-contact="dhaka" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+          <div data-contact="dhaka" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dhaka_office">Dhaka Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.bd_title">Fashion Comfort (BD) Ltd.</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Afzalur Rahman</p>
@@ -887,7 +893,7 @@
             </p>
           </div>
 
-          <div data-contact="tokyo" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+          <div data-contact="tokyo" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.tokyo_office">Tokyo Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.jp_title">FASHION COMFORT STUDIO JAPAN CO., LTD.</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Mitsuhiro Kusumoto</p>
@@ -901,11 +907,24 @@
               Riviera Minami Aoyama BLD. A<br>3-3, 3 Chome, Minami Aoyama, Minato-ku<br>Tokyo 107-0062, Japan
             </p>
           </div>
+
+          <div data-contact="shanghai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.shanghai_office">Shanghai Office</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.shanghai_title">FASHION COMFORT SHANGHAI</p>
+            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Andrew Chou</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+              <a href="tel:+8613512143212" style="color: var(--text-secondary); text-decoration: none;">+86 135 1214 3212</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+              <a href="mailto:AndrewChou@shfullwise.com" style="color: var(--text-primary); text-decoration: none;">AndrewChou@shfullwise.com</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6; font-style: italic;" data-i18n="contact.shanghai_address">Address coming soon</p>
+          </div>
         </div>
 
-        <!-- RIGHT COLUMN: USA, Canada, Dubai, Shanghai -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div data-contact="usa" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+        <!-- RIGHT COLUMN: USA, Canada, Dubai -->
+        <div style="display: contents;">
+          <div data-contact="usa" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.usa_office">USA Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.usa_title">FASHION COMFORT USA LLC</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">MD Mosaruf Hossain</p>
@@ -920,7 +939,7 @@
             </p>
           </div>
 
-          <div data-contact="ca" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+          <div data-contact="ca" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.ca_office">Canada Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.ca_title">FASHION COMFORT CANADA INC</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Mehbub Ahsan</p>
@@ -935,7 +954,7 @@
             </p>
           </div>
 
-          <div data-contact="dubai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
+          <div data-contact="dubai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border);">
             <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.dubai_office">Dubai Office</h3>
             <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.dubai_title">FASHION COMFORT FZCO DUBAI</p>
             <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">MD Hadi A Alam Akash</p>
@@ -952,18 +971,6 @@
             </p>
             <p style="color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6;" data-i18n-html="contact.dubai_address">
               Building BCA1, Office 516<br>Dubai CommerCity, Umm Ramool<br>Dubai, UAE
-            </p>
-          </div>
-
-          <div data-contact="shanghai" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--border); flex: 1;">
-            <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 600; margin-bottom: 12px;" data-i18n="contact.shanghai_office">Shanghai Office</h3>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;" data-i18n="contact.shanghai_title">FASHION COMFORT SHANGHAI</p>
-            <p style="color: var(--text-primary); font-size: 14px; font-weight: 500; margin-bottom: 4px;">Andrew Chou</p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
-              <a href="tel:+8613512143212" style="color: var(--text-secondary); text-decoration: none;">+86 135 1214 3212</a>
-            </p>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
-              <a href="mailto:AndrewChou@shfullwise.com" style="color: var(--text-primary); text-decoration: none;">AndrewChou@shfullwise.com</a>
             </p>
           </div>
         </div>
