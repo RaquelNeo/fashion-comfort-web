@@ -370,10 +370,14 @@
       emptyMsg.style.display = 'none';
 
       products.forEach(function(p) {
-        var a = document.createElement('a');
-        a.href = p.productUrl || '#';
-        a.target = '_blank';
-        a.rel = 'noopener';
+        // Las prendas que la marca ya ha retirado de su tienda no llevan enlace:
+        // un "#" abría una pestaña vacía.
+        var a = document.createElement(p.productUrl ? 'a' : 'div');
+        if (p.productUrl) {
+          a.href = p.productUrl;
+          a.target = '_blank';
+          a.rel = 'noopener';
+        }
         a.className = 'feed-item';
         a.innerHTML =
           '<img src="' + (p.imageLocal || p.image || '') + '" alt="' + (p.name || '') + '">' +
@@ -411,9 +415,11 @@
       var seen = {};
       var brands = [];
       products.forEach(function(p) {
-        if (!seen[p.brandDisplay]) {
-          seen[p.brandDisplay] = true;
-          brands.push(p.brandDisplay);
+        // Bebé niño y bebé niña van juntos en la pestaña ZARA BABY.
+        var bd = /^ZARA BABY /.test(p.brandDisplay) ? 'ZARA BABY' : p.brandDisplay;
+        if (!seen[bd]) {
+          seen[bd] = true;
+          brands.push(bd);
         }
       });
 
