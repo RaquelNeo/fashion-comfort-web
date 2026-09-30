@@ -6,10 +6,11 @@
     "name": "JERSEY PUNTO PERLADO",
     "image": "https://static.zara.net/assets/public/c6c0/5d2c/9b964a0b9cf8/9f95cf2a2d8c/03284331722-p/03284331722-p.jpg?ts=1759938176865&w=1920",
     "imageLocal": "assets/images/products/zara_03284331.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-punto-perlado-p03284331.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:46:49.545721+00:00"
+    "scrapedAt": "2026-03-29T19:46:49.545721+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-punto-perlado-p03284331.html"
   },
   {
     "brand": "zara",
@@ -18,10 +19,11 @@
     "name": "JERSEY ESTRUCTURA LAVADA ALGODÓN",
     "image": "https://static.zara.net/assets/public/92e6/9c79/c04d4c74b85d/ebe75ca3fed5/03284424411-p/03284424411-p.jpg?ts=1773403666202&w=1920",
     "imageLocal": "assets/images/products/zara_03284424.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-estructura-lavada-algodon-p03284424.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:46:56.042959+00:00"
+    "scrapedAt": "2026-03-29T19:46:56.042959+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-estructura-lavada-algodon-p03284424.html"
   },
   {
     "brand": "zara",
@@ -30,10 +32,11 @@
     "name": "JERSEY RAYAS LINO - ALGODÓN",
     "image": "https://static.zara.net/assets/public/fc45/3e42/2dec4ca89871/136e7858b637/03284408712-p/03284408712-p.jpg?ts=1770742108690&w=1920",
     "imageLocal": "assets/images/products/zara_03284408.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-rayas-lino---algodon-p03284408.html",
+    "productUrl": "",
     "composition": "53% lino, 47% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:02.539653+00:00"
+    "scrapedAt": "2026-03-29T19:47:02.539653+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-rayas-lino---algodon-p03284408.html"
   },
   {
     "brand": "zara",
@@ -42,10 +45,11 @@
     "name": "POLO PUNTO MEZCLA LINO",
     "image": "https://static.zara.net/assets/public/631f/c5cc/a646417fa85e/d7c0d2c015af/03284407717-p/03284407717-p.jpg?ts=1771402584478&w=1920",
     "imageLocal": "assets/images/products/zara_03284407.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-mezcla-lino-p03284407.html",
+    "productUrl": "",
     "composition": "65% lino, 18% liocel, 17% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:09.137711+00:00"
+    "scrapedAt": "2026-03-29T19:47:09.137711+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-mezcla-lino-p03284407.html"
   },
   {
     "brand": "zara",
@@ -54,10 +58,11 @@
     "name": "JERSEY ESTRUCTURA TRENZAS",
     "image": "https://static.zara.net/assets/public/1d4d/e1a5/3f77466ba47f/fa4d5354946a/03284422400-p/03284422400-p.jpg?ts=1770118779389&w=1920",
     "imageLocal": "assets/images/products/zara_03284422.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-estructura-trenzas-p03284422.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:16.628093+00:00"
+    "scrapedAt": "2026-03-29T19:47:16.628093+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-estructura-trenzas-p03284422.html"
   },
   {
     "brand": "zara",
@@ -66,10 +71,11 @@
     "name": "JERSEY DESAGUJADO TRENZAS",
     "image": "https://static.zara.net/assets/public/fedb/abcd/98ca47899e5e/32b9ede89780/03284406251-p/03284406251-p.jpg?ts=1771952549418&w=1920",
     "imageLocal": "assets/images/products/zara_03284406.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-desagujado-trenzas-p03284406.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:24.971250+00:00"
+    "scrapedAt": "2026-03-29T19:47:24.971250+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-desagujado-trenzas-p03284406.html"
   },
   {
     "brand": "zara",
@@ -78,10 +84,11 @@
     "name": "POLO PUNTO CREMALLERA",
     "image": "https://static.zara.net/assets/public/042e/4fb2/d4ea40f38722/b2e40249d9b2/03284466017-p/03284466017-p.jpg?ts=1767088826464&w=1920",
     "imageLocal": "assets/images/products/zara_03284466.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-cremallera-p03284466.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:31.875848+00:00"
+    "scrapedAt": "2026-03-29T19:47:31.875848+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-cremallera-p03284466.html"
   },
   {
     "brand": "zara",
@@ -90,10 +97,11 @@
     "name": "MONO PUNTO FLORES BORDADAS PUNTO DE CRUZ LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/7e19/5f8b/7236420898f1/d4f3bb3a6ec9/03284607701-p/03284607701-p.jpg?ts=1773661188776&w=1920",
     "imageLocal": "assets/images/products/zara_03284607.jpg",
-    "productUrl": "https://www.zara.com/es/es/mono-punto-flores-bordadas-punto-de-cruz-limited-edition-p03284607.html",
+    "productUrl": "",
     "composition": "100% algodón, 94% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:38.655705+00:00"
+    "scrapedAt": "2026-03-29T19:47:38.655705+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/mono-punto-flores-bordadas-punto-de-cruz-limited-edition-p03284607.html"
   },
   {
     "brand": "zara",
@@ -102,10 +110,11 @@
     "name": "PICHI PUNTO FLORES BORDADAS PUNTO DE CRUZ LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/7655/beb2/f642451f8cfe/2ad1b03627d2/03284609250-p/03284609250-p.jpg?ts=1773661167415&w=1920",
     "imageLocal": "assets/images/products/zara_03284609.jpg",
-    "productUrl": "https://www.zara.com/es/es/pichi-punto-flores-bordadas-punto-de-cruz-limited-edition-p03284609.html",
+    "productUrl": "",
     "composition": "100% algodón, 95% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:45.338421+00:00"
+    "scrapedAt": "2026-03-29T19:47:45.338421+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/pichi-punto-flores-bordadas-punto-de-cruz-limited-edition-p03284609.html"
   },
   {
     "brand": "zara",
@@ -114,10 +123,11 @@
     "name": "CHAQUETA PUNTO COLOR BLOCK FLOR BORDADA LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/c623/ba71/528944f6bf84/b1c3e4636cfc/03284611693-p/03284611693-p.jpg?ts=1773661195384&w=1920",
     "imageLocal": "assets/images/products/zara_03284611.jpg",
-    "productUrl": "https://www.zara.com/es/es/chaqueta-punto-color-block-flor-bordada-limited-edition-p03284611.html",
+    "productUrl": "",
     "composition": "100% algodón, 96% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:52.079033+00:00"
+    "scrapedAt": "2026-03-29T19:47:52.079033+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/chaqueta-punto-color-block-flor-bordada-limited-edition-p03284611.html"
   },
   {
     "brand": "zara",
@@ -126,10 +136,11 @@
     "name": "JERSEY PUNTO RAYAS BORDADO FLOR LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/4e14/9422/5a9c4b2a8225/0bd666fdf26f/03284608520-p/03284608520-p.jpg?ts=1773661166149&w=1920",
     "imageLocal": "assets/images/products/zara_03284608.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-punto-rayas-bordado-flor-limited-edition-p03284608.html",
+    "productUrl": "",
     "composition": "100% algodón, 94% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:47:59.007716+00:00"
+    "scrapedAt": "2026-03-29T19:47:59.007716+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-punto-rayas-bordado-flor-limited-edition-p03284608.html"
   },
   {
     "brand": "zara",
@@ -138,10 +149,11 @@
     "name": "JERSEY POLO PUNTO BORDADOS LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/1a1a/4f63/398f4ef4814b/0bd3644b98ae/03284604677-p/03284604677-p.jpg?ts=1773661160739&w=1920",
     "imageLocal": "assets/images/products/zara_03284604.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-polo-punto-bordados-limited-edition-p03284604.html",
+    "productUrl": "",
     "composition": "100% algodón, 91% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:48:05.718757+00:00"
+    "scrapedAt": "2026-03-29T19:48:05.718757+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-polo-punto-bordados-limited-edition-p03284604.html"
   },
   {
     "brand": "zara",
@@ -162,10 +174,11 @@
     "name": "TOP PUNTO BORDADOS CONTRASTE LIMITED EDITION",
     "image": "https://static.zara.net/assets/public/ac0a/e555/2201480aa0c4/7aedaff81f46/03284605982-p/03284605982-p.jpg?ts=1773661164766&w=1920",
     "imageLocal": "assets/images/products/zara_03284605.jpg",
-    "productUrl": "https://www.zara.com/es/es/top-punto-bordados-contraste-limited-edition-p03284605.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:48:19.756203+00:00"
+    "scrapedAt": "2026-03-29T19:48:19.756203+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/top-punto-bordados-contraste-limited-edition-p03284605.html"
   },
   {
     "brand": "zara",
@@ -174,10 +187,11 @@
     "name": "POLO CON LINO Y ALGODÓN",
     "image": "https://static.zara.net/assets/public/993e/2944/b0874c20a8ed/39c70d18e158/03284752705-e1/03284752705-e1.jpg?ts=1768290239682&w=1920",
     "imageLocal": "assets/images/products/zara_03284752.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-con-lino-y-algodon-p03284752.html",
+    "productUrl": "",
     "composition": "53% lino, 47% algodón, 36% lino, 32% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:48:26.548818+00:00"
+    "scrapedAt": "2026-03-29T19:48:26.548818+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-con-lino-y-algodon-p03284752.html"
   },
   {
     "brand": "zara",
@@ -186,10 +200,11 @@
     "name": "POLO PUNTO ALGODÓN LINO",
     "image": "https://static.zara.net/assets/public/25c4/7581/651245088759/a8cb20048e89/03284551086-e1/03284551086-e1.jpg?ts=1773333047485&w=1920",
     "imageLocal": "assets/images/products/zara_03284551.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-algodon-lino-p03284551.html",
+    "productUrl": "",
     "composition": "55% lino, 45% algodón, 37% lino, 31% algodón",
     "status": "found",
-    "scrapedAt": "2026-03-29T19:48:33.278855+00:00"
+    "scrapedAt": "2026-03-29T19:48:33.278855+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-algodon-lino-p03284551.html"
   },
   {
     "brand": "zara",
@@ -198,10 +213,11 @@
     "name": "JERSEY PUNTO PERLADO CUELLO CREMALLERA",
     "image": "https://static.zara.net/assets/public/77a1/7eb4/e61d43e7adfd/92ca83a5fc79/03332404800-p/03332404800-p.jpg?ts=1766999454680&w=1920",
     "imageLocal": "assets/images/products/zara_03284400.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-punto-perlado-cuello-cremallera-p03332404.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T19:24:35.946440+00:00"
+    "scrapedAt": "2026-04-06T19:24:35.946440+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-punto-perlado-cuello-cremallera-p03332404.html"
   },
   {
     "brand": "zara",
@@ -210,10 +226,11 @@
     "name": "CHALECO PUNTO JACQUARD CUADROS",
     "image": "https://static.zara.net/assets/public/d1a0/6ce4/622c412199da/3c77e12a1986/03284403300-p/03284403300-p.jpg?ts=1770826316085&w=1920",
     "imageLocal": "assets/images/products/zara_03284403.jpg",
-    "productUrl": "https://www.zara.com/es/es/chaleco-punto-jacquard-cuadros-p03284403.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T19:24:44.179545+00:00"
+    "scrapedAt": "2026-04-06T19:24:44.179545+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/chaleco-punto-jacquard-cuadros-p03284403.html"
   },
   {
     "brand": "zara",
@@ -222,10 +239,11 @@
     "name": "POLO PUNTO RELAXED FIT RAYAS",
     "image": "https://static.zara.net/assets/public/dd77/a987/4c474bf78a56/bd138637d69d/03284405401-p/03284405401-p.jpg?ts=1770649724807&w=1920",
     "imageLocal": "assets/images/products/zara_03284405.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-relaxed-fit-rayas-p03284405.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T19:24:52.654747+00:00"
+    "scrapedAt": "2026-04-06T19:24:52.654747+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-relaxed-fit-rayas-p03284405.html"
   },
   {
     "brand": "zara",
@@ -234,10 +252,11 @@
     "name": "JERSEY ESTRUCTURA LAVADO",
     "image": "https://static.zara.net/assets/public/06ed/2b84/504e448d8001/4f6edd794244/03284412800-p/03284412800-p.jpg?ts=1771258927858&w=1920",
     "imageLocal": "assets/images/products/zara_03284412.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-estructura-lavado-p03284412.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T19:25:01.150990+00:00"
+    "scrapedAt": "2026-04-06T19:25:01.150990+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-estructura-lavado-p03284412.html"
   },
   {
     "brand": "zara",
@@ -246,10 +265,11 @@
     "name": "POLO PUNTO RAYAS WILLY CHAVARRIA X ZARA",
     "image": "https://static.zara.net/assets/public/e084/3061/f51e4fe1a6e3/30e31c630e66/03284417401-p/03284417401-p.jpg?ts=1774370359360&w=1920",
     "imageLocal": "assets/images/products/zara_03284417.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-rayas-willy-chavarria-x-zara-p03284417.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T19:25:09.872968+00:00"
+    "scrapedAt": "2026-04-06T19:25:09.872968+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-rayas-willy-chavarria-x-zara-p03284417.html"
   },
   {
     "brand": "pullbear",
@@ -258,10 +278,11 @@
     "name": "Polo paneles texto bordado",
     "image": "https://static.pullandbear.net/assets/public/7fed/6a6c/a4134e81a47c/005673c15fdf/03540530620-M/03540530620-M.jpg?ts=1774533139178&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-530.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-paneles-texto-bordado-l03540530?cS=620&pelement=726407394",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:03.873842+00:00"
+    "scrapedAt": "2026-04-06T20:40:03.873842+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-paneles-texto-bordado-l03540530?cS=620&pelement=726407394"
   },
   {
     "brand": "pullbear",
@@ -270,10 +291,11 @@
     "name": "Jersey ochos lavado ácido",
     "image": "https://static.pullandbear.net/assets/public/373a/c8a7/568b416599dd/19dbb759f17d/03540504833-M/03540504833-M.jpg?ts=1764756091185&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-504.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-ochos-lavado-acido-l03540504?cS=833&pelement=721442274",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.051949+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.051949+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-ochos-lavado-acido-l03540504?cS=833&pelement=721442274"
   },
   {
     "brand": "pullbear",
@@ -282,10 +304,11 @@
     "name": "Jersey cuello redondo",
     "image": "https://static.pullandbear.net/assets/public/ca57/b424/4027420a9eeb/6c20391323bc/03540501717-M/03540501717-M.jpg?ts=1763390974294&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-501.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-cuello-redondo-l03540501?cS=717&pelement=721442252",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.227059+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.227059+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-cuello-redondo-l03540501?cS=717&pelement=721442252"
   },
   {
     "brand": "pullbear",
@@ -294,10 +317,11 @@
     "name": "Polo punto texto cremallera",
     "image": "https://static.pullandbear.net/assets/public/ee82/27e3/20d149cbab46/7446f4895fd5/03540510251-M/03540510251-M.jpg?ts=1769421054191&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-510.jpg",
-    "productUrl": "https://www.pullandbear.com/es/gl/polo-punto-texto-cremalleira-l03540510?cS=251&pelement=721446289",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.402812+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.402812+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/gl/polo-punto-texto-cremalleira-l03540510?cS=251&pelement=721446289"
   },
   {
     "brand": "pullbear",
@@ -306,10 +330,11 @@
     "name": "Jersey rayas STWD",
     "image": "https://static.pullandbear.net/assets/public/9842/9b1a/801b4614a367/2acece5c4338/03540515251-M/03540515251-M.jpg?ts=1770023207997&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-515.jpg",
-    "productUrl": "https://www.pullandbear.com/es/gl/xersei-raias-stwd-l03540515?cS=251&pelement=721970701",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.630107+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.630107+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/gl/xersei-raias-stwd-l03540515?cS=251&pelement=721970701"
   },
   {
     "brand": "pullbear",
@@ -318,10 +343,11 @@
     "name": "Jersey paneles STWD",
     "image": "https://static.pullandbear.net/assets/public/7dcf/9ed9/3ae04bc9acce/a515ec1058b6/03540516251-M/03540516251-M.jpg?ts=1770023219242&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-516.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-paneles-stwd-l03540516?cS=251&pelement=722887784",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.803373+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.803373+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-paneles-stwd-l03540516?cS=251&pelement=722887784"
   },
   {
     "brand": "pullbear",
@@ -330,10 +356,11 @@
     "name": "Polo punto rayas cremallera",
     "image": "https://static.pullandbear.net/assets/public/9945/93de/96b5469d8040/fdd9f2c69b53/03540519681-M/03540519681-M.jpg?ts=1770649258249&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-519.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-rayas-cremallera-l03540519?cS=681&pelement=723359752",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:04.970637+00:00"
+    "scrapedAt": "2026-04-06T20:40:04.970637+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-rayas-cremallera-l03540519?cS=681&pelement=723359752"
   },
   {
     "brand": "pullbear",
@@ -342,10 +369,11 @@
     "name": "Jersey cuadros STWD",
     "image": "https://static.pullandbear.net/assets/public/7365/4902/b73b4414879f/e00d3834b6cb/03540520251-M/03540520251-M.jpg?ts=1771336663250&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-520.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-cuadros-stwd-l03540520?cS=251&pelement=723359753",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:05.128680+00:00"
+    "scrapedAt": "2026-04-06T20:40:05.128680+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-cuadros-stwd-l03540520?cS=251&pelement=723359753"
   },
   {
     "brand": "pullbear",
@@ -354,10 +382,11 @@
     "name": "Chaleco punto",
     "image": "https://static.pullandbear.net/assets/public/8862/c9bd/07984834826a/0bd11f4c985d/03540531700-M/03540531700-M.jpg?ts=1773833596789&w=1088&f=auto",
     "imageLocal": "assets/images/products/pullbear_3540-531.jpg",
-    "productUrl": "https://www.pullandbear.com/es/chaleco-punto-l03540531?cS=700&pelement=726587728",
+    "productUrl": "",
     "composition": "60% algodón / 40% poliéster",
     "status": "found",
-    "scrapedAt": "2026-04-06T20:40:05.287751+00:00"
+    "scrapedAt": "2026-04-06T20:40:05.287751+00:00",
+    "productUrlRetirada": "https://www.pullandbear.com/es/chaleco-punto-l03540531?cS=700&pelement=726587728"
   },
   {
     "brand": "pullbear",
@@ -378,10 +407,11 @@
     "name": "POLO PUNTO LINO - ALGODÓN RAYAS",
     "image": "https://static.zara.net/assets/public/9c3e/93c0/3d6a48f89a1f/2c3c34c66d13/03284419712-p/03284419712-p.jpg?ts=1775662556747&w=1920",
     "imageLocal": "assets/images/products/zara_man_3284-419.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-lino---algodon-rayas-p03284419.html",
+    "productUrl": "",
     "composition": "3%B",
     "status": "found",
-    "scrapedAt": "2026-04-16T07:18:29.510385+00:00"
+    "scrapedAt": "2026-04-16T07:18:29.510385+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-lino---algodon-rayas-p03284419.html"
   },
   {
     "brand": "zara man",
@@ -390,10 +420,11 @@
     "name": "CÁRDIGAN ESTRUCTURA TRENZAS CAPUCHA",
     "image": "https://static.zara.net/assets/public/5608/9500/9a63453fb0f8/77692db73db9/03284425710-p/03284425710-p.jpg?ts=1775050793298&w=1920",
     "imageLocal": "assets/images/products/zara_man_3284-425.jpg",
-    "productUrl": "https://www.zara.com/es/es/cardigan-estructura-trenzas-capucha-p03284425.html",
+    "productUrl": "",
     "composition": "3%B",
     "status": "found",
-    "scrapedAt": "2026-04-16T07:18:38.945651+00:00"
+    "scrapedAt": "2026-04-16T07:18:38.945651+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/cardigan-estructura-trenzas-capucha-p03284425.html"
   },
   {
     "brand": "zara man",
@@ -402,10 +433,11 @@
     "name": "POLO PUNTO RELAXED FIT RAYAS",
     "image": "https://static.zara.net/assets/public/a286/740b/984a45bbad2b/bb6209d76bb1/03284427600-p/03284427600-p.jpg?ts=1776155561926&w=1920",
     "imageLocal": "assets/images/products/zara_man_3284-427.jpg",
-    "productUrl": "https://www.zara.com/es/es/polo-punto-relaxed-fit-rayas-p03284427.html",
+    "productUrl": "",
     "composition": "3%B",
     "status": "found",
-    "scrapedAt": "2026-04-16T07:18:48.022765+00:00"
+    "scrapedAt": "2026-04-16T07:18:48.022765+00:00",
+    "productUrlRetirada": "https://www.zara.com/es/es/polo-punto-relaxed-fit-rayas-p03284427.html"
   },
   {
     "brand": "zara man",
@@ -1281,11 +1313,12 @@
     "name": "Cárdiga rústica trenzado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/bershka-w/00956623/2.jpg",
     "imageLocal": "assets/images/products/bershka_0956-623.jpg",
-    "productUrl": "https://www.bershka.com/es/cardiga-rustica-trenzado-l00956623.html",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.bershka.com/es/cardiga-rustica-trenzado-l00956623.html"
   },
   {
     "brand": "pullbear",
@@ -1322,11 +1355,12 @@
     "name": "Polo punto Camarón de la Isla",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540536/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-536.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-camaron-de-la-isla-l03540536?cS=641&pelement=738528275",
+    "productUrl": "",
     "composition": "99% algodón | 1% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-camaron-de-la-isla-l03540536?cS=641&pelement=738528275"
   },
   {
     "brand": "pullbear",
@@ -1335,11 +1369,12 @@
     "name": "Polo punto paneles",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540522/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-522.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-paneles-l03540522?cS=403&pelement=723686640",
+    "productUrl": "",
     "composition": "50% viscosa, 28% poliéster, 22% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-paneles-l03540522?cS=403&pelement=723686640"
   },
   {
     "brand": "pullbear",
@@ -1348,11 +1383,12 @@
     "name": "Jersey marrón Autonomous",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540514/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-514.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-marron-autonomous-l03540514?cS=700&pelement=721446409",
+    "productUrl": "",
     "composition": "99% algodón | 1% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-marron-autonomous-l03540514?cS=700&pelement=721446409"
   },
   {
     "brand": "pullbear",
@@ -1361,11 +1397,12 @@
     "name": "Jersey rayas",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540503/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-503.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540503?cS=403&pelement=721442247",
+    "productUrl": "",
     "composition": "74% poliamida, 16% acrílico, 10% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rayas-l03540503?cS=403&pelement=721442247"
   },
   {
     "brand": "pullbear",
@@ -1374,11 +1411,12 @@
     "name": "Camiseta punto estrella",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540518/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-518.jpg",
-    "productUrl": "https://www.pullandbear.com/es/camiseta-punto-estrella-l03540518?cS=716&pelement=723373478",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/camiseta-punto-estrella-l03540518?cS=716&pelement=723373478"
   },
   {
     "brand": "pullbear",
@@ -1387,11 +1425,12 @@
     "name": "Jersey STWD rayas bordado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540507/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-507.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-stwd-rayas-bordado-l03540507?cS=403&pelement=721441696",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-stwd-rayas-bordado-l03540507?cS=403&pelement=721441696"
   },
   {
     "brand": "pullbear",
@@ -1400,11 +1439,12 @@
     "name": "Camiseta punto rayas",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540523/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-523.jpg",
-    "productUrl": "https://www.pullandbear.com/es/camiseta-punto-rayas-l03540523?cS=400&pelement=723686648",
+    "productUrl": "",
     "composition": "65% poliéster, 35% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/camiseta-punto-rayas-l03540523?cS=400&pelement=723686648"
   },
   {
     "brand": "pullbear",
@@ -1413,11 +1453,12 @@
     "name": "Polo punto STWD",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540509/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-509.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-stwd-l03540509?cS=064&pelement=721441990",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-stwd-l03540509?cS=064&pelement=721441990"
   },
   {
     "brand": "pullbear",
@@ -1426,11 +1467,12 @@
     "name": "Polo punto rayas STWD",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540527/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-527.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-rayas-stwd-l03540527?cS=401&pelement=734368106",
+    "productUrl": "",
     "composition": "92% algodón, 8% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-rayas-stwd-l03540527?cS=401&pelement=734368106"
   },
   {
     "brand": "pullbear",
@@ -1439,11 +1481,12 @@
     "name": "Camiseta henley",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540517/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-517.jpg",
-    "productUrl": "https://www.pullandbear.com/es/camiseta-henley-l03540517?cS=711&pelement=723359754",
+    "productUrl": "",
     "composition": "82% algodón, 18% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/camiseta-henley-l03540517?cS=711&pelement=723359754"
   },
   {
     "brand": "pullbear",
@@ -1452,11 +1495,12 @@
     "name": "Polo punto gráfico",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540508/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-508.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-punto-grafico-l03540508?cS=401&pelement=721442037",
+    "productUrl": "",
     "composition": "100% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-punto-grafico-l03540508?cS=401&pelement=721442037"
   },
   {
     "brand": "pullbear",
@@ -1465,11 +1509,12 @@
     "name": "Jersey bordado STWD Studio",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540502/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-502.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-bordado-stwd-studio-l03540502?cS=833&pelement=721446164",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-bordado-stwd-studio-l03540502?cS=833&pelement=721446164"
   },
   {
     "brand": "pullbear",
@@ -1478,11 +1523,12 @@
     "name": "Camiseta rayas manga corta",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540541/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-541.jpg",
-    "productUrl": "https://www.pullandbear.com/es/camiseta-rayas-manga-corta-l03540541?cS=400&pelement=739875382",
+    "productUrl": "",
     "composition": "49% poliéster, 48% algodón, 3% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/camiseta-rayas-manga-corta-l03540541?cS=400&pelement=739875382"
   },
   {
     "brand": "pullbear",
@@ -1491,11 +1537,12 @@
     "name": "Polo rayas punto bordado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540529/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-529.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-rayas-punto-bordado-l03540529?cS=920&pelement=726407384",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-rayas-punto-bordado-l03540529?cS=920&pelement=726407384"
   },
   {
     "brand": "pullbear",
@@ -1504,11 +1551,12 @@
     "name": "Polo manga larga STWD",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540521/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-521.jpg",
-    "productUrl": "https://www.pullandbear.com/es/polo-manga-larga-stwd-l03540521?cS=807&pelement=723359764",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/polo-manga-larga-stwd-l03540521?cS=807&pelement=723359764"
   },
   {
     "brand": "pullbear",
@@ -1517,11 +1565,12 @@
     "name": "Cárdigan STWD",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540512/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-512.jpg",
-    "productUrl": "https://www.pullandbear.com/es/cardigan-stwd-l03540512?cS=600&pelement=721441825",
+    "productUrl": "",
     "composition": "75% algodón, 25% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/cardigan-stwd-l03540512?cS=600&pelement=721441825"
   },
   {
     "brand": "pullbear",
@@ -1530,11 +1579,12 @@
     "name": "Chaleco punto ochos",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540535/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-535.jpg",
-    "productUrl": "https://www.pullandbear.com/es/chaleco-punto-ochos-l03540535?cS=251&pelement=733671613",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/chaleco-punto-ochos-l03540535?cS=251&pelement=733671613"
   },
   {
     "brand": "pullbear",
@@ -1543,11 +1593,12 @@
     "name": "Camiseta crochet rayas STWD",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-w/03540544/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-544.jpg",
-    "productUrl": "https://www.pullandbear.com/es/camiseta-crochet-rayas-stwd-l03540544?cS=423&pelement=745520253",
+    "productUrl": "",
     "composition": "50% algodón, 50% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/camiseta-crochet-rayas-stwd-l03540544?cS=423&pelement=745520253"
   },
   {
     "brand": "zara",
@@ -1570,12 +1621,13 @@
     "name": "CHALECO PUNTO PENN ©",
     "image": "https://archivo.fashioncomfortarchive.com/archive/zara-nino/03284650/03284650098-p.jpg",
     "imageLocal": "assets/images/products/zara_3284-650.jpg",
-    "productUrl": "https://www.zara.com/es/es/chaleco-punto-penn---p03284650.html",
+    "productUrl": "",
     "composition": "100% algodón, 93% algodón, 7% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "color": "098"
+    "color": "098",
+    "productUrlRetirada": "https://www.zara.com/es/es/chaleco-punto-penn---p03284650.html"
   },
   {
     "brand": "zara",
@@ -1584,12 +1636,13 @@
     "name": "JERSEY PUNTO PESPUNTES LIMITED EDITION",
     "image": "https://archivo.fashioncomfortarchive.com/archive/zara-nino/03284613/03284613067-p.jpg",
     "imageLocal": "assets/images/products/zara_3284-613.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-punto-pespuntes-limited-edition-p03284613.html",
+    "productUrl": "",
     "composition": "100% algodón, 95% algodón, 5% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "color": "067"
+    "color": "067",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-punto-pespuntes-limited-edition-p03284613.html"
   },
   {
     "brand": "zara",
@@ -1598,12 +1651,13 @@
     "name": "JERSEY PUNTO RAYAS CONTRASTE LIMITED EDITION",
     "image": "https://archivo.fashioncomfortarchive.com/archive/zara-nino/03284614/03284614087-p.jpg",
     "imageLocal": "assets/images/products/zara_3284-614.jpg",
-    "productUrl": "https://www.zara.com/es/es/jersey-punto-rayas-contraste-limited-edition-p03284614.html",
+    "productUrl": "",
     "composition": "100% algodón, 96% algodón, 4% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "color": "087"
+    "color": "087",
+    "productUrlRetirada": "https://www.zara.com/es/es/jersey-punto-rayas-contraste-limited-edition-p03284614.html"
   },
   {
     "brand": "zara",
@@ -1612,11 +1666,12 @@
     "name": "CAMISA PUNTO BORDADOS",
     "image": "https://archivo.fashioncomfortarchive.com/archive/zara-nino/03284765/03284765710-f1.jpg",
     "imageLocal": "assets/images/products/zara_3284-765.jpg",
-    "productUrl": "https://www.zara.com/es/es/camisa-punto-bordados-p03284765.html",
+    "productUrl": "",
     "composition": "100% algodón, 90% algodón, 9% poliamida, 1% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.zara.com/es/es/camisa-punto-bordados-p03284765.html"
   },
   {
     "brand": "pullbear",
@@ -1625,11 +1680,12 @@
     "name": "Jersey rosa cuello redondo",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540322/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-322.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rosa-cuello-redondo-l03540322?cS=636&pelement=721441983",
+    "productUrl": "",
     "composition": "70% poliéster, 21% poliamida, 8% lana, 1% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rosa-cuello-redondo-l03540322?cS=636&pelement=721441983"
   },
   {
     "brand": "pullbear",
@@ -1638,11 +1694,12 @@
     "name": "Jersey punto grueso",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540316/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-316.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-punto-grueso-l03540316?cS=700&pelement=723021852",
+    "productUrl": "",
     "composition": "85% poliéster, 6% poliamida, 5% lana, 4% alpaca",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-punto-grueso-l03540316?cS=700&pelement=723021852"
   },
   {
     "brand": "pullbear",
@@ -1651,11 +1708,12 @@
     "name": "Jersey bordado delantero",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540313/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-313.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540313?cS=807&pelement=722887791",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540313?cS=807&pelement=722887791"
   },
   {
     "brand": "pullbear",
@@ -1664,11 +1722,12 @@
     "name": "Jersey rayas",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540323/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-323.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540323?cS=711&pelement=721970707",
+    "productUrl": "",
     "composition": "49% poliéster, 36% acrílico, 9% poliamida, 6% lana",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rayas-l03540323?cS=711&pelement=721970707"
   },
   {
     "brand": "pullbear",
@@ -1677,11 +1736,12 @@
     "name": "Jersey rosa corazón bordado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540315/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-315.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rosa-corazon-bordado-l03540315?cS=620&pelement=723100324",
+    "productUrl": "",
     "composition": "84% poliéster, 10% acrílico, 6% lana",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rosa-corazon-bordado-l03540315?cS=620&pelement=723100324"
   },
   {
     "brand": "pullbear",
@@ -1690,11 +1750,12 @@
     "name": "Jersey rayas",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540305/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-305.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540305?cS=712&pelement=721441667",
+    "productUrl": "",
     "composition": "63% poliéster, 28% acrílico, 5% lana, 4% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rayas-l03540305?cS=712&pelement=721441667"
   },
   {
     "brand": "pullbear",
@@ -1703,11 +1764,12 @@
     "name": "Jersey oversize bajo asimétrico",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540321/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-321.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-oversize-bajo-asimetrico-l03540321?cS=300&pelement=723029657",
+    "productUrl": "",
     "composition": "65% acrílico, 15% poliéster, 15% poliamida, 5% lana",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-oversize-bajo-asimetrico-l03540321?cS=300&pelement=723029657"
   },
   {
     "brand": "pullbear",
@@ -1716,11 +1778,12 @@
     "name": "Jersey bordado delantero",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540312/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-312.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540312?cS=401&pelement=721441709",
+    "productUrl": "",
     "composition": "100% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540312?cS=401&pelement=721441709"
   },
   {
     "brand": "pullbear",
@@ -1729,11 +1792,12 @@
     "name": "Jersey punto perlado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540307/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-307.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-punto-perlado-l03540307?cS=630&pelement=721441669",
+    "productUrl": "",
     "composition": "76% poliéster, 13% poliamida, 9% lana, 2% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-punto-perlado-l03540307?cS=630&pelement=721441669"
   },
   {
     "brand": "pullbear",
@@ -1742,11 +1806,12 @@
     "name": "Jersey rayas",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540317/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-317.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540317?cS=501&pelement=721446147",
+    "productUrl": "",
     "composition": "42% acrílico, 30% poliéster, 28% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rayas-l03540317?cS=501&pelement=721446147"
   },
   {
     "brand": "pullbear",
@@ -1755,11 +1820,12 @@
     "name": "Jersey asimétrico",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540333/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-333.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-asimetrico-l03540333?cS=600&pelement=726407451",
+    "productUrl": "",
     "composition": "52% viscosa, 30% poliéster, 18% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-asimetrico-l03540333?cS=600&pelement=726407451"
   },
   {
     "brand": "pullbear",
@@ -1768,11 +1834,12 @@
     "name": "Jersey bardot encaje combinado",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540319/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-319.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-bardot-encaje-combinado-l03540319?cS=803&pelement=721446705",
+    "productUrl": "",
     "composition": "96% poliéster | 4% algodón",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-bardot-encaje-combinado-l03540319?cS=803&pelement=721446705"
   },
   {
     "brand": "pullbear",
@@ -1781,11 +1848,12 @@
     "name": "Jersey oversize cuello redondo",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540303/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-303.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-oversize-cuello-redondo-l03540303?cS=800&pelement=721446741",
+    "productUrl": "",
     "composition": "52% viscosa, 30% poliéster, 18% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-oversize-cuello-redondo-l03540303?cS=800&pelement=721446741"
   },
   {
     "brand": "pullbear",
@@ -1794,11 +1862,12 @@
     "name": "Jersey oso",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540401/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-401.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-oso-l03540401?cS=807&pelement=723350466",
+    "productUrl": "",
     "composition": "77% acrílico, 23% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-oso-l03540401?cS=807&pelement=723350466"
   },
   {
     "brand": "pullbear",
@@ -1807,11 +1876,12 @@
     "name": "Jersey asimétrico punto fino",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540340/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-340.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-asimetrico-punto-fino-l03540340?cS=406&pelement=744475325",
+    "productUrl": "",
     "composition": "83% viscosa, 17% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-asimetrico-punto-fino-l03540340?cS=406&pelement=744475325"
   },
   {
     "brand": "pullbear",
@@ -1820,11 +1890,12 @@
     "name": "Jersey asimétrico efecto pelo",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540309/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-309.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-asimetrico-efecto-pelo-l03540309?cS=818&pelement=721446336",
+    "productUrl": "",
     "composition": "71% poliamida, 29% acrílico",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-asimetrico-efecto-pelo-l03540309?cS=818&pelement=721446336"
   },
   {
     "brand": "pullbear",
@@ -1833,11 +1904,12 @@
     "name": "Jersey punto ligero",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540328/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-328.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-punto-ligero-l03540328?cS=400&pelement=729499869",
+    "productUrl": "",
     "composition": "87% viscosa, 13% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-punto-ligero-l03540328?cS=400&pelement=729499869"
   },
   {
     "brand": "pullbear",
@@ -1846,11 +1918,12 @@
     "name": "Jersey cuello pico rib",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540314/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-314.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-cuello-pico-rib-l03540314?cS=401&pelement=721442005",
+    "productUrl": "",
     "composition": "28% poliéster, 28% acrílico, 22% poliamida, 18% modal, 4% lana",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-cuello-pico-rib-l03540314?cS=401&pelement=721442005"
   },
   {
     "brand": "pullbear",
@@ -1859,11 +1932,12 @@
     "name": "Top punto manga corta espalda descubierta",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540337/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-337.jpg",
-    "productUrl": "https://www.pullandbear.com/es/top-punto-manga-corta-espalda-descubierta-l03540337?cS=629&pelement=738289443",
+    "productUrl": "",
     "composition": "87% viscosa, 13% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/top-punto-manga-corta-espalda-descubierta-l03540337?cS=629&pelement=738289443"
   },
   {
     "brand": "pullbear",
@@ -1872,11 +1946,12 @@
     "name": "Jersey boxy manga corta",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540318/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-318.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-boxy-manga-corta-l03540318?cS=620&pelement=721446242",
+    "productUrl": "",
     "composition": "92% poliéster, 6% lana, 2% elastano",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-boxy-manga-corta-l03540318?cS=620&pelement=721446242"
   },
   {
     "brand": "pullbear",
@@ -1885,11 +1960,12 @@
     "name": "Jersey cuello polo",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540308/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-308.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-cuello-polo-l03540308?cS=712&pelement=721441502",
+    "productUrl": "",
     "composition": "65% acrílico, 19% poliéster, 16% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-cuello-polo-l03540308?cS=712&pelement=721441502"
   },
   {
     "brand": "pullbear",
@@ -1898,11 +1974,12 @@
     "name": "Jersey rosa cuello pico",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540335/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-335.jpg",
-    "productUrl": "https://www.pullandbear.com/es/jersey-rosa-cuello-pico-l03540335?cS=636&pelement=737845382",
+    "productUrl": "",
     "composition": "74% viscosa, 26% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/jersey-rosa-cuello-pico-l03540335?cS=636&pelement=737845382"
   },
   {
     "brand": "pullbear",
@@ -1911,11 +1988,12 @@
     "name": "Top punto crochet",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540329/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-329.jpg",
-    "productUrl": "https://www.pullandbear.com/es/top-punto-crochet-l03540329?cS=700&pelement=755824235",
+    "productUrl": "",
     "composition": "81% viscosa, 19% poliéster",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/top-punto-crochet-l03540329?cS=700&pelement=755824235"
   },
   {
     "brand": "pullbear",
@@ -1924,11 +2002,12 @@
     "name": "Top capucha arandelas Karoline Vitto",
     "image": "https://archivo.fashioncomfortarchive.com/archive/pullbear-mujer-w/03540380/thumb.jpg",
     "imageLocal": "assets/images/products/pullbear_3540-380.jpg",
-    "productUrl": "https://www.pullandbear.com/es/top-capucha-arandelas-karoline-vitto-l03540380?cS=422&pelement=724937093",
+    "productUrl": "",
     "composition": "75% viscosa, 25% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.pullandbear.com/es/top-capucha-arandelas-karoline-vitto-l03540380?cS=422&pelement=724937093"
   },
   {
     "brand": "bershka",
@@ -1951,11 +2030,12 @@
     "name": "Jersey cuello panadero print",
     "image": "https://archivo.fashioncomfortarchive.com/archive/bershka-hombre-w/01464623/2.jpg",
     "imageLocal": "assets/images/products/bershka_1464-623.jpg",
-    "productUrl": "https://www.bershka.com/es/jersey-cuello-panadero-print-l01464623.html",
+    "productUrl": "",
     "composition": "72% viscosa, 28% poliamida",
     "status": "found",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
-    "source": "fc-brands-archive"
+    "source": "fc-brands-archive",
+    "productUrlRetirada": "https://www.bershka.com/es/jersey-cuello-panadero-print-l01464623.html"
   },
   {
     "brand": "zara",
