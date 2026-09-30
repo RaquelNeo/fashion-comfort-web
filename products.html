@@ -163,6 +163,18 @@
       opacity: 0.75;
     }
 
+    .feed-status {
+      margin-top: 6px;
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #6b5b4b;
+    }
+
     .feed-comp {
       font-size: 11px;
       font-weight: 300;
@@ -360,6 +372,11 @@
       return main.join(', ');
     }
 
+    function textoRetirada() {
+      var t = (typeof i18n !== 'undefined') && i18n.getNestedValue && i18n.getNestedValue('work.unavailable');
+      return t || 'No longer available';
+    }
+
     function renderFeed(products) {
       grid.innerHTML = '';
       if (!products.length) {
@@ -385,6 +402,11 @@
             '<p class="feed-brand">' + (p.brandDisplay || '') + '</p>' +
             '<p class="feed-name">' + (p.name || '') + '</p>' +
             '<p class="feed-comp">' + mainComposition(p.composition) + '</p>' +
+            // La prenda sigue en nuestra web aunque la marca la haya retirado;
+            // el enlace se mantiene y se avisa de que ya no está a la venta.
+            (p.retirada
+              ? '<p class="feed-status" data-i18n="work.unavailable">' + textoRetirada() + '</p>'
+              : '') +
           '</div>';
         grid.appendChild(a);
       });
