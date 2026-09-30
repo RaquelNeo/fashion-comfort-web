@@ -449,7 +449,9 @@
       });
     }
 
-    fetch('products_data.json')
+    // no-cache: sin esto el navegador sigue enseñando la lista vieja después
+    // de añadir prendas (pasó el 30-09-2026).
+    fetch('products_data.json', { cache: 'no-cache' })
       .then(function(r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
