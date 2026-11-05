@@ -1316,10 +1316,11 @@
     "imageLocal": "assets/images/products/bershka_1420-623.jpg",
     "productUrl": "https://www.bershka.com/es/top-cuello-barco-punto-l01420623.html",
     "composition": "81% viscosa, 19% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "color": "800"
+    "color": "800",
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "bershka",
@@ -1358,10 +1359,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-524.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-manga-corta-l03540524?cS=058&pelement=755799417",
     "composition": "70% viscosa, 30% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "color": "737"
+    "color": "737",
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1386,10 +1388,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-522.jpg",
     "productUrl": "https://www.pullandbear.com/es/polo-punto-paneles-l03540522?cS=403&pelement=723686640",
     "composition": "50% viscosa, 28% poliéster, 22% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1414,10 +1417,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-503.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540503?cS=403&pelement=721442247",
     "composition": "74% poliamida, 16% acrílico, 10% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1428,10 +1432,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-518.jpg",
     "productUrl": "https://www.pullandbear.com/es/camiseta-punto-estrella-l03540518?cS=716&pelement=723373478",
     "composition": "100% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1442,10 +1447,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-507.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-stwd-rayas-bordado-l03540507?cS=403&pelement=721441696",
     "composition": "100% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1456,10 +1462,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-523.jpg",
     "productUrl": "https://www.pullandbear.com/es/camiseta-punto-rayas-l03540523?cS=400&pelement=723686648",
     "composition": "65% poliéster, 35% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1512,10 +1519,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-508.jpg",
     "productUrl": "https://www.pullandbear.com/es/polo-punto-grafico-l03540508?cS=401&pelement=721442037",
     "composition": "100% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1540,10 +1548,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-541.jpg",
     "productUrl": "https://www.pullandbear.com/es/camiseta-rayas-manga-corta-l03540541?cS=400&pelement=739875382",
     "composition": "49% poliéster, 48% algodón, 3% elastano",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1568,10 +1577,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-521.jpg",
     "productUrl": "https://www.pullandbear.com/es/polo-manga-larga-stwd-l03540521?cS=807&pelement=723359764",
     "composition": "100% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1610,10 +1620,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-544.jpg",
     "productUrl": "https://www.pullandbear.com/es/camiseta-crochet-rayas-stwd-l03540544?cS=423&pelement=745520253",
     "composition": "50% algodón, 50% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "zara",
@@ -1697,10 +1708,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-322.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rosa-cuello-redondo-l03540322?cS=636&pelement=721441983",
     "composition": "70% poliéster, 21% poliamida, 8% lana, 1% elastano",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1725,10 +1737,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-313.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540313?cS=807&pelement=722887791",
     "composition": "100% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1739,10 +1752,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-323.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540323?cS=711&pelement=721970707",
     "composition": "49% poliéster, 36% acrílico, 9% poliamida, 6% lana",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1753,10 +1767,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-315.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rosa-corazon-bordado-l03540315?cS=620&pelement=723100324",
     "composition": "84% poliéster, 10% acrílico, 6% lana",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1767,10 +1782,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-305.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rayas-l03540305?cS=712&pelement=721441667",
     "composition": "63% poliéster, 28% acrílico, 5% lana, 4% elastano",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1781,10 +1797,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-321.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-oversize-bajo-asimetrico-l03540321?cS=300&pelement=723029657",
     "composition": "65% acrílico, 15% poliéster, 15% poliamida, 5% lana",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1795,10 +1812,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-312.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-bordado-delantero-l03540312?cS=401&pelement=721441709",
     "composition": "100% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1809,10 +1827,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-307.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-punto-perlado-l03540307?cS=630&pelement=721441669",
     "composition": "76% poliéster, 13% poliamida, 9% lana, 2% elastano",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1851,10 +1870,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-319.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-bardot-encaje-combinado-l03540319?cS=803&pelement=721446705",
     "composition": "96% poliéster | 4% algodón",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1879,10 +1899,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-401.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-oso-l03540401?cS=807&pelement=723350466",
     "composition": "77% acrílico, 23% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1893,10 +1914,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-340.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-asimetrico-punto-fino-l03540340?cS=406&pelement=744475325",
     "composition": "83% viscosa, 17% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1907,10 +1929,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-309.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-asimetrico-efecto-pelo-l03540309?cS=818&pelement=721446336",
     "composition": "71% poliamida, 29% acrílico",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1921,10 +1944,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-328.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-punto-ligero-l03540328?cS=400&pelement=729499869",
     "composition": "87% viscosa, 13% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1935,10 +1959,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-314.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-cuello-pico-rib-l03540314?cS=401&pelement=721442005",
     "composition": "28% poliéster, 28% acrílico, 22% poliamida, 18% modal, 4% lana",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1949,10 +1974,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-337.jpg",
     "productUrl": "https://www.pullandbear.com/es/top-punto-manga-corta-espalda-descubierta-l03540337?cS=629&pelement=738289443",
     "composition": "87% viscosa, 13% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1963,10 +1989,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-318.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-boxy-manga-corta-l03540318?cS=620&pelement=721446242",
     "composition": "92% poliéster, 6% lana, 2% elastano",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1977,10 +2004,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-308.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-cuello-polo-l03540308?cS=712&pelement=721441502",
     "composition": "65% acrílico, 19% poliéster, 16% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -1991,10 +2019,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-335.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-rosa-cuello-pico-l03540335?cS=636&pelement=737845382",
     "composition": "74% viscosa, 26% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en Turquia, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -2005,10 +2034,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-329.jpg",
     "productUrl": "https://www.pullandbear.com/es/top-punto-crochet-l03540329?cS=700&pelement=755824235",
     "composition": "81% viscosa, 19% poliéster",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -2019,10 +2049,11 @@
     "imageLocal": "assets/images/products/pullbear_3540-380.jpg",
     "productUrl": "https://www.pullandbear.com/es/top-capucha-arandelas-karoline-vitto-l03540380?cS=422&pelement=724937093",
     "composition": "75% viscosa, 25% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
-    "retirada": true
+    "retirada": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "bershka",
@@ -2368,11 +2399,12 @@
     "imageLocal": "assets/images/products/bershka_1420-623_300.jpg",
     "productUrl": "https://www.bershka.com/es/top-cuello-barco-punto-l01420623.html",
     "composition": "81% viscosa, 19% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
     "color": "300",
-    "colorExtra": true
+    "colorExtra": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "bershka",
@@ -2383,11 +2415,12 @@
     "imageLocal": "assets/images/products/bershka_1420-623_712.jpg",
     "productUrl": "https://www.bershka.com/es/top-cuello-barco-punto-l01420623.html",
     "composition": "81% viscosa, 19% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
     "color": "712",
-    "colorExtra": true
+    "colorExtra": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -2443,11 +2476,12 @@
     "imageLocal": "assets/images/products/pullbear_3540-524_064.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-manga-corta-l03540524?cS=058&pelement=755799417",
     "composition": "70% viscosa, 30% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
     "color": "064",
-    "colorExtra": true
+    "colorExtra": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -2458,11 +2492,12 @@
     "imageLocal": "assets/images/products/pullbear_3540-524_251.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-manga-corta-l03540524?cS=058&pelement=755799417",
     "composition": "70% viscosa, 30% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
     "color": "251",
-    "colorExtra": true
+    "colorExtra": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "pullbear",
@@ -2473,11 +2508,12 @@
     "imageLocal": "assets/images/products/pullbear_3540-524_800.jpg",
     "productUrl": "https://www.pullandbear.com/es/jersey-manga-corta-l03540524?cS=058&pelement=755799417",
     "composition": "70% viscosa, 30% poliamida",
-    "status": "found",
+    "status": "oculta",
     "scrapedAt": "2026-07-07T00:00:00+00:00",
     "source": "fc-brands-archive",
     "color": "800",
-    "colorExtra": true
+    "colorExtra": true,
+    "motivoOculta": "Hecha en China, no en Bangladesh (revisión 5-11-2026)"
   },
   {
     "brand": "bershka",
@@ -2762,5 +2798,290 @@
     "composition": "50% algodón, 20% poliamida, 15% poliéster, 10% acrílico, 5% lana",
     "status": "found",
     "scrapedAt": "2026-11-03T15:52:11.055948+00:00"
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "3665/306",
+    "name": "Short rayas crochet",
+    "image": "assets/images/products/pullbear_3665-306_000.jpg",
+    "imageLocal": "assets/images/products/pullbear_3665-306_000.jpg",
+    "productUrl": "https://www.pullandbear.com/es/short-rayas-crochet-l03665306?cS=406&pelement=729624395",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "000",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/505",
+    "name": "Jersey cuello cremallera",
+    "image": "assets/images/products/pullbear_7540-505_800.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-505_800.jpg",
+    "productUrl": "https://www.pullandbear.com/es/jersey-cuello-cremallera-l07540505?cS=401&pelement=749370788",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "800",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/504",
+    "name": "Jersey básico punto",
+    "image": "assets/images/products/pullbear_7540-504_700.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-504_700.jpg",
+    "productUrl": "https://www.pullandbear.com/es/jersey-basico-punto-l07540504?cS=251&pelement=748867218",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "700",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7210/518",
+    "name": "Polo punto Disney x F1 Mickey",
+    "image": "assets/images/products/pullbear_7210-518_251.jpg",
+    "imageLocal": "assets/images/products/pullbear_7210-518_251.jpg",
+    "productUrl": "https://www.pullandbear.com/es/polo-punto-disney-x-f1-mickey-l07210518?cS=251&pelement=761772322",
+    "composition": "75% acrílico, 19% poliamida, 6% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "251",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7210/506",
+    "name": "Polo punto gráfico L'île-Rousse",
+    "image": "assets/images/products/pullbear_7210-506_791.jpg",
+    "imageLocal": "assets/images/products/pullbear_7210-506_791.jpg",
+    "productUrl": "https://www.pullandbear.com/es/polo-punto-grafico-lilerousse-l07210506?cS=791&pelement=748856667",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "791",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/512",
+    "name": "Chaleco punto",
+    "image": "assets/images/products/pullbear_7540-512_621.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-512_621.jpg",
+    "productUrl": "https://www.pullandbear.com/es/chaleco-punto-l07540512?cS=401&pelement=751440065",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "621",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/326",
+    "name": "Jersey rojo número estrellas",
+    "image": "assets/images/products/pullbear_7540-326_600.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-326_600.jpg",
+    "productUrl": "https://www.pullandbear.com/es/jersey-rojo-numero-estrellas-l07540326?cS=600&pelement=749920373",
+    "composition": "81% algodón, 10% viscosa, 6% poliéster, 3% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "600",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/328",
+    "name": "Jersey celeste número mangas",
+    "image": "assets/images/products/pullbear_7540-328_423.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-328_423.jpg",
+    "productUrl": "https://www.pullandbear.com/es/jersey-celeste-numero-mangas-l07540328?cS=423&pelement=751453920",
+    "composition": "81% algodón, 10% viscosa, 6% poliéster, 3% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "423",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/329",
+    "name": "Jersey negro gráfico número",
+    "image": "assets/images/products/pullbear_7540-329_800.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-329_800.jpg",
+    "productUrl": "https://www.pullandbear.com/es/jersey-negro-grafico-numero-l07540329?cS=800&pelement=751453922",
+    "composition": "81% algodón, 10% viscosa, 6% poliéster, 3% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "800",
+    "retirada": false
+  },
+  {
+    "brand": "pullbear",
+    "brandDisplay": "PULL&BEAR",
+    "reference": "7540/354",
+    "name": "Polo rayas Disney x F1 Mickey",
+    "image": "assets/images/products/pullbear_7540-354_422.jpg",
+    "imageLocal": "assets/images/products/pullbear_7540-354_422.jpg",
+    "productUrl": "https://www.pullandbear.com/es/polo-rayas-disney-x-f1-mickey-l07540354?cS=422&pelement=760668675",
+    "composition": "82% algodón | 5% poliéster | 5% poliamida | 9% viscosa",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "422",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA MAN",
+    "reference": "3284/314",
+    "name": "POLO PUNTO ESTRUCTURA ALGODÓN",
+    "image": "assets/images/products/zara_3284-314_700.jpg",
+    "imageLocal": "assets/images/products/zara_3284-314_700.jpg",
+    "productUrl": "https://www.zara.com/es/es/polo-punto-estructura-algodon-p03284314.html",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "700",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/602",
+    "name": "JERSEY PUNTO ROMBOS",
+    "image": "assets/images/products/zara_3284-602_330.jpg",
+    "imageLocal": "assets/images/products/zara_3284-602_330.jpg",
+    "productUrl": "https://www.zara.com/es/es/jersey-punto-rombos-p03284602.html",
+    "composition": "54% poliéster, 46% acrílico, 52% poliéster, 44% acrílico, 4% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "330",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA MAN",
+    "reference": "3284/328",
+    "name": "CÁRDIGAN RELAXED FIT COLOR ESTAMPADO",
+    "image": "assets/images/products/zara_3284-328_700.jpg",
+    "imageLocal": "assets/images/products/zara_3284-328_700.jpg",
+    "productUrl": "https://www.zara.com/es/es/cardigan-relaxed-fit-color-estampado-p03284328.html",
+    "composition": "100% algodón",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "700",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA MAN",
+    "reference": "3284/326",
+    "name": "POLO PUNTO JACQUARD ROMBOS",
+    "image": "assets/images/products/zara_3284-326_800.jpg",
+    "imageLocal": "assets/images/products/zara_3284-326_800.jpg",
+    "productUrl": "https://www.zara.com/es/es/polo-punto-jacquard-rombos-p03284326.html",
+    "composition": "49% poliéster, 46% acrílico, 5% lana",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "800",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/705",
+    "name": "CHAQUETA 100% LANA CORAZONES BORDADOS LIMITED EDITION",
+    "image": "assets/images/products/zara_3284-705_423.jpg",
+    "imageLocal": "assets/images/products/zara_3284-705_423.jpg",
+    "productUrl": "https://www.zara.com/es/es/chaqueta-100-lana-corazones-bordados-limited-edition-p03284705.html",
+    "composition": "100% lana, 96% lana, 4% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "423",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/706",
+    "name": "JERSEY 100% LANA RAYAS LIMITED EDITION",
+    "image": "assets/images/products/zara_3284-706_330.jpg",
+    "imageLocal": "assets/images/products/zara_3284-706_330.jpg",
+    "productUrl": "https://www.zara.com/es/es/jersey-100-lana-rayas-limited-edition-p03284706.html",
+    "composition": "100% lana, 95% lana, 5% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "330",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/707",
+    "name": "CÁRDIGAN 100% LANA BORDADO LIMITED EDITION",
+    "image": "assets/images/products/zara_3284-707_481.jpg",
+    "imageLocal": "assets/images/products/zara_3284-707_481.jpg",
+    "productUrl": "https://www.zara.com/es/es/cardigan-100-lana-bordado-limited-edition-p03284707.html",
+    "composition": "100% lana, 96% lana, 4% poliamida",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "481",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/708",
+    "name": "JERSEY BOTONATO CON LANA LIMITED EDITION",
+    "image": "assets/images/products/zara_3284-708_052.jpg",
+    "imageLocal": "assets/images/products/zara_3284-708_052.jpg",
+    "productUrl": "https://www.zara.com/es/es/jersey-botonato-con-lana-limited-edition-p03284708.html",
+    "composition": "65% lana, 30% poliamida, 5% alpaca",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "052",
+    "retirada": false
+  },
+  {
+    "brand": "zara",
+    "brandDisplay": "ZARA KIDS",
+    "reference": "3284/709",
+    "name": "JERSEY PUNTO POLO CON LANA LIMITED EDITION",
+    "image": "assets/images/products/zara_3284-709_920.jpg",
+    "imageLocal": "assets/images/products/zara_3284-709_920.jpg",
+    "productUrl": "https://www.zara.com/es/es/jersey-punto-polo-con-lana-limited-edition-p03284709.html",
+    "composition": "65% lana, 30% poliamida, 5% alpaca",
+    "status": "found",
+    "scrapedAt": "2026-11-05T08:10:12.896619+00:00",
+    "source": "fc-brands-archive",
+    "color": "920",
+    "retirada": false
   }
 ]

@@ -108,6 +108,35 @@
       color: var(--text-primary);
     }
 
+    /* Las marcas que no caben en una línea pasan a este desplegable */
+    .feed-filters-row {
+      display: flex; align-items: flex-end; gap: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: var(--space-2xl);
+    }
+    .feed-filters-row .feed-filters {
+      flex: 1; min-width: 0; margin-bottom: 0; border-bottom: none;
+      overflow: hidden; flex-wrap: nowrap;
+    }
+    .feed-filters-row .feed-tab { white-space: nowrap; flex-shrink: 0; }
+    .feed-more {
+      display: none;
+      flex-shrink: 0;
+      margin-bottom: 6px;
+      padding: 8px 30px 8px 14px;
+      font-family: var(--font-body);
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--text-muted);
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right 12px center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      -webkit-appearance: none; appearance: none;
+    }
+    .feed-more.visible { display: block; }
+    .feed-more.active { color: var(--text-primary); border-color: var(--text-primary); }
+
     /* Image grid — editorial, not e-commerce */
     .feed-grid {
       display: grid;
@@ -249,6 +278,9 @@
         padding-right: 24px;
       }
       .feed-filters::-webkit-scrollbar { display: none; }
+      .feed-filters-row { margin-left: -24px; margin-right: -24px; padding: 0 24px; gap: 8px; }
+      .feed-filters-row .feed-filters { overflow: hidden; margin: 0; padding: 0 0 8px; }
+      .feed-more { font-size: 11px; padding: 7px 26px 7px 12px; }
 
       .feed-tab {
         padding: 8px 14px;
@@ -308,8 +340,13 @@
   <section class="feed-section">
     <div class="feed-inner">
 
-      <div class="feed-filters" id="feed-filters">
-        <button class="feed-tab active" onclick="filterFeed('all')" data-i18n="work.filter_all">All</button>
+      <div class="feed-filters-row">
+        <div class="feed-filters" id="feed-filters">
+          <button class="feed-tab active" onclick="filterFeed('all')" data-i18n="work.filter_all">All</button>
+        </div>
+        <select class="feed-more" id="feed-more" aria-label="More brands" onchange="if (this.value) filterFeed(this.value)">
+          <option value="" data-i18n="work.filter_more">More brands</option>
+        </select>
       </div>
 
       <div class="feed-grid" id="feed-grid"></div>
@@ -422,6 +459,10 @@
         ? document.querySelector('.feed-tab:first-child')
         : document.querySelector('.feed-tab[data-filter="' + brandDisplay + '"]');
       if (active) active.classList.add('active');
+      var more = document.getElementById('feed-more');
+      var enMas = !!more.querySelector('option[value="' + brandDisplay + '"]');
+      more.classList.toggle('active', enMas);
+      more.value = enMas ? brandDisplay : '';
       var filtered = brandDisplay === 'all'
         ? allProducts
         : brandDisplay === 'ZARA BABY'
@@ -473,7 +514,50 @@
         btn.onclick = function() { filterFeed(bd); };
         filtersEl.appendChild(btn);
       });
+      todasLasMarcas = brands;
+      repartirMarcas();
     }
+
+    // Las pestañas que no caben en una línea se van al desplegable "More brands",
+    // empezando por las últimas. Se recalcula al cambiar el ancho de la ventana.
+    var todasLasMarcas = [];
+    function repartirMarcas() {
+      var filtersEl = document.getElementById('feed-filters');
+      var more = document.getElementById('feed-more');
+      var activa = (document.querySelector('.feed-tab.active') || {}).getAttribute
+        ? document.querySelector('.feed-tab.active').getAttribute('data-filter')
+        : null;
+      var elegidaEnMas = more.value;
+      // Vuelven todas a la línea
+      filtersEl.querySelectorAll('.feed-tab[data-filter]').forEach(function(b) { b.style.display = ''; });
+      while (more.options.length > 1) more.remove(1);
+      more.classList.remove('visible');
+      var tabs = Array.prototype.slice.call(filtersEl.querySelectorAll('.feed-tab[data-filter]'));
+      // Mientras no quepan, la última pestaña visible pasa al desplegable
+      var ocultas = [];
+      for (var i = tabs.length - 1; i >= 0 && filtersEl.scrollWidth > filtersEl.clientWidth + 1; i--) {
+        if (!more.classList.contains('visible')) more.classList.add('visible');
+        tabs[i].style.display = 'none';
+        ocultas.unshift(tabs[i].getAttribute('data-filter'));
+      }
+      ocultas.forEach(function(bd) {
+        var o = document.createElement('option');
+        o.value = bd; o.textContent = bd;
+        more.appendChild(o);
+      });
+      var elegida = elegidaEnMas || activa;
+      var enMas = elegida && ocultas.indexOf(elegida) !== -1;
+      more.value = enMas ? elegida : '';
+      more.classList.toggle('active', !!enMas);
+    }
+    // Las fuentes y la traducción cambian el ancho de las pestañas: se vuelve a repartir.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function() { setTimeout(repartirMarcas, 50); });
+    window.addEventListener('load', function() { setTimeout(repartirMarcas, 300); });
+    var esperaResize;
+    window.addEventListener('resize', function() {
+      clearTimeout(esperaResize);
+      esperaResize = setTimeout(repartirMarcas, 150);
+    });
 
     // no-cache: sin esto el navegador sigue enseñando la lista vieja después
     // de añadir prendas (pasó el 30-09-2026).
